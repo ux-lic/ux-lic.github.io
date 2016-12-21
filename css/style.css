@@ -7,7 +7,7 @@
 
 #button-blue,
 .feedback-input {
-    font-family: 'Booster Next FY', "Helvetica Neue", helvetica, arial, sans-serif;
+    font-family: 'Booster Next', "Helvetica Neue", helvetica, arial, sans-serif;
     width: 100%
 }
 #form-div,
@@ -605,7 +605,7 @@ body.big-h3 .content h3 {
 .content h4,
 .content h5,
 body:not(.big-h3) .content h3 {
-    font-family: 'Booster Next FY', "Helvetica Neue", helvetica, arial, sans-serif;
+    font-family: 'Booster Next', "Helvetica Neue", helvetica, arial, sans-serif;
     padding-bottom: 10px;
     text-transform: uppercase
 }
@@ -2027,7 +2027,7 @@ MIT License: https://github.com/driftyco/ionicons
 }
 .devices a h3,
 html {
-    font-family: 'Booster Next FY', "Helvetica Neue", helvetica, arial, sans-serif
+    font-family: 'Booster Next', "Helvetica Neue", helvetica, arial, sans-serif
 }
 .ion-alert:before {
     content: "\f101"
@@ -5061,7 +5061,7 @@ li,
 p,
 span,
 ul {
-    font-family: 'Booster Next FY', "Helvetica Neue", helvetica, arial, sans-serif
+    font-family: 'Booster Next', "Helvetica Neue", helvetica, arial, sans-serif
 }
 h4,
 h5,
