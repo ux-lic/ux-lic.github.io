@@ -9,12 +9,6 @@ At the top of the file there should be a short introduction and/ or overview tha
 
 Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
 
-
-``` this is the pre
-PROTOCOL AND HOST
-"https://api.minda.io"
-```
-
 # Cloud API
 
 A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.
