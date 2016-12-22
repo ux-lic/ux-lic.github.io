@@ -1,7 +1,5 @@
-This is the opening paragraph which should be large and to the point
-
 # Introduction
-
+This is the opening paragraph which should be large and to the point
 
 ## Synopsis
 
@@ -12,18 +10,29 @@ At the top of the file there should be a short introduction and/ or overview tha
 Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
 
 
-```
+``` this is the pre
 PROTOCOL AND HOST
 "https://api.minda.io"
 ```
 
-## Motivation
+# Cloud API
 
 A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.
 
-## Installation
+## Authentication
 
-Provide code examples and explanations of how to get the project.
+### How to send your access token
+### Generate an access token
+### List access tokens
+### Delete an access token
+
+## OAuth Clients
+Explain what an OAuth client is
+
+### Create an OAuth client
+
+## Errors
+## Versioning
 
 ## API Reference
 

@@ -7,7 +7,7 @@
 
 #button-blue,
 .feedback-input {
-    font-family: 'Booster Next', "Helvetica Neue", helvetica, arial, sans-serif;
+    font-family: 'Booster FY', proxima-nova, "Helvetica Neue", helvetica, arial, sans-serif;
     width: 100%
 }
 #form-div,
@@ -70,7 +70,7 @@ ul {
 .feedback-input:focus {
     background: #fff;
     box-shadow: 0;
-    border: 1px solid #00adef;
+    border: 1px solid #009cde;
     color: #3498db;
     outline: 0;
     padding: 13px 13px 13px 54px
@@ -143,7 +143,7 @@ textarea:hover {
     float: left;
     border: 4px solid #fbfbfb;
     cursor: pointer;
-    background-color: #00adef;
+    background-color: #009cde;
     font-size: 24px;
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
@@ -351,7 +351,7 @@ i {
     border: none
 }
 .content .btn {
-    background: #00adef;
+    background: #009cde;
     color: #fff;
     font-weight: 700;
     font-size: 12px;
@@ -605,7 +605,7 @@ body.big-h3 .content h3 {
 .content h4,
 .content h5,
 body:not(.big-h3) .content h3 {
-    font-family: 'Booster Next', "Helvetica Neue", helvetica, arial, sans-serif;
+    font-family: 'Booster FY', proxima-nova, "Helvetica Neue", helvetica, arial, sans-serif;
     padding-bottom: 10px;
     text-transform: uppercase
 }
@@ -848,7 +848,7 @@ h1 small.beta {
 .arrow:active i,
 .arrow:hover,
 .arrow:hover i {
-    color: #00adef
+    color: #009cde
 }
 .arrow.previous-arrow {
     left: 0
@@ -2027,7 +2027,7 @@ MIT License: https://github.com/driftyco/ionicons
 }
 .devices a h3,
 html {
-    font-family: 'Booster Next', "Helvetica Neue", helvetica, arial, sans-serif
+    font-family: 'Booster FY', proxima-nova, "Helvetica Neue", helvetica, arial, sans-serif
 }
 .ion-alert:before {
     content: "\f101"
@@ -4292,7 +4292,7 @@ a.nav {
 a.nav-device,
 a.nav.active,
 a.nav:hover {
-    color: #00adef
+    color: #009cde
 }
 a.nav i {
     margin-right: 5px;
@@ -4641,7 +4641,7 @@ ul.in-page-toc.hide {
     left: 0;
     top: 0;
     bottom: 0;
-    width: 280px;
+    width: 240px;
     box-sizing: border-box;
     border-right: solid 1px #dfe2e7;
     z-index: 100
@@ -4740,7 +4740,7 @@ ul.in-page-toc li {
 }
 .menubar li a:hover,
 .menubar li a:visited:hover {
-    color: #00adef
+    color: #009cde
 }
 .menubar li {
     white-space: nowrap
@@ -4763,11 +4763,11 @@ ul.in-page-toc li i.toggle-secondary-toc {
 }
 .menubar li.active.top-level:hover #toggle-in-page-nav,
 ul.in-page-toc li i.toggle-secondary-toc:hover {
-    color: #00adef
+    color: #009cde
 }
 ul.in-page-toc li.active a {
     font-weight: 700;
-    color: #00adef
+    color: #009cde
 }
 ul.in-page-toc li a {
     font-size: 12px
@@ -4795,18 +4795,18 @@ ul.in-page-toc .secondary-in-page-toc {
 .menu a,
 .menu a:visited,
 a {
-    color: #00adef
+    color: #009cde
 }
 .menu a:hover,
 a:hover {
     color: #006d9f
 }
 .menu a.active:after {
-    background: #00adef
+    background: #009cde
 }
 .button,
 .button:visited {
-    background: #00adef;
+    background: #009cde;
     border: 0;
     padding: 5px 25px 7px
 }
@@ -4848,7 +4848,7 @@ pre .tag {
 }
 code .atv,
 pre .atv {
-    color: #00adef
+    color: #009cde
 }
 code .dec,
 pre .dec {
@@ -5007,7 +5007,7 @@ ol.linenums {
     width: 300px
 }
 .devices a:hover h3 {
-    color: #00adef
+    color: #009cde
 }
 @media (max-width: 768px) {
     .devices a img {
@@ -5061,7 +5061,7 @@ li,
 p,
 span,
 ul {
-    font-family: 'Booster Next', "Helvetica Neue", helvetica, arial, sans-serif
+    font-family: 'Booster FY', proxima-nova, "Helvetica Neue", helvetica, arial, sans-serif
 }
 h4,
 h5,
@@ -5175,17 +5175,17 @@ a {
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 10px;
-    border-bottom: 1px #00adef
+    border-bottom: 1px #009cde
 }
 @media screen and (min-width: 1360px) {
     .footnoteLink {
-        border-bottom: 1px solid #00adef;
+        border-bottom: 1px solid #009cde;
         cursor: pointer
     }
     .footnote {
         background-color: #fff;
-        border-top: 2px solid #00adef;
-        border-bottom: 2px solid #00adef;
+        border-top: 2px solid #009cde;
+        border-bottom: 2px solid #009cde;
         font-weight: 400;
         height: auto;
         left: -140px;
@@ -5208,7 +5208,7 @@ a {
 }
 @media screen and (max-width: 1360px) and (min-width: 480px) {
     .footnoteLink {
-        border-bottom: 1px solid #00adef;
+        border-bottom: 1px solid #009cde;
         cursor: pointer
     }
     .footnote {
@@ -5227,7 +5227,7 @@ a {
         font-size: 10 px;
         transform: translateY(-50%);
         padding: 15px;
-        border: 2px solid #00adef;
+        border: 2px solid #009cde;
         border-radius: 10px;
         display: block
     }
@@ -5238,12 +5238,12 @@ a {
 }
 @media screen and (max-width: 480px) and (min-width: 0) {
     .footnoteLink {
-        border-bottom: 1px solid #00adef;
+        border-bottom: 1px solid #009cde;
         cursor: pointer
     }
     .footnote {
         background-color: #fff;
-        border: 2px solid #00adef;
+        border: 2px solid #009cde;
         font-weight: 400;
         height: auto;
         left: 0;
@@ -5273,13 +5273,13 @@ a {
 }
 @media screen and (min-width: 1360px) {
     .popupLink {
-        border-bottom: 1px solid #00adef;
+        border-bottom: 1px solid #009cde;
         cursor: pointer
     }
     .popup {
         background-color: #0c0c0c;
         border-radius: 5px;
-        border: 2px solid #00adef;
+        border: 2px solid #009cde;
         font-weight: 400;
         left: 25%;
         right: 50%;
@@ -5308,13 +5308,13 @@ a {
 }
 @media screen and (max-width: 1360px) and (min-width: 0) {
     .popupLink {
-        border-bottom: 1px solid #00adef;
+        border-bottom: 1px solid #009cde;
         cursor: pointer
     }
     .popup {
-        background-color: #00adef;
+        background-color: #009cde;
         border-radius: 5px;
-        border: 2px solid #00adef;
+        border: 2px solid #009cde;
         font-weight: 400;
         opacity: 0;
         visibility: hidden;
@@ -5395,7 +5395,7 @@ a {
 .search input:active,
 .search input:focus,
 .search input:hover {
-    border: 1px solid #00adef
+    border: 1px solid #009cde
 }
 .search input:focus {
     outline: 0
@@ -5427,7 +5427,7 @@ a {
 }
 .search .search-results a:hover {
     background: #f7f7f7;
-    color: #00adef
+    color: #009cde
 }
 .search .search-results a:first-of-type {
     border-top-left-radius: 4px;
@@ -5483,7 +5483,7 @@ a {
 .search .search-results li span.title {
     display: block;
     font-weight: 500;
-    color: #00adef
+    color: #009cde
 }
 .search .search-results li span.device {
     display: inline-block;
@@ -5557,7 +5557,7 @@ a {
 .content ul.api-attributes .field-required {
     display: block;
     font-size: 12px;
-    color: #00adef
+    color: #009cde
 }
 .content ul.api-attributes small {
     display: block;
@@ -5693,13 +5693,13 @@ a {
     color: #333
 }
 .resource-tile:hover {
-    border: 3px solid #00adef;
+    border: 3px solid #009cde;
     border-radius: 10px;
     color: #181818
 }
 .icon-iHelp {
     font-size: 36px;
-    color: #00adef
+    color: #009cde
 }
 @media (max-width: 768px) {
     .resource-tile,
@@ -5802,7 +5802,7 @@ a {
     z-index: 999
 }
 #buttonParticle {
-    background: #00adef;
+    background: #009cde;
     width: 50px;
     height: 50px;
     border-radius: 50%;
