@@ -8,7 +8,10 @@ At the top of the file there should be a short introduction and/ or overview tha
 ## Code Example
 
 Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
-
+There are three ways to send your access token in a request.
+- In an HTTP Authorization header (always works)
+- In the URL query string (only works with GET requests)
+- In the request body (only works for POST & PUT when body is URL-encoded)
 
 ``` this is the pre
 PROTOCOL AND HOST
@@ -20,10 +23,16 @@ PROTOCOL AND HOST
 A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.
 
 ## Authentication
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis commodo nulla turpis, id accumsan nisl laoreet a. Aliquam rhoncus mattis risus vel ullamcorper. Nunc finibus ultrices ante, id ultricies nibh dapibus a. Ut blandit purus id accumsan rhoncus. Duis lacinia imperdiet viverra.
 
 ### How to send your access token
+There are three ways to send your access token in a request.
+- In an HTTP Authorization header (always works)
+- In the URL query string (only works with GET requests)
+- In the request body (only works for POST & PUT when body is URL-encoded)
 ### Generate an access token
 ### List access tokens
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis commodo nulla turpis, id accumsan nisl laoreet a. Aliquam rhoncus mattis risus vel ullamcorper. Nunc finibus ultrices ante, id ultricies nibh dapibus a. Ut blandit purus id accumsan rhoncus. Duis lacinia imperdiet viverra.
 ### Delete an access token
 
 ## OAuth Clients
