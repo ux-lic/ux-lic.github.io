@@ -1,62 +1,51 @@
-An h1 header
-============
+# Introduction
+This is the opening paragraph which should be large and to the point
 
-Paragraphs are separated by a blank line.
+## Synopsis
 
-2nd paragraph. *Italic*, **bold**, and `monospace`. Itemized lists
-look like:
+At the top of the file there should be a short introduction and/ or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
 
-  * this one
-  * that one
-  * the other one
+## Code Example
 
-Note that --- not considering the asterisk --- the actual text
-content starts at 4-columns in.
-
-> Block quotes are
-> written like so.
->
-> They can span multiple paragraphs,
-> if you like.
-
-Use 3 dashes for an em-dash. Use 2 dashes for ranges (ex., "it's all
-in chapters 12--14"). Three dots ... will be converted to an ellipsis.
-Unicode is supported. ☺
+Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
 
 
+``` this is the pre
+PROTOCOL AND HOST
+"https://api.minda.io"
+```
 
-An h2 header
-------------
+# Cloud API
 
-Here's a numbered list:
+A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.
 
- 1. first item
- 2. second item
- 3. third item
+## Authentication
 
-Note again how the actual text starts at 4 columns in (4 characters
-from the left side). Here's a code sample:
+### How to send your access token
+### Generate an access token
+### List access tokens
+### Delete an access token
 
-    # Let me re-iterate ...
-    for i in 1 .. 10 { do-something(i) }
+## OAuth Clients
+Explain what an OAuth client is
 
-As you probably guessed, indented 4 spaces. By the way, instead of
-indenting the block, you can use delimited blocks, if you like:
+### Create an OAuth client
 
-~~~
-define foobar() {
-    print "Welcome to flavor country!";
-}
-~~~
+## Errors
+## Versioning
 
-(which makes copying & pasting easier). You can optionally mark the
-delimited block for Pandoc to syntax highlight it:
+## API Reference
 
-~~~python
-import time
-# Quick, count to ten!
-for i in range(10):
-    # (but not *too* quick)
-    time.sleep(0.5)
-    print i
-~~~
+Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
+
+## Tests
+
+Describe and show how to run the tests with code examples.
+
+## Contributors
+
+Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
+
+## License
+
+A short snippet describing the license (MIT, Apache, etc.)
