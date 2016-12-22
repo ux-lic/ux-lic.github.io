@@ -13,7 +13,8 @@ There are three ways to send your access token in a request.
 - In the URL query string (only works with GET requests)
 - In the request body (only works for POST & PUT when body is URL-encoded)
 
-``` this is the pre
+```
+this is the pre
 PROTOCOL AND HOST
 "https://api.minda.io"
 ```
