@@ -1,0 +1,154 @@
+<!doctype html>
+<!--
+
+  Instructions:
+
+  - Save this file.
+  - Replace "USER" with your GitHub username.
+  - Replace "REPO" with your GitHub repo name.
+  - Replace "Your Project" with your project name.
+  - Upload this file (or commit to GitHub Pages).
+
+  Customize as you see fit!
+
+-->
+<html class="three-columns">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+
+    <title>LIC Developer</title>
+
+    <!-- Flatdoc -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src='https://cdn.rawgit.com/rstacruz/flatdoc/v0.9.0/legacy.js'></script>
+    <script src='https://cdn.rawgit.com/rstacruz/flatdoc/v0.9.0/flatdoc.js'></script>
+
+    <!-- Flatdoc theme -->
+    <script src='https://cdn.rawgit.com/rstacruz/flatdoc/v0.9.0/theme-white/script.js'></script>
+
+    <!-- Meta -->
+    <meta content="Your Project" property="og:title">
+    <meta content="Your Project description goes here." name="description">
+
+    <!-- Custom -->
+    <script src="https://use.fontawesome.com/37821384dd.js"></script>
+
+    <link href='css/font.css' rel='stylesheet'>
+    <link href='css/style.css' rel='stylesheet'>
+
+    <!-- Initializer -->
+    <script>
+        //Use local readme for quick testing
+        if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
+            Flatdoc.run({
+                fetcher: Flatdoc.file('Readme.md')
+            });
+        } else {
+            Flatdoc.run({
+                fetcher: Flatdoc.github('DomLIC/DomLIC.github.io')
+            });
+        }
+    </script>
+</head>
+
+<body role='flatdoc' class="big-h3">
+    <div id="docs">
+        <div class="header">
+            <div class="left">
+                <div class="toggle-nav">
+                    <a href="#" class="subnav-link toggle-navigation">
+                        <i class="fa fa-bars" title="show/hide the navigation"></i>
+                    </a>
+                </div>
+                <a href="/apps">
+                    <img src="/assets/images/lic-logo.png" id="logo">
+                </a>
+                <div class="sections">
+                    <a class="nav " href="/apps">My Apps</a>
+                    <a class="nav active" href="/docs">API Docs</a>
+                    <a class="nav " href="/support">Support</a>
+                </div>
+                <div class="fd-dropdown mobile-only">
+                    <a id="dLabel" data-target="#" class="nav" data-toggle="fd-dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            Reference
+            <i class="fa fa-chevron-down"></i>
+          </a>
+                    <ul class="fd-dropdown-menu" aria-labelledby="dLabel">
+                        <li><a href="/apps">My Apps</a></li>
+                        <li><a href="/docs">API Docs</a></li>
+                        <li><a href="/support">Support</a></li>
+                    </ul>
+                </div>
+                <div class="search">
+                    <div class="search-input-wrapper">
+                        <i class="fa fa-search"></i>
+                        <input class="search-box" type="text" placeholder="Search" value="">
+                    </div>
+                    <div class="search-results" style="display: none;">
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <a href="https://github.com/DomLIC/DomLIC.github.io" class="nav" target="_blank"><i class="fa fa-pencil"></i> Edit</a>
+
+            </div>
+        </div>
+
+        <div class='content-root'>
+            <div class='menubar'>
+                <div class='menu section' role='flatdoc-menu'></div>
+            </div>
+            <div class="page-body">
+                <div class="content-inner">
+                    <div role='flatdoc-content' class='content api-docs'>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src='js/prettify.js'></script> -->
+
+    <script>
+        //style code
+        function syntaxHighlight(json) {
+            json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function(match) {
+                var cls = 'lit';
+                if (/^"/.test(match)) {
+                    if (/:$/.test(match)) {
+                        cls = 'kwd';
+                    } else {
+                        cls = 'str';
+                    }
+                } else if (/true|false/.test(match)) {
+                    cls = 'kwd';
+                } else if (/null/.test(match)) {
+                    cls = 'null';
+                }
+                return '<span class="' + cls + '">' + match + '</span>';
+            });
+        }
+
+        //flatdoc content loaded
+        $(document).on('flatdoc:ready', function() {
+            // add code background panel
+            $('.content-inner').append('<div class="code-samples"></div>');
+
+            $("pre > code").each(function() {
+                var $code = $(this);
+                $code.addClass('lang-json prettyprint prettyprinted');
+
+                var obj = $code.text();
+                var str = JSON.stringify(obj, undefined, 4);
+                $code.html(syntaxHighlight(str));
+            });
+
+        });
+    </script>
+</body>
+
+</html>

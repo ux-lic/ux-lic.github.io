@@ -1,0 +1,121 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+
+    <title>LIC Developer</title>
+
+    <!-- LIC -->
+    <link href='css/font.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="all">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <!-- Meta -->
+    <meta content="LIC Developer" property="og:title">
+    <meta content="LIC Developer description goes here." name="description">
+
+    <!-- Custom -->
+    <script src="https://use.fontawesome.com/37821384dd.js"></script>
+
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="left">
+            <div class="toggle-nav">
+                <a href="#" class="subnav-link toggle-navigation">
+                    <i class="fa fa-bars" title="show/hide the navigation"></i>
+                </a>
+            </div>
+            <a href="/apps">
+                <img src="/assets/images/lic-logo.png" id="logo" style="padding: 0px 40px 0px 20px;margin-top: 10px;">
+            </a>
+            <div class="sections">
+                <a class="nav active" href="/apps">My Apps</a>
+                <a class="nav" href="/docs">API Docs</a>
+                <a class="nav" href="/support">Support</a>
+            </div>
+            <div class="fd-dropdown mobile-only">
+                <a id="dLabel" data-target="#" class="nav" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+        Reference
+        <i class="fa fa-chevron-down"></i>
+      </a>
+                <ul class="fd-dropdown-menu" aria-labelledby="dLabel">
+                    <li><a href="/apps">My Apps</a></li>
+                    <li><a href="/docs">API Docs</a></li>
+                    <li><a href="/support">Support</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="search">
+            <div class="search-input-wrapper">
+                <i class="fa fa-search"></i>
+                <input class="search-box" type="text" placeholder="Search" value="" style="height:31px;width:292px">
+            </div>
+            <div class="search-results" style="display: none;">
+            </div>
+        </div>
+        <div class="right">
+            <div class="dropdown" style="padding: 0px 20px 0px 10px;margin-top: 7px;">
+                <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <img src="assets/images/me.jpeg" class="img-rounded" width="38">
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid">
+        <div class="content-wrapper">
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1>My Applications
+                    <div class="pull-right">
+                        <button class="btn btn-sky-blue-fill btn-lg">New App</button>
+                    </div>
+                    </h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th>Application ID</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="#">Farm Project 1</a></td>
+                                <td>A short description about the project.</td>
+                                <td>farm-indigo-bravo</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Agri-grow</a></td>
+                                <td>A short description about the project.</td>
+                                <td>agri-grow</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+<script src="js/bootstrap.min.js"></script>
+
+</html>
