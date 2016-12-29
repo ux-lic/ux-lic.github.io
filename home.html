@@ -33,54 +33,52 @@
                     <i class="fa fa-bars" title="show/hide the navigation"></i>
                 </a>
             </div>
-            <a href="/apps">
+            <a href="/home">
                 <img src="/assets/images/lic-logo.png" id="logo" style="padding: 0px 40px 0px 20px;margin-top: 10px;">
             </a>
-            <div class="sections">
-                <a class="nav active" href="/apps">My Apps</a>
-                <a class="nav" href="/docs">API Docs</a>
-                <a class="nav" href="/support">Support</a>
-            </div>
-            <div class="fd-dropdown mobile-only">
-                <a id="dLabel" data-target="#" class="nav" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-        Reference
-        <i class="fa fa-chevron-down"></i>
-      </a>
-                <ul class="fd-dropdown-menu" aria-labelledby="dLabel">
-                    <li><a href="/apps">My Apps</a></li>
-                    <li><a href="/docs">API Docs</a></li>
-                    <li><a href="/support">Support</a></li>
-                </ul>
-            </div>
+
         </div>
-        <div class="search">
-            <div class="search-input-wrapper">
-                <i class="fa fa-search"></i>
-                <input class="search-box" type="text" placeholder="Search" value="" style="height:31px;width:292px">
-            </div>
-            <div class="search-results" style="display: none;">
-            </div>
-        </div>
+
         <div class="right">
-            <div class="dropdown" style="padding: 0px 20px 0px 10px;margin-top: 7px;">
-                <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    <img src="assets/images/me.jpeg" class="img-rounded" width="38">
+            <div class="sections">
+                <a class="nav" style="margin-top: 5px;" href="/docs">API Docs</a>
+                <a href="" class="nav" style="margin-top: 10px;">
+                    <img src="assets/images/me.jpeg" class="img-rounded" width="34">
                 </a>
             </div>
+
         </div>
     </div>
 
-
-    <div class="container-fluid">
+    <div class="apps-header">
+        <div class="container">
+            <h3>Welcome LIC Developer</h3>
+            <p>
+                Continue building your apps with LIC APIs using some of the resources below<br> or consult our documentation for guideance and tutorials.
+            </p>
+            <ul class="list-unstyled list-inline  ">
+                <li>
+                    <a href=""><i class="fa fa-list"></i> Documentation</a>
+                </li>
+                <li>
+                    <a href=""><i class="fa fa-code"></i> Samples</a>
+                </li>
+                <li>
+                    <a href=""><i class="fa fa-comment-o"></i> Support</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
         <div class="content-wrapper">
 
             <div class="row">
                 <div class="col-sm-12">
-                    <h1>My Applications
+                    <h4 class="text-muted">Your applications using our APIs
                     <div class="pull-right">
-                        <button class="btn btn-sky-blue-fill btn-lg">New App</button>
+                        <button class="btn btn-sky-blue-stroke">Create New App</button>
                     </div>
-                    </h1>
+                  </h4>
                 </div>
             </div>
 
@@ -92,18 +90,21 @@
                                 <th>Name</th>
                                 <th>Description</th>
                                 <th>Application ID</th>
+                                <th>Key</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><a href="#">Farm Project 1</a></td>
+                                <td><a href="/demo-app">Farm Project 1</a></td>
                                 <td>A short description about the project.</td>
                                 <td>farm-indigo-bravo</td>
+                                <td><button class="btn btn-sm btn-dark-blue-stroke">Generate Key</button></td>
                             </tr>
                             <tr>
-                                <td><a href="#">Agri-grow</a></td>
+                                <td><a href="/demo-app">Agri-grow</a></td>
                                 <td>A short description about the project.</td>
                                 <td>agri-grow</td>
+                                <td>89467456b5cfdc9458967945876vn</td>
                             </tr>
                         </tbody>
                     </table>
