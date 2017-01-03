@@ -1,9 +1,9 @@
 //show hide funtion buttons
 $('table tbody tr').mouseover(function() {
-    $(this).find('td .btn-group').removeClass('transparent');
+    $(this).find('td .btn-group').removeClass('hover-button');
 });
 $('table tbody tr').mouseout(function() {
-    $(this).find('td .btn-group').addClass('transparent');
+    $(this).find('td .btn-group').addClass('hover-button');
 });
 
 // Copy to clipboard
@@ -16,9 +16,17 @@ function copyKey($this) {
   document.execCommand("copy");
   dummy.remove();
 
-  notifire({
-  	msg: 'UID Copied to clipboard',
-  	position: 'right',
-    timeout: 2000
-  });
+  toastr.success(key,'UID Copied to clipboard')
+  // notifire({
+  // 	msg: 'UID Copied to clipboard',
+  // 	position: 'right',
+  //   timeout: 2000,
+  //   callback: function() {
+  //     notifire({
+  //     	msg: key,
+  //     	position: 'right',
+  //       timeout: 5000
+  //     })
+  //   }
+  // });
 }

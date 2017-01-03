@@ -46,6 +46,13 @@ A section title appears in the menu as a section.
 Explain what an OAuth client is
 
 ### Create an OAuth client
+this is just an example of what this sample might look like
+```
+gapi.client.init({
+  'apiKey': 'YOUR_API_KEY',
+  ...
+}).then(...)
+```
 
 ## Errors
 ## Versioning

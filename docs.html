@@ -136,7 +136,7 @@
         //flatdoc content loaded
         $(document).on('flatdoc:ready', function() {
             // add code background panel
-            $('.content-inner').append('<div class="code-samples"></div>');
+            $('.content-inner .content').append('<div class="code-samples"></div>');
 
             $("pre > code").each(function() {
                 var $code = $(this);

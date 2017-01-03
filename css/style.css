@@ -5,9 +5,16 @@
  * Some variables and mixins from Bootstrap (Apache 2 license).
  */
 
-.transparent {
-    opacity: 0;
+.hover-button {
+    opacity: 1;
     transition: 0.2s;
+}
+
+@media (min-width:768px) {
+    .hover-button {
+        opacity: 0;
+        transition: 0.2s;
+    }
 }
 
 #button-blue, .feedback-input {
