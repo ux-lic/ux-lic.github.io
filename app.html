@@ -74,10 +74,10 @@
                                 <h4>Farm Project 1</h4></div>
                         </div>
                     </div>
-                    <ul class="nav nav-tabs ">
-                        <li role="presentation" class="active"><a href="#auth"><i class="fa fa-users"></i><span class="hidden-xs"> Authentication</span></a></li>
-                        <li role="presentation"><a href="#settings"><i class="fa fa-sliders"></i><span class="hidden-xs"> Settings</span></a></li>
-                        <li role="presentation"><a href="#stats"><i class="fa fa-pie-chart"></i><span class="hidden-xs"> Statistics</span></a></li>
+                    <ul class="nav nav-tabs " role="tablist">
+                        <li role="presentation" class="active"><a href="#auth" role="tab" data-toggle="tab"><i class="fa fa-users"></i><span class="hidden-xs"> Authentication</span></a></li>
+                        <li role="presentation"><a href="#settings" role="tab" data-toggle="tab"><i class="fa fa-sliders"></i><span class="hidden-xs"> Settings</span></a></li>
+                        <li role="presentation"><a href="#stats" role="tab" data-toggle="tab"><i class="fa fa-pie-chart"></i><span class="hidden-xs"> Statistics</span></a></li>
                     </ul>
                     <div class="tab-content">
                         <!-- Authentication Tab -->
@@ -87,6 +87,7 @@
                                     <thead>
                                         <tr>
                                             <th>Email</th>
+                                            <th>Full Name</th>
                                             <th>Company</th>
                                             <th>Created</th>
                                             <th>Status</th>
@@ -96,24 +97,12 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>name@email.co.nz</td>
+                                            <td>me@jfish.co.nz</td>
+                                            <td>John Fish</td>
                                             <td>MuckTech</td>
                                             <td>29 Dec 2016</td>
-                                            <td>Yes</td>
-                                            <td>9poiPQt9RkYW6qBpGiHGy1Az0g73</td>
-                                            <td>
-                                                <div class="hover-button btn-group btn-group-xs">
-                                                    <button onclick="copyKey(this);" class="btn btn-link"><i class="fa fa-copy"></i></button>
-                                                    <button class="btn btn-link"><i class="fa fa-ellipsis-v"></i></button>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr class="active">
-                                            <td>dom@lic.co.nz <span class="label label-default">Disabled</span></td>
-                                            <td>LIC</td>
-                                            <td>29 Dec 2016</td>
-                                            <td>No</td>
-                                            <td>6qBpGiHGy1Az0g739poiPQt9RkYW</td>
+                                            <td>Confirmed</td>
+                                            <td style="width:200px">9poiPQt9RkYW6qBpGiHGy1Az0g73</td>
                                             <td>
                                                 <div class="hover-button btn-group btn-group-xs">
                                                     <button onclick="copyKey(this);" class="btn btn-link"><i class="fa fa-copy"></i></button>
@@ -122,11 +111,40 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>name@email.co.nz</td>
-                                            <td>MuckTech</td>
+                                            <td>dom@lic.co.nz</td>
+                                            <td>Dominic Shooter</td>
+                                            <td>LIC</td>
                                             <td>29 Dec 2016</td>
-                                            <td>Yes</td>
-                                            <td>9poiPQt9RkYW6qBpGiHGy1Az0g73</td>
+                                            <td>Confirmed</td>
+                                            <td style="width:200px">6qBpGiHGy1Az0g739poiPQt9RkYW</td>
+                                            <td>
+                                                <div class="hover-button btn-group btn-group-xs">
+                                                    <button onclick="copyKey(this);" class="btn btn-link"><i class="fa fa-copy"></i></button>
+                                                    <button class="btn btn-link"><i class="fa fa-ellipsis-v"></i></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="active">
+                                            <td>jo@email.co.nz <span class="label label-default">Disabled</span></td>
+                                            <td>Jo Wood</td>
+                                            <td></td>
+                                            <td>29 Dec 2016</td>
+                                            <td>Confirmed</td>
+                                            <td style="width:200px">9poiPQt9RkYW6qBpGiHGy1Az0g73</td>
+                                            <td>
+                                                <div class="hover-button btn-group btn-group-xs">
+                                                    <button onclick="copyKey(this);" class="btn btn-link"><i class="fa fa-copy"></i></button>
+                                                    <button class="btn btn-link"><i class="fa fa-ellipsis-v"></i></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>sarah@email.co.nz</td>
+                                            <td>Sarah Reeves</td>
+                                            <td>MuckTech</td>
+                                            <td>11 Dec 2016</td>
+                                            <td>Pending</td>
+                                            <td style="width:200px">9poiPQt9RkYW6qBpGiHGy1Az0g73</td>
                                             <td>
                                                 <div class="hover-button btn-group btn-group-xs">
                                                     <button onclick="copyKey(this);" class="btn btn-link"><i class="fa fa-copy"></i></button>
@@ -137,17 +155,81 @@
 
                                     </tbody>
                                 </table>
+                                <div class="panel-body">
+                                    <div class="pull-right">
+                                        <button class="btn btn-sky-blue-stroke" data-toggle="modal" data-target=".create-user">Create User</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <!-- Settings Tab -->
-                        <div role="tabpanel" class="tab-pane" id="settings">...</div>
+                        <div role="tabpanel" class="tab-pane" id="settings">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <label for="ap-name">Application Name</label>
+                                            <input type="text" class="form-control" name="app-name" value="Farm Project 1">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="app-desc">Application Description</label>
+                                            <textarea class="form-control" name="app-desc" value="A short description about the project.">A short description about the project.</textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="app-id">Application ID</label>
+                                            <p class="form-control-static" name="app-id">5e9a5d76b2f849f1aa31508f983d515f</p>
+                                            <p>Always store keys securely! <a href="#">Regenerate</a> your application ID if you supect it has been compromised!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+
+                                </div>
+                            </div>
+                        </div>
                         <!-- Statistics Tab -->
-                        <div role="tabpanel" class="tab-pane" id="stats">...</div>
+                        <div role="tabpanel" class="tab-pane" id="stats">
+                            No data available
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
+
+        <div class="modal fade create-user" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Create New User</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="user-name">Full Name</label>
+                                <input type="text" class="form-control" name="user-name" placeholder="Developer's Full Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="user-email">Email</label>
+                                <input type="email" class="form-control" name="user-email" placeholder="Developer's Email">
+                            </div>
+                            <div class="form-group">
+                                <label for="user-company">Company</label>
+                                <input type="text" class="form-control" name="user-company" placeholder="Developer's Company Name">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-dark-blue-stroke" data-dismiss="modal">Create User</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
 
 </body>
 
