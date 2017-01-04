@@ -10,10 +10,30 @@
     transition: 0.2s;
 }
 
+.password input {
+    padding-right: 30px;
+}
+
 @media (min-width:768px) {
     .hover-button {
         opacity: 0;
         transition: 0.2s;
+    }
+}
+
+.password>.toggle-mask {
+    display: none;
+    position: absolute;
+    bottom: 72px;
+    right: 42px;
+    cursor: pointer;
+    color: #7d7d7d;
+}
+
+@media (min-width:768px) {
+    .password>.toggle-mask {
+        bottom: 91px;
+        right: 42px;
     }
 }
 
@@ -1185,22 +1205,6 @@ hr {
 
 .table-scrollable {
     overflow-x: auto
-}
-
-
-/*!
-Ionicons, v2.0.0
-Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
-https://twitter.com/benjsperry  https://twitter.com/ionicframework
-MIT License: https://github.com/driftyco/ionicons
-*/
-
-@font-face {
-    font-family: Ionicons;
-    src: url(../assets/fonts/ionicons.eot?v=2.0.0);
-    src: url(../assets/fonts/ionicons.eot?v=2.0.0#iefix) format("embedded-opentype"), url(../assets/fonts/ionicons.ttf?v=2.0.0) format("truetype"), url(../assets/fonts/ionicons.woff?v=2.0.0) format("woff"), url(../assets/fonts/ionicons.svg?v=2.0.0#Ionicons) format("svg");
-    font-weight: 400;
-    font-style: normal
 }
 
 .clearfix:after, .clearfix:before, .core-butt, .pattern {

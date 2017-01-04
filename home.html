@@ -13,6 +13,7 @@
     <link href='css/font.css' rel='stylesheet'>
     <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/toastr.css" type="text/css" media="all">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
     <!-- Meta -->
@@ -42,7 +43,7 @@
         <div class="right">
             <div class="sections">
                 <a class="nav" style="margin-top: 5px;" href="/docs">API Docs</a>
-                <a href="" class="nav" style="margin-top: 10px;">
+                <a href="" role="button" class="nav" style="margin-top: 10px;">
                     <img src="assets/images/me.jpeg" class="img-rounded" width="34">
                 </a>
             </div>
@@ -76,7 +77,7 @@
                 <div class="col-sm-12">
                     <h4 class="text-muted">Your applications using our APIs
                     <div class="pull-right">
-                        <button class="btn btn-sky-blue-stroke">Create New App</button>
+                        <button class="btn btn-sky-blue-stroke" data-toggle="modal" data-target=".create-app">Create New App</button>
                     </div>
                   </h4>
                 </div>
@@ -98,7 +99,7 @@
                                 <td><a href="/app">Farm Project 1</a></td>
                                 <td>A short description about the project.</td>
                                 <td>farm-indigo-bravo</td>
-                                <td><button class="btn btn-sm btn-dark-blue-stroke">Request Key</button></td>
+                                <td><button id="proto-request" class="btn btn-sm btn-dark-blue-stroke">Request Key</button></td>
                             </tr>
                             <tr>
                                 <td><a href="/app">Agri-grow</a></td>
@@ -113,10 +114,46 @@
         </div>
     </div>
 
+    <div class="modal fade create-app" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Create New Application</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label>Application Name</label>
+                            <input type="text" class="form-control app-name" maxlength="32" name="app-name" placeholder="Application Name">
+                        </div>
+                        <div class="form-group">
+                            <label>Application Description</label>
+                            <textarea type="textarea" class="form-control app-desc" max="240" rows="3" name="app-desc" placeholder="Application Description"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Unique ID</label>
+                            <input type="text" class="form-control app-id" maxlength="32" name="app-id" placeholder="Unique Identifier">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-dark-blue-stroke" data-dismiss="modal">Create App</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
 
 </body>
 
 
 <script src="js/bootstrap.min.js"></script>
+<script src="js/toastr.min.js"></script>
+<script src="js/app.js"></script>
 
 </html>
