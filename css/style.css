@@ -108,7 +108,7 @@
 }
 
 #name, #name:focus {
-    background-image: url(/assets/images/cperson.svg)
+    background-image: url(/images/cperson.svg)
 }
 
 #category, #comment, #name {
@@ -135,12 +135,12 @@ select {
 }
 
 #email, #email2, #email2:focus, #email:focus {
-    background-image: url(/assets/images/email.svg);
+    background-image: url(/images/email.svg);
     background-position: 11px 8px
 }
 
 #comment {
-    background-image: url(/assets/images/write.svg)
+    background-image: url(/images/write.svg)
 }
 
 #category {
@@ -248,7 +248,7 @@ input:focus, input:hover, textarea:focus, textarea:hover {
 
 @font-face {
     font-family: Inconsolata;
-    src: url(../assets/fonts/Inconsolata.otf) format("opentype")
+    src: url(../fonts/Inconsolata.otf) format("opentype")
 }
 
 a, abbr, acronym, address, applet, big, blockquote, body, caption, cite, code, dd, del, dfn, div, dl, dt, em, fieldset, form, h1, h2, h3, h4, h5, h6, html, iframe, img, ins, kbd, label, legend, li, object, ol, p, pre, q, s, samp, small, span, strike, strong, sub, sup, table, tbody, td, tfoot, th, thead, tr, tt, ul, var {
@@ -260,7 +260,7 @@ a, abbr, acronym, address, applet, big, blockquote, body, caption, cite, code, d
     font-style: inherit;
     font-family: inherit;
     font-size: 100%;
-    vertical-align: baseline
+    vertical-align: baseline;
 }
 
 .content code, .content code span {
@@ -3004,7 +3004,7 @@ a.buttonTextHelp {
     background-position: calc(50% + 128px) 0;
     padding: 48px 0 52px 0;
     background-color: white;
-    background-image: url(../assets/images/welcome.png);
+    background-image: url(../images/welcome.png);
     background-repeat: no-repeat;
     -webkit-background-size: auto 100%;
     background-size: auto 100%;
