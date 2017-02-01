@@ -1,0 +1,53 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:image" content="preview.png" />
+
+    <title>LIC Architechture</title>
+
+    <!-- LIC -->
+    <link href='css/font.css' rel='stylesheet'>
+    <link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+    <link title="timeline-styles" rel="stylesheet" href="css/font.css">
+
+    <!-- 2 -->
+    <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+
+</head>
+
+<body>
+    <div id='timeline-embed' style="width: 100%; height: 800px"></div>
+
+</body>
+<!-- Jquery only required for DomS -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+    // The TL.Timeline constructor takes at least two arguments:
+    // the id of the Timeline container (no '#'), and
+    // the URL to your JSON data file or Google spreadsheet.
+    // the id must refer to an element "above" this code,
+    // and the element must have CSS styling to give it width and height
+    // optionally, a third argument with configuration options can be passed.
+    // See below for more about options.
+    var options = {
+        timenav_height_percentage: 50,
+        duration: 1000
+    }
+    timeline = new TL.Timeline('timeline-embed',
+        'https://docs.google.com/spreadsheets/d/1jTFc5st9XCZAk9pfXjYymC4c9uZbLcmf-JRoF5ePttI/pubhtml', options);
+
+    /*
+_onStorySliderNext:function(t){this.fire("nav_next",t)},
+
+_onButtonBackToStart:function(t){this.fire("back_to_start",t)}
+
+        */
+</script>
+
+</html>
