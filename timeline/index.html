@@ -8,12 +8,13 @@
     <meta name="viewport" content="width=device-width">
     <meta property="og:image" content="preview.png" />
 
-    <title>LIC Architechture</title>
+    <title>LIC Architecture</title>
 
     <!-- LIC -->
     <link href='css/font.css' rel='stylesheet'>
     <link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
     <link title="timeline-styles" rel="stylesheet" href="css/font.css">
+    <link title="timeline-styles" rel="stylesheet" href="../css/bootstrap.min.css">
 
     <!-- 2 -->
     <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
@@ -21,6 +22,22 @@
 </head>
 
 <body>
+    <div id="control-panel">
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 ">
+                    <h3>Choose timeline to display</h3>
+                    <div class="panel panel-default">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-pills nav-stacked" role="tablist"></ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
     <div id='timeline-embed' style="width: 100%; height: 800px"></div>
 
 </body>
@@ -28,6 +45,21 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 <script type="text/javascript">
+    //Google docs sheets
+    var sheets = '{ "sheets" : [' +
+        '{ "url":"https://docs.google.com/spreadsheets/d/1jTFc5st9XCZAk9pfXjYymC4c9uZbLcmf-JRoF5ePttI/pubhtml","name":"Farmer Facing"},' +
+        '{ "url":"","name":""},' +
+        '{ "url":"","name":""}' +
+        ']}';
+
+    var obj = JSON.parse(sheets);
+
+    // build menu
+    for (var i = 0; i < obj.sheets.length; i++) {
+        if (obj.sheets[i].url.length) $('#control-panel ul').append('<li role="presentation"><a href="#t' + i + '" aria-controls="t' + i + '" role="tab" data-toggle="tab">' +
+            obj.sheets[i].name + '</a></li>');
+    }
+
     // The TL.Timeline constructor takes at least two arguments:
     // the id of the Timeline container (no '#'), and
     // the URL to your JSON data file or Google spreadsheet.
@@ -36,19 +68,29 @@
     // optionally, a third argument with configuration options can be passed.
     // See below for more about options.
     var options = {
-        timenav_height_percentage: 50,
+        timenav_height_percentage: 40,
         duration: 1000,
         scale_factor: 1
     }
-    timeline = new TL.Timeline('timeline-embed',
-        'https://docs.google.com/spreadsheets/d/1jTFc5st9XCZAk9pfXjYymC4c9uZbLcmf-JRoF5ePttI/pubhtml', options);
 
-    /*
-_onStorySliderNext:function(t){this.fire("nav_next",t)},
 
-_onButtonBackToStart:function(t){this.fire("back_to_start",t)}
 
-        */
+    //console.log(obj.sheets[0].sheet);
+
+    $('ul li').each(function(index) {
+        $(this).click(function() {
+            // console.log(index);
+            if (obj.sheets[index].url.length) {
+                $('#control-panel').hide();
+                timeline = new TL.Timeline('timeline-embed',
+                    obj.sheets[index].url, options);
+            } else {
+                $('#control-panel').append('<div class="alert alert-warning alert-dismissible" role="alert">' +
+                    '<strong>Sheet url not found:</strong> Index:' + index + '' + obj.sheets[index].url + '' +
+                    '</div>');
+            }
+        })
+    })
 </script>
 
 </html>
