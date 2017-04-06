@@ -5,6 +5,18 @@
  * Some variables and mixins from Bootstrap (Apache 2 license).
  */
 
+.py {
+    padding: 20px 0;
+}
+
+.pb {
+    padding-bottom: 20px;
+}
+
+footer .lic-logo {
+    height: 20px;
+}
+
 .hover-button {
     opacity: 1;
     transition: 0.2s;
