@@ -2793,8 +2793,8 @@ footer #language_picker2 .language-dropdown .tick-mark {
 
 .social-proof p {
     font-family: "Booster FY", Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    font-size: 1rem;
+    /*font-size: 16px;
+    font-size: 1rem;*/
     line-height: 24px;
     line-height: 1.5rem;
     -webkit-font-smoothing: antialiased;
