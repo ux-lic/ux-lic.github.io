@@ -1,0 +1,41 @@
+.py {
+  padding: 20px 0;
+}
+
+.pb {
+  padding-bottom: 20px;
+}
+
+.content-wrapper {
+  padding-top: 60px;
+}
+
+.profile-header {
+  /*background-position: -webkit-calc(50% + 128px) 0;*/
+  background-position: 0;
+  position: fixed;
+  /*background-position: calc(50% + 128px) 0;*/
+  height: 306px;
+  background-color: white;
+  background-image: url(../images/grass.jpg);
+  background-repeat: repeat-x;
+  /*-webkit-background-size: 100% 100%;
+  background-size: 100% 100%;*/
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.12);
+}
+
+#logo {
+  height: 34px;
+  display: block;
+  padding: 10px 40px 8px 20px
+}
+
+.header .left a {
+  display: inline-block;
+  float: left
+}
+
+.header .left a.nav {
+  margin-right: 22px
+}
