@@ -85,26 +85,24 @@
             <div class="tab-content" style="background-color:#F7F9FD">
               <div role="tabpanel" class="tab-pane active" id="farm">
                 <div id="myDiagramDiv" style="border: solid 1px black; width:100%; height:600px"></div>
-                <div class="panel panel-default">
-                  <div class="panel-body">
-                    <p>
-                      The node template uses a custom <a>Part.selectionAdornmentTemplate</a> to add a row of Buttons when the node is selected. Select a node and you will see the Buttons for the node.
-                    </p>
-                    <p>
-                      The first button, "T", when clicked, starts in-place editing of the text.
-                    </p>
-                    <p>
-                      The second button, "C", when clicked, changes the color of the node, rotating through a list of colors.
-                    </p>
-                    <p>
-                      The third button, "L", when clicked or dragged, starts the <a>LinkingTool</a>, drawing a new link starting at the selected node.
-                    </p>
-                    <p>
-                      The fourth button, "N", when clicked, adds a new node and creates a link from the selected node to the new node. Dragging from the fourth button does the same thing as a click but also activates the <a>DraggingTool</a>, allowing
-                      the user to drag the new node where they like.
-                    </p>
-                  </div>
+                <div>
+                  <button id="SaveButton" onclick="save()">Save</button>
+                  <button onclick="load()">Load</button> Diagram Model saved in JSON format:
                 </div>
+                <textarea id="mySavedModel" class="form-control" style="width:100%;height:300px">
+                  { "class": "go.GraphLinksModel",
+                    "nodeDataArray": [
+                  {"key":1, "text":"JJ Family Farm", "color":"white", "stroke":"blue", "location":"0 0"},
+                  {"key":2, "text":"JJ Farms Ltd", "color":"white", "stroke":"blue", "location":"200 0"},
+                  {"key":3, "text":"Animal Group", "color":"white", "stroke":"blue", "location":"250 200"},
+                  {"key":4, "text":"Good Paddock Ltd", "color":"lightgray", "stroke":"lightgray", "location":"150 300"}
+                   ],
+                    "linkDataArray": [
+                  {"from":1, "to":2},
+                  {"from":2, "to":3},
+                  {"from":4, "to":3}
+                   ]}
+                </textarea>
               </div>
               <div role="tabpanel" class="tab-pane" id="orders">Order Lists</div>
               <div role="tabpanel" class="tab-pane" id="billing">Billing information</div>
@@ -400,6 +398,15 @@
       ]);
 
     myDiagram.findNodeForKey(1).isSelected = true;
+  }
+
+  // Show the diagram's model in JSON format
+  function save() {
+    document.getElementById("mySavedModel").value = myDiagram.model.toJson();
+  }
+
+  function load() {
+    myDiagram.model = go.Model.fromJson(document.getElementById("mySavedModel").value);
   }
 
   init();
