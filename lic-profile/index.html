@@ -20,6 +20,8 @@
   <meta content="LIC Developer" property="og:title">
   <meta content="LIC Developer a prototype design." name="description">
   <link rel="icon" href="../favicon.ico">
+  <!-- Custom -->
+  <script src="https://use.fontawesome.com/37821384dd.js"></script>
 
 </head>
 
@@ -119,7 +121,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gojs/1.7.12/go.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/app.js"></script>
+<script src="js/buttons.js"></script>
 
 
 <script>
@@ -154,7 +156,7 @@
 
     myDiagram.nodeTemplate =
       $(go.Node, "Auto", {
-          desiredSize: new go.Size(80, 80),
+          desiredSize: new go.Size(90, 90),
           // rearrange the link points evenly along the sides of the nodes as links are
           // drawn or reconnected -- these event handlers only make sense when the fromSpot
           // and toSpot are Spot.xxxSides
@@ -191,13 +193,14 @@
           new go.Binding("fill", "color").makeTwoWay()),
         $(go.TextBlock, {
             name: "TEXTBLOCK", // named so that editText can start editing it
-            margin: 3,
+            margin: 1,
+            font: "9pt Booster FY",
             // use the following property if you want users to interactively start
             // editing the text by clicking on it or by F2 if the node is selected:
             //editable: true,
             overflow: go.TextBlock.OverflowEllipsis,
             textAlign: "center",
-            maxLines: 5
+            maxLines: 3
           },
           new go.Binding("text").makeTwoWay())
       );
@@ -210,7 +213,7 @@
           //selected state
           $(go.Shape, "Circle", {
             stroke: "#009cde",
-            desiredSize: new go.Size(80, 80),
+            desiredSize: new go.Size(90, 90),
             strokeWidth: 2,
             fill: null
           }),
@@ -223,24 +226,17 @@
           $("Button", {
               click: editText,
             }, // defined below, to support editing the text of the node
-            $(go.TextBlock, "Edit", {
-              font: "10pt sans-serif",
-              // desiredSize: new go.Size(30, 30),
+            $(go.TextBlock, {
+              text: "\uf040",
+              verticalAlignment: go.Spot.Center,
+              margin: 2
+            }, {
+              font: "10pt FontAwesome",
+              stroke: "white",
+              desiredSize: new go.Size(20, 20),
               textAlign: "center"
             }),
           ),
-          // $("Button", {
-          //     click: changeColor,
-          //     "_buttonFillOver": "transparent"
-          //   }, // defined below, to support changing the color of the node
-          //   new go.Binding("ButtonBorder.fill", "color", nextColor),
-          //   $(go.Shape, {
-          //     fill: null,
-          //     stroke: null,
-          //     desiredSize: new go.Size(14, 14)
-          //   })
-          // ),
-
           $("Button", {
               actionMove: dragNewNode, // defined below, to support dragging from the button
               _dragData: {
@@ -249,9 +245,14 @@
               }, // node data to copy
               click: clickNewNode // defined below, to support a click on the button
             },
-            $(go.TextBlock, "Add", {
-              font: "10pt sans-serif",
-              // desiredSize: new go.Size(30, 30),
+            $(go.TextBlock, {
+              text: "\uf067",
+              verticalAlignment: go.Spot.Center,
+              margin: 2
+            }, {
+              font: "10pt FontAwesome",
+              stroke: "white", //this sets the color boo ):
+              desiredSize: new go.Size(20, 20),
               textAlign: "center"
             })
           )
