@@ -134,6 +134,26 @@
     </div>
   </div>
 
+  <div class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Modal title</h4>
+        </div>
+        <div class="modal-body">
+          <p>One fine body&hellip;</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
 
 </body>
 
@@ -320,12 +340,12 @@
             }),
           ),
           $("Button", {
-              // actionMove: dragNewNode, // defined below, to support dragging from the button
-              // _dragData: {
-              //   text: "New Place",
-              //   color: "white"
-              // }, // node data to copy
-              click: launchModal // defined below, to support a click on the button
+              actionMove: dragNewNode, // defined below, to support dragging from the button
+              _dragData: {
+                text: "New Place",
+                color: "white"
+              }, // node data to copy
+              click: clickNewNode // defined below, to support a click on the button
             },
             $(go.TextBlock, {
               text: "\uf067",
@@ -427,7 +447,7 @@
 
     //TODO This will be applied from a dialog so that the user can define the place
     function launchModal(e, button) {
-      alert('This is just a test im not actually going to ue this shit');
+      //  document.getElementById("myModal").show();
     }
     // the Button.click event handler, called when the user clicks the "N" button
     function clickNewNode(e, button) {
