@@ -143,6 +143,56 @@
 
 
 <script>
+  // This variation on ForceDirectedLayout does not move any selected Nodes
+  // but does move all other nodes (vertexes).
+  function ContinuousForceDirectedLayout() {
+    go.ForceDirectedLayout.call(this);
+    this._isObserving = false;
+  }
+  go.Diagram.inherit(ContinuousForceDirectedLayout, go.ForceDirectedLayout);
+
+  /** @override */
+  ContinuousForceDirectedLayout.prototype.isFixed = function(v) {
+    return v.node.isSelected;
+  }
+
+  // optimization: reuse the ForceDirectedNetwork rather than re-create it each time
+  /** @override */
+  ContinuousForceDirectedLayout.prototype.doLayout = function(coll) {
+    if (!this._isObserving) {
+      this._isObserving = true;
+      // cacheing the network means we need to recreate it if nodes or links have been added or removed or relinked,
+      // so we need to track structural model changes to discard the saved network.
+      var lay = this;
+      this.diagram.addModelChangedListener(function(e) {
+        // modelChanges include a few cases that we don't actually care about, such as
+        // "nodeCategory" or "linkToPortId", but we'll go ahead and recreate the network anyway.
+        // Also clear the network when replacing the model.
+        if (e.modelChange !== "" ||
+          (e.change === go.ChangedEvent.Transaction && e.propertyName === "StartingFirstTransaction")) {
+          lay.network = null;
+        }
+      });
+    }
+    var net = this.network;
+    if (net === null) { // the first time, just create the network as normal
+      this.network = net = this.makeNetwork(coll);
+    } else { // but on reuse we need to update the LayoutVertex.bounds for selected nodes
+      this.diagram.nodes.each(function(n) {
+        var v = net.findVertex(n);
+        if (v !== null) v.bounds = n.actualBounds;
+      });
+    }
+    // now perform the normal layout
+    go.ForceDirectedLayout.prototype.doLayout.call(this, coll);
+    // doLayout normally discards the LayoutNetwork by setting Layout.network to null;
+    // here we remember it for next time
+    this.network = net;
+  }
+  // end ContinuousForceDirectedLayout
+
+
+
   function init() {
     if (window.goSamples) goSamples(); // init for these samples -- you don't need to call this
     var $ = go.GraphObject.make; // for conciseness in defining templates
@@ -150,7 +200,16 @@
     myDiagram = $(go.Diagram, "myDiagramDiv", // create a Diagram for the DIV HTML element
       {
         initialContentAlignment: go.Spot.Center, // center the content
-
+        contentAlignment: go.Spot.Center, // align document to the center of the viewport
+        layout: $(ContinuousForceDirectedLayout, // automatically spread nodes apart while dragging
+          {
+            defaultSpringLength: 30,
+            defaultElectricalCharge: 100
+          }),
+        // do an extra layout at the end of a move
+        "SelectionMoved": function(e) {
+          e.diagram.layout.invalidateLayout();
+        },
         "toolManager.mouseWheelBehavior": go.ToolManager.WheelZoom, // have mouse wheel events zoom in and out instead of scroll up and down
         "linkingTool.isEnabled": false, // invoked explicitly by drawLink function, below
         "linkingTool.direction": go.LinkingTool.ForwardsOnly, // only draw "from" towards "to"
@@ -261,12 +320,12 @@
             }),
           ),
           $("Button", {
-              actionMove: dragNewNode, // defined below, to support dragging from the button
-              _dragData: {
-                text: "New Place",
-                color: "white"
-              }, // node data to copy
-              click: clickNewNode // defined below, to support a click on the button
+              // actionMove: dragNewNode, // defined below, to support dragging from the button
+              // _dragData: {
+              //   text: "New Place",
+              //   color: "white"
+              // }, // node data to copy
+              click: launchModal // defined below, to support a click on the button
             },
             $(go.TextBlock, {
               text: "\uf067",
@@ -367,7 +426,9 @@
     }
 
     //TODO This will be applied from a dialog so that the user can define the place
-
+    function launchModal(e, button) {
+      alert('This is just a test im not actually going to ue this shit');
+    }
     // the Button.click event handler, called when the user clicks the "N" button
     function clickNewNode(e, button) {
       var data = button._dragData;
