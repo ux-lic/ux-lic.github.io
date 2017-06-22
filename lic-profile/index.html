@@ -329,6 +329,7 @@
           },
           locationSpot: go.Spot.Center
         },
+
         new go.Binding("location", "location", go.Point.parse).makeTwoWay(go.Point.stringify),
         $(go.Shape, "Circle", {
             name: "SHAPE", // named so that changeColor can modify it
@@ -347,7 +348,8 @@
             toLinkableDuplicates: true,
             toLinkableSelfNode: true
           },
-          new go.Binding("fill", "color").makeTwoWay()),
+          new go.Binding("fill", "color").makeTwoWay()
+        ),
 
         $(go.TextBlock, {
             name: "TEXTBLOCK", // named so that editText can start editing it
@@ -360,8 +362,10 @@
             textAlign: "center",
             maxLines: 3
           },
-          new go.Binding("text").makeTwoWay())
+          new go.Binding("text").makeTwoWay()
+        )
       );
+
 
     // a selected node shows an Adornment that includes both a blue border
     // and a row of Buttons above the node
@@ -436,16 +440,28 @@
           mouseDrop: function(e, obj) {
             myDiagram.commandHandler.deleteSelection();
           }
+
         },
-        $(go.Shape, {
-          fill: "lightgray",
-          stroke: "gray"
+        $(go.Shape, "Circle", {
+          stroke: "#009cde",
+          desiredSize: new go.Size(60, 60),
+          strokeWidth: 2,
+          fill: "#c8dbf1",
+          stroke: "#001e62"
         }),
-        $(go.TextBlock, "Drop Here\nTo Delete", {
-          margin: 5,
+        $(go.TextBlock, {
+          text: "\uf1f8",
+          verticalAlignment: go.Spot.Center,
+          margin: 2,
+          textAlign: "center"
+        }, {
+          font: "20pt FontAwesome",
+          stroke: "#001e62", //this sets the color boo ):
+          desiredSize: new go.Size(90, 90),
           textAlign: "center"
         })
       ));
+
 
     function editText(e, button) {
       var node = button.part.adornedPart;
@@ -589,6 +605,11 @@
           "color": "white",
           "stroke": "lightgray",
           "location": "583.0600791776492 -4.999671988101042"
+        },
+        {
+          "key": -2,
+          "category": "Recycle",
+          "loc": "4.8260339382989415 377.8205032738099"
         }
       ], [{
           "from": 1,
