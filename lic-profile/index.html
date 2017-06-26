@@ -27,7 +27,7 @@
 
 <body>
   <header>
-    <div class="navbar navbar-inverse navbar-static-top" role="navigation" style="margin:0px;">
+    <div class="navbar navbar-default navbar-static-top" role="navigation" style="margin:0px;">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -37,12 +37,12 @@
                     <span class="icon-bar"></span>
                   </button>
           <a href="home">
-            <img src="../images/MINDA-Info.svg" id="logo" style="margin-top:10px;height:60px;">
+            <img src="../images/MINDA-Info.svg" style="margin-top:10px;height:60px;">
           </a>
         </div>
         <div class="collapse navbar-collapse navbar-right">
           <ul class="nav navbar-nav" style="margin:10px 0">
-            <li><a href="/minda-info/docs"><span>Dominic Shooter</span> <img src="../images/me.jpeg" class="img-rounded" width="34"></a></li>
+            <!-- <li><a href="/minda-info/docs"><span>Dominic Shooter</span> <img src="../images/me.jpeg" class="img-rounded" width="34"></a></li> -->
 
           </ul>
         </div>
@@ -52,165 +52,119 @@
     </div>
   </header>
 
-
-  <div class="profile-header">
-
-    <div class="container">
-      <div class="content-wrapper">
-
-        <div class="row">
-          <div class="col-sm-3">
-            <div class="panel panel-default">
-              <img src="http://placehold.it/300x300/009cde/ffffff?text=DS" class="img-responsive" />
-              <div class="panel-body">
-                <h3>Dominic Shooter <br /><small>TestUser1</small></h3>
-                <p class="pb">dominic.shooter@lic.co.nz <span class="label label-primary"><i class="fa fa-check"></i> Verified</span></p>
-
-                <p><a href="#" class="btn btn-sky-blue-stroke btn-block" role="button">Edit Profile</a></p>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+        <label>Your Workforce</label>
+        <ul class="list-unstyled list-inline">
+          <li>
+            <img src="http://placehold.it/32x32" class="img-circle img-responsive" width="32" height="32" />
+          </li>
+          <li>
+            <img src="http://placehold.it/32x32" class="img-circle img-responsive" width="32" height="32" />
+          </li>
+          <li>
+            <img src="http://placehold.it/32x32" class="img-circle img-responsive" width="32" height="32" />
+          </li>
+          <li>
+            <img src="http://placehold.it/32x32" class="img-circle img-responsive" width="32" height="32" />
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div id="myDiagramDiv" style="width:100%; height:600px"></div>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="btn-group">
+              <button type="button" class="btn btn-dark-blue-stroke" onclick="myDiagram.commandHandler.zoomToFit()">Zoom to Fit</button>
+            </div>
+            <div class="btn-toolbar pull-right" role="toolbar" aria-label="...">
+              <div class="btn-group">
+                <button id="SaveButton" class="btn btn-dark-blue-stroke" onclick="save()"><i class="fa fa-code"></i> Get JSON</button>
+                <button class="btn btn-dark-blue-stroke" onclick="load()"><i class="fa fa-code"></i> Update AgriOp</button>
               </div>
-              <ul class="list-group">
-                <li class="list-group-item">Farms <span class="badge">4</span></li>
-                <li class="list-group-item">Animal Groups <span class="badge">2</span></li>
-
-              </ul>
             </div>
           </div>
-          <div class="col-sm-9">
-            <!-- Nav tabs -->
-            <ul class="nav nav-tabs nav-justified" role="tablist" style="background-color:white;">
-              <li role="presentation" class="active"><a href="#farm" aria-controls="farm" role="tab" data-toggle="tab">My Farm</a></li>
-              <li role="presentation"><a href="#orders" aria-controls="orders" role="tab" data-toggle="tab">Orders</a></li>
-              <li role="presentation"><a href="#billing" aria-controls="billing" role="tab" data-toggle="tab">Billing</a></li>
-            </ul>
-
-            <!-- Tab panes -->
-            <div class="tab-content" style="background-color:#F7F9FD">
-              <div class="panel panel-default">
-                <div class="panel-body">
-                  <h3>What does your farm look like </h3>
-                </div>
-              </div>
-
-              <div role="tabpanel" class="tab-pane active" id="farm">
-                <div id="myDiagramDiv" style="width:100%; height:600px"></div>
-                <div class="panel panel-default">
-                  <div class="panel-body">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-dark-blue-stroke" onclick="myDiagram.commandHandler.zoomToFit()">Zoom to Fit</button>
-                    </div>
-                    <div class="btn-toolbar pull-right" role="toolbar" aria-label="...">
-                      <div class="btn-group">
-                        <button id="SaveButton" class="btn btn-dark-blue-stroke" onclick="save()"><i class="fa fa-code"></i> Get JSON</button>
-                        <button class="btn btn-dark-blue-stroke" onclick="load()"><i class="fa fa-code"></i> Update AgriOp</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="panel-body">
-                    <textarea id="mySavedModel" class="form-control" style="width:100%;height:300px">
-                      { "class": "go.GraphLinksModel",
-                        "nodeDataArray": [
-                        {
-                            "key": 1,
-                            "text": "JJ Family Farm",
-                            "color": "white",
-                            "stroke": "blue",
-                            "location": "247.4654683715417 -60.797614988493436"
-                          },
-                          {
-                            "key": 2,
-                            "text": "JJ Farms Ltd",
-                            "color": "white",
-                            "stroke": "blue",
-                            "location": "415.0448525675106 12.005495862128214"
-                          },
-                          {
-                            "key": 3,
-                            "text": "Animal Group",
-                            "color": "white",
-                            "stroke": "blue",
-                            "location": "505.94769426173997 182.06019658707257"
-                          },
-                          {
-                            "key": 4,
-                            "text": "Good Paddock Ltd",
-                            "color": "lightgray",
-                            "stroke": "lightgray",
-                            "location": "343.29840996101484 280.88518796413246"
-                          },
-                          {
-                            "key": 5,
-                            "text": "Vet",
-                            "color": "lightgray",
-                            "stroke": "lightgray",
-                            "location": "678.999326964163 165.44876289115973"
-                          },
-                          {
-                            "key": 6,
-                            "text": "Mob 1",
-                            "color": "white",
-                            "stroke": "lightgray",
-                            "location": "583.0600791776492 -4.999671988101042"
-                          }
-                        ], [{
-                            "from": 1,
-                            "to": 2
-                          },
-                          {
-                            "from": 2,
-                            "to": 3
-                          },
-                          {
-                            "from": 2,
-                            "to": 6
-                          },
-                          {
-                            "from": 4,
-                            "to": 3
-                          },
-                          {
-                            "from": 5,
-                            "to": 3
-                          },
-                          {
-                            "from": 5,
-                            "to": 6
-                          }
-                       ]}
-                </textarea>
-                  </div>
-                </div>
-              </div>
-              <div role="tabpanel" class="tab-pane" id="orders">Order Lists</div>
-              <div role="tabpanel" class="tab-pane" id="billing">Billing information</div>
-            </div>
+          <div class="panel-body">
+            <textarea id="mySavedModel" class="form-control" style="width:100%;height:300px">
+            { "class": "go.GraphLinksModel",
+              "nodeDataArray": [
+              {
+                  "key": 1,
+                  "text": "JJ Family Farm",
+                  "color": "white",
+                  "stroke": "blue",
+                  "location": "247.4654683715417 -60.797614988493436"
+                },
+                {
+                  "key": 2,
+                  "text": "JJ Farms Ltd",
+                  "color": "white",
+                  "stroke": "blue",
+                  "location": "415.0448525675106 12.005495862128214"
+                },
+                {
+                  "key": 3,
+                  "text": "Animal Group",
+                  "color": "white",
+                  "stroke": "blue",
+                  "location": "505.94769426173997 182.06019658707257"
+                },
+                {
+                  "key": 4,
+                  "text": "Good Paddock Ltd",
+                  "color": "lightgray",
+                  "stroke": "lightgray",
+                  "location": "343.29840996101484 280.88518796413246"
+                },
+                {
+                  "key": 5,
+                  "text": "Vet",
+                  "color": "lightgray",
+                  "stroke": "lightgray",
+                  "location": "678.999326964163 165.44876289115973"
+                },
+                {
+                  "key": 6,
+                  "text": "Mob 1",
+                  "color": "white",
+                  "stroke": "lightgray",
+                  "location": "583.0600791776492 -4.999671988101042"
+                }
+              ], [{
+                  "from": 1,
+                  "to": 2
+                },
+                {
+                  "from": 2,
+                  "to": 3
+                },
+                {
+                  "from": 2,
+                  "to": 6
+                },
+                {
+                  "from": 4,
+                  "to": 3
+                },
+                {
+                  "from": 5,
+                  "to": 3
+                },
+                {
+                  "from": 5,
+                  "to": 6
+                }
+             ]}
+      </textarea>
           </div>
         </div>
-
-
       </div>
     </div>
   </div>
-
-  <div class="modal fade" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title">Modal title</h4>
-        </div>
-        <div class="modal-body">
-          <p>One fine body&hellip;</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-      <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
   </div>
-  <!-- /.modal -->
 
 </body>
 
