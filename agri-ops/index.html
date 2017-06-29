@@ -77,7 +77,7 @@
     </div>
     <div class="row">
       <div class="col-sm-12">
-        <div id="myDiagramDiv" style="width:100%; height:600px"></div>
+        <div id="myDiagramDiv" style="width:100%; height:500px"></div>
         <div class="panel panel-default">
           <div class="panel-body">
             <div class="btn-group">
@@ -92,75 +92,25 @@
           </div>
           <div class="panel-body">
             <textarea id="mySavedModel" class="form-control" style="width:100%;height:300px">
-            { "class": "go.GraphLinksModel",
-              "nodeDataArray": [
-              {
-                  "key": 1,
-                  "text": "JJ Family Farm",
-                  "color": "white",
-                  "stroke": "blue",
-                  "location": "247.4654683715417 -60.797614988493436"
-                },
-                {
-                  "key": 2,
-                  "text": "JJ Farms Ltd",
-                  "color": "white",
-                  "stroke": "blue",
-                  "location": "415.0448525675106 12.005495862128214"
-                },
-                {
-                  "key": 3,
-                  "text": "Animal Group",
-                  "color": "white",
-                  "stroke": "blue",
-                  "location": "505.94769426173997 182.06019658707257"
-                },
-                {
-                  "key": 4,
-                  "text": "Good Paddock Ltd",
-                  "color": "lightgray",
-                  "stroke": "lightgray",
-                  "location": "343.29840996101484 280.88518796413246"
-                },
-                {
-                  "key": 5,
-                  "text": "Vet",
-                  "color": "lightgray",
-                  "stroke": "lightgray",
-                  "location": "678.999326964163 165.44876289115973"
-                },
-                {
-                  "key": 6,
-                  "text": "Mob 1",
-                  "color": "white",
-                  "stroke": "lightgray",
-                  "location": "583.0600791776492 -4.999671988101042"
-                }
-              ], [{
-                  "from": 1,
-                  "to": 2
-                },
-                {
-                  "from": 2,
-                  "to": 3
-                },
-                {
-                  "from": 2,
-                  "to": 6
-                },
-                {
-                  "from": 4,
-                  "to": 3
-                },
-                {
-                  "from": 5,
-                  "to": 3
-                },
-                {
-                  "from": 5,
-                  "to": 6
-                }
-             ]}
+              { "class": "go.GraphLinksModel",
+    "nodeDataArray": [
+  {"key":1, "text":"JJ Farms Ltd", "color":"#c8dbf1", "stroke":"blue", "location":"-121.4122976400065 -35.86993158564857"},
+  {"key":2, "text":"JJ Family Farm", "color":"white", "stroke":"blue", "location":"42.58861718884019 40.94098145500255"},
+  {"key":3, "text":"My Herd", "color":"white", "stroke":"blue", "location":"169.7906833328184 202.9383334749978"},
+  {"key":4, "text":"Good Paddock Ltd", "color":"lightgray", "stroke":"lightgray", "location":"347.43484283060445 246.20332553863108"},
+  {"key":5, "text":"Vet", "color":"lightgray", "stroke":"lightgray", "location":"290.16913640922957 42.67219177019713"},
+  {"key":20, "text":"Mob 1", "color":"white", "stroke":"blue", "location":"173.4460954733236 371.32320345915775"},
+  {"key":21, "text":"Mob 2", "color":"white", "stroke":"blue", "location":"-4.431491295588465 241.9495423278217"},
+  {"key":-2, "category":"Recycle", "loc":"125.4375078411003 776.4353615767081"}
+   ],
+    "linkDataArray": [
+  {"from":2, "to":1},
+  {"from":3, "to":2},
+  {"from":4, "to":21},
+  {"from":20, "to":3},
+  {"from":21, "to":3},
+  {"from":5, "to":3}
+   ]}
       </textarea>
           </div>
         </div>
@@ -608,77 +558,80 @@
       [{
           "key": 1,
           "text": "JJ Farms Ltd",
-          "color": "white",
+          "color": "#c8dbf1",
           "stroke": "blue",
-          "location": "247.4654683715417 -60.797614988493436"
+          "location": "-121.4122976400065 -35.86993158564857"
         },
         {
           "key": 2,
           "text": "JJ Family Farm",
           "color": "white",
           "stroke": "blue",
-          "location": "415.0448525675106 12.005495862128214"
+          "location": "42.58861718884019 40.94098145500255"
         },
         {
           "key": 3,
-          "text": "Animal Group",
+          "text": "My Herd",
           "color": "white",
           "stroke": "blue",
-          "location": "505.94769426173997 182.06019658707257"
+          "location": "169.7906833328184 202.9383334749978"
         },
         {
           "key": 4,
           "text": "Good Paddock Ltd",
           "color": "lightgray",
           "stroke": "lightgray",
-          "location": "343.29840996101484 280.88518796413246"
+          "location": "347.43484283060445 246.20332553863108"
         },
         {
           "key": 5,
           "text": "Vet",
           "color": "lightgray",
           "stroke": "lightgray",
-          "location": "678.999326964163 165.44876289115973"
+          "location": "290.16913640922957 42.67219177019713"
         },
         {
-          "key": 6,
+          "key": 20,
           "text": "Mob 1",
           "color": "white",
-          "stroke": "lightgray",
-          "location": "583.0600791776492 -4.999671988101042"
+          "stroke": "blue",
+          "location": "173.4460954733236 371.32320345915775"
+        },
+        {
+          "key": 21,
+          "text": "Mob 2",
+          "color": "white",
+          "stroke": "blue",
+          "location": "-4.431491295588465 241.9495423278217"
         },
         {
           "key": -2,
           "category": "Recycle",
-          "loc": "4.8260339382989415 377.8205032738099"
-        }, {
-          "key": 99,
-          "category": "Member",
-          "loc": "4.8260339382989415 377.8205032738099"
+          "loc": "-170.07284169263374 384.7128370935226"
         }
       ], [{
-          "from": 1,
+          "from": 2,
+          "to": 1
+        },
+        {
+          "from": 3,
           "to": 2
         },
         {
-          "from": 2,
-          "to": 3
-        },
-        {
-          "from": 2,
-          "to": 6
-        },
-        {
           "from": 4,
+          "to": 21
+        },
+        {
+          "from": 20,
+          "to": 3
+        },
+        {
+          "from": 21,
           "to": 3
         },
         {
           "from": 5,
           "to": 3
-        },
-        {
-          "from": 5,
-          "to": 6
         }
       ]);
 
