@@ -2,12 +2,13 @@
 
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-<title>Zalando Tech Radar</title>
-<link rel="shortcut icon" href="https://www.zalando.de/favicon.ico">
+<title>LIC  Tech Radar</title>
+<link rel="shortcut icon" href="https://www.lic.co.nz/favicon.ico">
 
 <link href='../css/font.css' rel='stylesheet'>
 
 <script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 <script src="radar.js"></script>
 
 <style type="text/css">
@@ -34,7 +35,7 @@
 </head>
 
 <body>
-
+<div class="results"></div> 
 <svg id="radar"></svg>
 
 <script>
@@ -42,6 +43,26 @@
   var svg_w = document.documentElement.clientWidth, svg_h = document.documentElement.clientHeight;
   if (svg_w < 1450) svg_w = 1450;
   if (svg_h < 1000) svg_w = 1000;
+
+   // ID of the Google Spreadsheet
+ var spreadsheetID = "1IIIXUn4gCI3gGgY6NJiIU-p3VQOAyngX8p8T3uRThdk";
+
+ // Make sure it is public or set to Anyone with link can view 
+ var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/2/public/values?alt=json"; //sheet 2 contains all of the things
+
+ $.getJSON(url, function(data) {
+
+  var obj = data.feed.entry; 
+
+  $(obj).each(function(){
+    // Column names are name, age, etc.
+    $('.results').prepend('{ quadrant:'+this.gsx$quadrant.$t+', ring:'+this.gsx$ring.$t+','+this.gsx$ring.$t+'</p><p>'+this.gsx$active.$t+'</p><p>'+this.gsx$link.$t+'</p><p>'+this.gsx$moved.$t+'</p>');
+  });
+
+ });
+
+
+ //build radar
 
 radar_visualization({
   svg_id: "radar",
@@ -194,12 +215,13 @@ radar_visualization({
 });
 </script>
 
+
+
 <table>
 <tr>
 <td>
 
 <h3>What is the Tech Radar?</h3>
-
 <p>
 The Zalando Tech Radar is a list of technologies, complemented by an assessment result, called <i>ring assignment</i>. We use four rings with the following semantics:
 </p>
