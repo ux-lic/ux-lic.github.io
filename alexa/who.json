@@ -2,8 +2,8 @@
 Alexa skill to find Rob Young
 */
 var who = [
-"He's in a TLT meeting",
-"He's probably in a TLT meeting",
-"Not sure have you tried the TLT meeting",
+"He's in a T. L. T. meeting",
+"He's probably in a T. L. T. meeting",
+"Not sure have you tried the T. L. T. meeting",
 "He's not here"
 ]
