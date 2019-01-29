@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Grid</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<style>
+body {
+    margin: 1rem;
+    background-color: #56575a;
+}
+
+
+.grid-container {
+    max-width: 1600px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+}
+
+/*we want 8px gaps on single columns devices for example iPhone SE*/
+@media(max-width: 359px) {
+    body {
+        margin: 0.5rem;
+    }
+
+    /*on the web simulator this won't look correct because the web renders the scrollbar in position */
+    .grid-container {
+        grid-column-gap: 0.5rem;
+        grid-row-gap: 0.5rem;
+    }
+}
+
+/*limit the width of the grid on extra-large desktops set the maximum column width to 388px so we get four columns*/
+@media(min-width: 1600px) {
+    .grid-container {
+        margin: 0 auto;
+        grid-template-columns: repeat(auto-fit, minmax(388px, 1fr));
+    }
+}
+
+/*We add some control to the to the hieght of a tile on 2 or more columns*/
+.tile {
+    background-color: #fff;
+    border-radius: 0.25rem;
+    color: #001e62;
+    min-height: 239px;
+}
+
+/*Tiles can be taller on single column display*/
+@media(max-width: 360px) {
+    .tile {
+        min-height: 185px;
+    }
+}
+
+
+
+/* Tile */
+
+.tile .header,
+.tile .footer,
+.tile .content {
+    padding: 1rem;
+}
+
+.tile .content {
+    padding-top: 0;
+}
+
+.tile .header>h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.tile .content {
+    min-height: 114px;
+}
+
+.tile .content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.tile .content .left {
+    background-color: grey;
+
+}
+
+.tile .content .right {
+    background-color: limegreen;
+    padding-left: 1rem;
+}
+
+@media(max-width: 359px) {
+    .tile .content {
+        grid-template-columns: 1fr;
+    }
+}
+
+.tile .footer {
+    margin: 0px;
+}
+
+.tile .footer label {
+    text-transform: uppercase;
+    font-size: 0.875rem;
+}
+
+.tile .footer p {
+    margin: 0;
+}
+</style>
+
+<body>
+    <div class="wrapper">
+        <div class="grid-container">
+            <div class="tile">
+                <div class="header">
+                    <h3>Herd test readiness</h3>
+                </div>
+                <div class="content">
+                    <div class="left"><canvas id="myChart" width="400" height="400"></canvas></div>
+                    <div class="right">2fr</div>
+                </div>
+                <div class="footer">
+                    <label>goal status</label>
+                    <p>Not ready</p>
+                </div>
+            </div>
+            <div class="tile">
+  <div class="header">
+                    <h3>Herd test readiness</h3>
+                </div>
+                <div class="content">
+                    <div class="left">1fr</div>
+                    <div class="right">2fr</div>
+                </div>
+                <div class="footer">
+                    <label>goal status</label>
+                    <p>Not ready</p>
+                </div>
+            </div>
+            <div class="tile">
+                <div class="header">
+                    <h3>Herd test readiness</h3>
+                </div>
+                <div class="content">
+                    <div class="left">1fr</div>
+                    <div class="right">2fr</div>
+                </div>
+                <div class="footer">
+                    <label>goal status</label>
+                    <p>Not ready</p>
+                </div>
+            </div>
+            <div class="tile">
+                <div class="header">
+                    <h3>Herd test readiness</h3>
+                </div>
+                <div class="content">
+                    <div class="left">1fr</div>
+                    <div class="right">2fr</div>
+                </div>
+                <div class="footer">
+                    <label>goal status</label>
+                    <p>Not ready</p>
+                </div>
+            </div>
+            <div class="tile">
+                <div class="header">
+                    <h3>Herd test readiness</h3>
+                </div>
+                <div class="content">
+                    <div class="left">1fr</div>
+                    <div class="right">2fr</div>
+                </div>
+                <div class="footer">
+                    <label>goal status</label>
+                    <p>Not ready</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
