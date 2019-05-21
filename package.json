@@ -1,29 +1,22 @@
 {
-  "name": "digital-journey",
-  "version": "1.0.0",
-  "description": "Digital journey progress",
-  "main": "index.html",
-  "scripts": {
-    "css-build": "node-sass --omit-source-map-url sass/mystyles.scss css/mystyles.css",
-    "css-watch": "npm run css-build -- --watch",
-    "start": "npm run css-watch"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ux-lic/ux-lic.github.io.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ux-lic/ux-lic.github.io/issues"
-  },
-  "homepage": "https://github.com/ux-lic/ux-lic.github.io#readme",
+  "name": "UI-library",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "chart.js": "^2.8.0",
-    "tabletop": "^1.5.2"
+    "bulma": "^0.7.5",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "0.9.x",
+    "trunx": "^0.22.1"
   },
   "devDependencies": {
-    "bulma": "^0.7.4",
-    "node-sass": "^4.11.0"
+    "node-sass": "^4.12.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "build-storybook": "build-storybook -c .storybook -o .out"
   }
 }
