@@ -1,11 +1,9 @@
-#Getting started
+# Getting started
 
-##Quick start
+``` cd ux-lic ```
 
-### Run react app
-```cd ux-lic
-npm start```
+``` npm install ```
+
+``` npm start ```
 
 Then open http://localhost:3000/ to see your app.
-
-### Run
