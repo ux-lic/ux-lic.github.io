@@ -17,6 +17,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "build-storybook": "build-storybook -c .storybook -o .out"
+    "build-storybook": "build-storybook -c .storybook -o .out",
+    "css-build": "node-sass --omit-source-map-url sass/mystyles.scss src/mytheme.css",
+    "css-watch": "npm run css-build -- --watch"
+    
   }
 }

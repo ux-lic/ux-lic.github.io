@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <div className="App">
         
-        <div className="container">
+        <div className="container app-box">
 
           <div className="app-grid">
 
@@ -20,11 +20,11 @@ class App extends Component {
                 <h1 className="is-size-1">Typography</h1>
               </div>
             </div>
-            <div className="content">
-              <h1>Heading 1</h1>
-              <h2>Heading 2</h2>
-              <h3>Heading 3</h3>
-              <h4>Heading 4</h4>
+            <div>
+              <h1 className="is-size-1">Heading 1</h1>
+              <h2 className="is-size-2">Heading 2</h2>
+              <h3 className="is-size-3">Heading 3</h3>
+              <h4 className="is-size-4">Heading 4</h4>
               <p>Paragraph with some small text inside</p>
               <label>label</label>
 
@@ -52,23 +52,28 @@ class App extends Component {
 
             <div className="app-grid app-grid-tight">
                 
-                  <Button small outlined>Outlined</Button>
                   <Button isPrimary>Primary</Button>
                   <Button isInfo>Seconary</Button>
+                  <Button isOutlined isPrimary>Outlined</Button>
                   <Button isText>Link</Button>
             </div>
 
             <div className="app-grid app-grid-tight">
                 
-                  <Button isSmall outlined>Outlined</Button>
                   <Button isSmall isPrimary>Primary</Button>
                   <Button isSmall isInfo>Seconary</Button>
+                  <Button isSmall isOutlined isPrimary>Outlined</Button>
             </div>
+
+
+            <div className="app-subheading">
+                <h4 className="is-size-4">Complex buttons</h4>
+            </div>
+
 
           </div>
 
         </div>
-
 
       </div>
     );
