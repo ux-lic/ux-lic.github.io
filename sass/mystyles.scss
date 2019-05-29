@@ -1,0 +1,90 @@
+@charset "utf-8";
+// @import "../node_modules/bulma/bulma.sass";
+
+// Import a Google Font
+// @import url('https://fonts.googleapis.com/css?family=Nunito:400,500,700');
+
+@font-face {
+    font-family: 'Booster Next FY';
+    src: url('./fonts/BoosterNextFY-Regular.eot');
+    src: url('./fonts/BoosterNextFY-Regular.eot?#iefix') format('embedded-opentype'), url('./fonts/BoosterNextFY-Regular.woff') format('woff'), url('./fonts/BoosterNextFY-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Booster Next FY';
+    src: url('./fonts/BoosterNextFY-Bold.eot');
+    src: url('./fonts/BoosterNextFY-Bold.eot?#iefix') format('embedded-opentype'), url('./fonts/BoosterNextFY-Bold.woff') format('woff'), url('./fonts/BoosterNextFY-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Booster Next FY';
+    src: url('./fonts/BoosterNextFY-Light.eot');
+    src: url('./fonts/BoosterNextFY-Light.eot?#iefix') format('embedded-opentype'), url('./fonts/BoosterNextFY-Light.woff') format('woff'), url('./fonts/BoosterNextFY-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Booster Next FY';
+    src: url('./fonts/BoosterNextFY-Thin.eot');
+    src: url('./fonts/BoosterNextFY-Thin.eot?#iefix') format('embedded-opentype'), url('./fonts/BoosterNextFY-Thin.woff') format('woff'), url('./fonts/BoosterNextFY-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+// Set your brand colors
+$darkblue: #001e62;
+$darksky: #007CBE;
+$skyblue: #009CDE;
+$lightsky: #CBDBEF;
+$bluewhite: #EDF3FA;
+$grey: #54575A;
+
+$success: #18CCB8;
+$danger: #F96F69;
+
+// Update Bulma's global variables
+$family-sans-serif: "Booster Next FY", sans-serif;
+$grey-dark: $grey;
+$grey-light: $bluewhite;
+
+$primary: $darkblue;
+$info: $darksky;
+$link: $darksky;
+$text: $primary;
+
+
+$widescreen-enabled: true;
+$fullhd-enabled: false;
+
+// Content 
+$content-heading-weight: 400;
+$content-heading-color: $primary;
+
+
+// Update some of Bulma's component variables
+$body-background-color: $bluewhite;
+$title: $primary;
+$control-border-width: 1px;
+$input-border-color: transparent;
+$input-shadow: none;
+
+
+// Import only what you need from Bulma
+@import "../node_modules/bulma/sass/utilities/_all.sass";
+@import "../node_modules/bulma/sass/base/_all.sass";
+@import "../node_modules/bulma/sass/elements/button.sass";
+@import "../node_modules/bulma/sass/elements/container.sass";
+@import "../node_modules/bulma/sass/form/_all.sass";
+@import "../node_modules/bulma/sass/elements/title.sass";
+@import "../node_modules/bulma/sass/elements/table.sass";
+@import "../node_modules/bulma/sass/elements/box.sass";
+@import "../node_modules/bulma/sass/elements/icon.sass";
+@import "../node_modules/bulma/sass/layout/section.sass";
+
+//Example of custom changes to styles
+// @import "./sass/elements/button.sass";

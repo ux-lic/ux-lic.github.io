@@ -4,6 +4,7 @@
 
 
 
+
 .app-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -49,4 +50,5 @@
 .app-box {
   background-color: white;
   padding: 1rem 2rem;
+  margin: 1rem;
 }
