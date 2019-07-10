@@ -1,0 +1,84 @@
+/* GRID */
+
+    .grid {
+        max-width: 1600px;
+        display: grid;
+        grid-gap: 1rem;
+    }
+
+    /*we want 8px gaps on single columns devices for example iPhone SE*/
+    @media(max-width: 359px) {
+        body {
+            margin: 0.5rem;
+        }
+        /*on the web simulator this won't look correct because the web renders the scrollbar in position */
+        .grid {
+            grid-gap: 0.5rem;
+        }
+    }
+    /*limit the width of the grid on extra-large desktops set the maximum column width to 388px so we get four columns*/
+    @media(min-width: 1600px) {
+        .grid {
+            margin: 0 auto;
+        }
+    }
+
+    .grid .col2 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grid .col3 {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .links {
+        grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+        grid-template-rows: [row1-start] auto [row2-start] auto [row3-start] auto] [row3-end]; 
+    }
+
+    .main { 
+        grid-template-columns: [col1-start] 1fr  [col2-start] 1fr  [col3-start] 1fr [col4-start] 1fr [col4-end];
+        grid-template-rows: [row1-start] auto [row2-start] auto [row3-start] auto [row4-start] auto [row5-start] auto [row5-end];
+    }
+
+    .goals {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .a {
+        grid-column: col1-start / col2-start;
+        grid-row: auto ;
+    }
+
+    .b {
+        grid-column: col2-start / col3-start;
+        grid-row: auto ;
+    }
+
+    .c {
+        grid-column: col1-start / col3-start;
+        grid-row: row2-start / row4-start;
+    }
+
+    .d {
+        grid-column: col3-start / col4-end;
+        grid-row: row1-start / row4-start;
+    }
+
+    .e {
+        grid-column: col1-start / col3-start;
+        grid-row: auto;
+        /*min-height: 600px !important;*/
+    }
+    .f {
+        grid-column: col3-start / col4-end;
+        grid-row: auto ;
+        /*min-height: 600px !important;*/
+    }
+
+    @media(max-width: 768px) {
+        .a,.b,.c,.d {
+            grid-column: col1-start / col4-end;
+            grid-row: auto;
+        }
+    }

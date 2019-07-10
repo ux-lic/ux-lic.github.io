@@ -1,0 +1,32 @@
+{
+  "name": "LIC-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "css-build": "node-sass --omit-source-map-url sass/mytheme.scss css/mystyles.css",
+    "css-watch": "npm run css-build -- --watch",
+    "start-css": "npm run css-watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bloomer": "^0.6.5",
+    "bulma": "^0.7.5",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@fortawesome/fontawesome-free": "^5.9.0",
+    "@storybook/addon-actions": "^5.1.8",
+    "@storybook/addon-links": "^5.1.8",
+    "@storybook/addons": "^5.1.8",
+    "@storybook/react": "^5.1.8",
+    "babel-loader": "^8.0.6",
+    "node-sass": "^4.12.0"
+  }
+}

@@ -1,0 +1,82 @@
+@charset "utf-8";
+//@import "../node_modules/bulma/bulma.sass";
+
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,500,700');
+
+// Set your brand colors
+$darkblue: #001e62;
+$darksky: #007CBE;
+$skyblue: #009CDE;
+$lightsky: #CBDBEF;
+$bluewhite: #EDF3FA;
+$grey: #54575A;
+
+$success: #18CCB8;
+$danger: #F96F69;
+
+// Update Bulma's global variables
+$family-sans-serif: "Booster Next FY","Nunito", sans-serif;
+$grey-dark: $grey;
+$grey-light: $bluewhite;
+
+$primary: $darkblue;
+$info: $skyblue;
+$link: $darksky;
+$text: $primary;
+
+$widescreen-enabled: true;
+$fullhd-enabled: false;
+
+// Update some of Bulma's component variables
+$body-background-color: $bluewhite;
+$title: $primary;
+
+//Text
+$size-1: 3rem;
+$size-2: 2rem;
+$size-3: 1.375rem;
+$size-4: 1.125rem;
+$size-5: 1rem;
+$size-6: 0.75rem;
+
+$size-small: $size-6;
+$size-normal: $size-5;
+$size-medium: $size-4;
+
+//Navbar
+$navbar-height: 6rem;
+
+$navbar-item-color: $primary;
+$navbar-item-hover-color: $info;
+// $navbar-item-hover-background-color: $white-bis
+// $navbar-item-active-color: $black
+$navbar-item-img-max-height: 2rem;
+
+//Forms
+$control-border-width: 1px;
+$input-border-color: $lightsky;
+$input-shadow: none;
+
+//Cards
+$card-content-padding: 1rem;
+$card-header-color: $primary;
+
+// $box-radius: $radius-small;
+$box-padding: 1rem;
+
+
+// Import only what you need from Bulma
+@import "../node_modules/bulma/sass/utilities/_all.sass";
+@import "../node_modules/bulma/sass/base/_all.sass";
+@import "../node_modules/bulma/sass/elements/button.sass";
+@import "../node_modules/bulma/sass/elements/container.sass";
+@import "../node_modules/bulma/sass/form/_all.sass";
+@import "../node_modules/bulma/sass/elements/title.sass";
+@import "../node_modules/bulma/sass/elements/table.sass";
+@import "../node_modules/bulma/sass/elements/box.sass";
+@import "../node_modules/bulma/sass/elements/icon.sass";
+@import "../node_modules/bulma/sass/elements/image.sass";
+@import "../node_modules/bulma/sass/components/navbar.sass";
+@import "../node_modules/bulma/sass/components/card.sass";
+@import "../node_modules/bulma/sass/layout/section.sass";
