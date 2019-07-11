@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Grid Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="css/grid.css">
+    <link rel="stylesheet" type="text/css" href="css/mystyles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/292d19d4f5.js"></script>
+    <script src="js/demo.js"></script>
+</head>
+
+<style>
+    /* STYLES */
+
+    .wrapper {
+        margin:12rem 0;
+    }
+
+    .subnav {
+        margin-top:6rem; min-height: 3.25rem;
+    }
+
+    /* Temp style for layout*/
+    .bg {
+        background-color: #fff;
+        border-radius: 0.25rem;
+        color: #001e62;
+        min-height: 240px;
+    }
+
+    /*We add some control to the to the hieght of a tile on 2 or more columns*/
+    .tile {
+        background-color: #fff;
+        border-radius: 0.25rem;
+        color: #001e62;
+        min-height: 180px;
+    }
+    /*Tiles can be taller on single column display*/
+    @media(max-width: 360px) {
+        .tile {
+            min-height: 185px;
+        }
+    }
+
+    .link {
+        display: grid;
+        grid-template-columns: auto 3fr;
+        background-color: white;
+        border-radius: 0.25rem;
+        color: #001e62;
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .link > .header {
+        list-style: none;
+    }
+    .link > .header li {
+        display: inline-block;
+    }
+
+    .link .icon {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        background-color: #001e62;
+        text-align: center;
+        color: white;
+        padding-top: 2rem;
+    }
+
+    /* Tile */
+
+    .tile .header, .tile .footer, .tile .content {
+        padding:1rem;
+    }
+
+    .tile .content {
+        padding-top: 0;
+    }
+
+    .tile .header > h3 {
+        margin:0;
+        padding:0;
+    }
+
+    .tile .content {
+        min-height: 114px;
+    }
+
+    .tile .content .left {
+        background-color: grey;
+
+    }
+
+    .tile .content .right {
+        background-color: limegreen;
+        padding-left:1rem;
+    }
+
+    /* iPhone 5 view stack tile content */
+    @media(max-width: 320px) {
+        .tile .col2, .tile .col3 {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .tile .footer {
+        margin: 0px;
+    }
+
+    .tile .footer label {
+        text-transform: uppercase;
+        font-size: 0.875rem;
+    }
+
+    .tile .footer p {
+        margin: 0;
+    }
+
+    /*.value-comp > label {
+        font-size: 0.875rem;
+        color: #001e62;
+        text-transform: uppercase;
+    }
+
+    .value-comp > a {
+        display: block;
+        margin-top: .25rem;
+    }*/
+</style>
+
+<body>
+
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://bulma.io">
+              <img src="logo.svg" width="112" height="28">
+            </a>
+
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div class="navbar-menu">
+        <!-- navbar start, navbar end -->
+
+        <div class="navbar-end">
+            <div class="navbar-item has-dropdown is-hoverable is-right">
+            <!-- Account dropdown -->
+                <a class="navbar-link">
+                Jess Jacobson
+                </a>
+                <div class="navbar-dropdown">
+                <!-- Other navbar items -->
+                <a class="navbar-item">Account settings</a>
+                <a class="navbar-item">Change password</a>
+                <hr class="navbar-divider">
+                <a class="navbar-item">NAIT stuff</a>
+                </div>
+            </div>
+            <div class="navbar-item">
+                <figure class="image is-32x32">
+                  <img class="is-rounded" src="https://bulma.io/images/placeholders/32x32.png">
+                </figure>
+            </div>
+            <div class="navbar-item has-dropdown is-right is-hoverable">
+                <a class="navbar-link">
+                    <i class="fa fa-bell"></i>
+                </a>
+                <div class="navbar-dropdown">
+                <!-- Other navbar items -->
+                
+                </div>
+            </div>
+          </div>
+        </div>
+    </nav>
+
+    <nav class="navbar has-background-info is-fixed-top subnav" role="navigation" aria-label="sub-navigation">
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <div class="navbar-item">
+                    <div class="field has-addons">
+                      <div class="control">
+                        <input class="input" type="text" placeholder="Lookup an animal">
+                      </div>
+                      <div class="control">
+                        <a class="button is-primary">
+                          Lookup
+                        </a>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-end">
+                <div class="navbar-item">
+                  <div class="select">
+                    <select>
+                        <option>ABCD JJ Family Farm</option>
+                        <option>WWXY Potter Farm</option>
+                    </select>
+                  </div>
+                  <button class="button is-primary"><span class="icon is-small">
+      <i class="fa fa-key"></i>
+    </span>
+    <span>Manage herds</span></button>Preferences
+                </div>                
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="wrapper">
+        <div class="grid links">
+            <div class=" link">
+                <span class="fa-stack fa-2x" style="vertical-align: top;">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fas fa-calendar fa-stack-1x fa-inverse"></i>
+                </span>
+                <h3>Event recorder</h3>
+            </div>
+            <div class=" link">
+                <span class="fa-stack fa-2x" style="vertical-align: top;">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fas fa-layer-group fa-stack-1x fa-inverse"></i>
+                </span>
+                <h3>Groups</h3>
+            </div>
+            <div class=" link">
+                <span class="fa-stack fa-2x" style="vertical-align: top;">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fas fa-chart-bar fa-stack-1x fa-inverse"></i>
+                </span>
+                <h3>Reports</h3>
+            </div>
+        </div>
+
+        <div class="grid main">
+            <div class="tile d">
+                <div class="header">
+                    <h3>Recent activity</h3>
+                </div>
+            </div>
+            <div class="card a">
+              <header class="card-header">
+                <p class="card-header-title">
+                  Inventory
+                </p>
+              </header>
+              <div class="card-content columns is-multiline">
+                
+                <div class="value-comp column is-half">
+                    <label>NAIT animals</label>
+                    <h3 class="title is-3"><i class="fas fa-arrow-circle-right has-text-warning"></i> 298</h3>
+                </div>
+                <div class="value-comp column is-half">
+                    <label>Animals in herd</label>
+                    <h3 class="title is-3 has-text-danger">300</h3>
+                </div>
+                <div class="value-comp column is-full">
+                    <label>Without EID</label>
+                    <h3 class="title is-3 has-text-danger is-link">3</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="card b">
+                <header class="card-header">
+                    <p class="card-header-title">Movement</p>
+                </header>
+                <div class="card-content columns is-multiline">
+                    <div class="value-comp column is-one-third-desktop">
+                        <label>Born</label>
+                        <a class="title is-3">20</a>
+                    </div>
+                    <div class="value-comp column is-one-third-desktop">
+                        <label>Culled</label>
+                        <a class="title is-3">12</a>
+                    </div>
+                    <div class="value-comp column is-one-third-desktop">
+                        <label>Incoming</label>
+                        <a class="title is-3">12</a>
+                    </div>
+                    <div class="value-comp column is-one-third-desktop">
+                        <label>Died</label>
+                        <a class="title is-3">12</a>
+                    </div>
+                    <div class="value-comp column is-one-third-desktop">
+                        <label>Sold</label>
+                        <a class="title is-3">12</a>
+                    </div>
+                    <div class="value-comp column is-one-third-desktop">
+                        <label>Outward</label>
+                        <a class="title is-3">12</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card c">
+                <header class="card-header">
+                    <p class="card-header-title">Health</p>
+                </header>
+                <div class="card-content grid col3">
+                    <div class="value-comp">
+                        <label>Sick</label>
+                        <h3 class="title is-3">20</h3>
+                    </div>
+                    <div class="value-comp">
+                        <label>Milk withholding</label>
+                        <h3 class="title is-3 has-text-danger">3</h3>
+                    </div>
+                    <div class="value-comp">
+                        <label>Not vaccinated (%)</label>
+                        <h3 class="title is-3">12</h3>
+                    </div>
+                    <div class="value-comp">
+                        <label>Active treatments</label>
+                        <h3 class="title is-3">12</h3>
+                    </div>
+                    <div class="value-comp">
+                        <label>Meat withholding</label>
+                        <h3 class="title is-3 has-text-danger">1</h3>
+                    </div>
+                    <div class="value-comp">
+                        <label>Return to vat (%)</label>
+                        <h3 class="title is-3">12</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="tile e">
+                <div class="header">
+                    <h3>Weights</h3>
+                </div>
+                <div class="content">
+                    <canvas id="myWeightChart" width="1600" height="800" class="chartjs-render-monitor" style="display: block; height: 800; width: 800px;"></canvas>
+                </div>
+            </div>
+            <div class="tile f">
+                <div class="header">
+                    <h3>Reproduction</h3>
+                </div>
+                <div class="content">
+                    <canvas id="myReproChart" width="1600" height="800" class="chartjs-render-monitor" style="display: block; height: 800; width: 800px;"></canvas>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="grid goals">
+            <div class="tile">
+                <div class="header">
+                    <h3>Seasonal</h3>
+                </div>
+                <div class="content grid col2">
+                    
+                </div>
+            </div>
+            <div class="tile">
+                <div class="header">
+                    <h3>Seasonal</h3>
+                </div>
+                <div class="content grid col2">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
