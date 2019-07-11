@@ -21,7 +21,10 @@ You can also use  the following command build on-the-fly
 `npm run css-watch`
 
 ## Bloomer 
-When using react  we use Bloomer this provides us with a set of out of the box *React components* for  Burma we can see and manipulate these components through storybook.
+When using react we use Bloomer this provides us with a set of out of the box *React components* for  Burma we can see and manipulate these components through storybook.
 
 ## Storybook
-` npm run storybook`
+
+Rub your storybook with 
+
+` yarn storybook`
