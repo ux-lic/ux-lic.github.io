@@ -5,28 +5,40 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 
-import 'bulma/css/bulma.css';
+import 'bulma/css/bulma.css'
 import '../css/mystyles.css';
 
-import { Breadcrumb, BreadcrumbItem, Button, Card, CardContent, CardHeader, CardHeaderIcon, CardHeaderTitle, CardFooter, CardFooterIcon, CardFooterTitle, Container, Content, Table, Progress, Notification, Delete, Field, Control, Input, Icon, Select, Help, Tag, TextArea, Checkbox, Radio, Label, Pagination, Page, PageLink, PageEllipsis, PageControl, PageList, Tabs, Tab, TabList, TabLink, Box, Title, Heading } from 'bloomer';
+import { Breadcrumb, BreadcrumbItem, Button, Card, CardContent, CardHeader, CardHeaderIcon, CardHeaderTitle, CardFooter, CardFooterIcon, CardFooterTitle, Columns, Column, Container, Content, Table, Progress, Notification, Delete, Field, Control, Input, Icon, Select, Help, Tag, TextArea, Checkbox, Radio, Label, Pagination, Page, PageLink, PageEllipsis, PageControl, PageList, Tabs, Tab, TabList, TabLink, Box, Title, Heading } from 'bloomer';
 
 // storiesOf('Overview', module)
 //   .add('Welcome', () => (
 //     <Container></Container>
 //   ))
-storiesOf('Grid', module)
-  .add('8pt', () => (
-    <Container></Container>
-  ))
-  .add('CSS Grid', () => (
-    <Container></Container>
-  ))
-  .add('Columns', () => (
-    <Container></Container>
-  ))
-  .add('Color definition', () => (
-    <Container></Container>
-  ))
+// storiesOf('Foundations', module)
+//   .add('Color', () => (
+//     <Container>
+//       <Columns isCentered>
+//         <Column><Box column className="has-background-primary" hasTextColor="white">Dark blue</Box></Column>
+//         <Column><Box column className="has-background-info" hasTextColor="white">Sky blue</Box></Column>
+//         <Column><Box column className="has-background-link" hasTextColor="white">Dark sky blue</Box></Column>
+//         <Column><Box column className="has-background-light">Light blue</Box></Column>
+//         <Column><Box column className="has-background-grey-light" >Blue white</Box></Column>
+//       </Columns>
+//     </Container>
+//   ))
+//   .add('8pt', () => (
+//     <Container></Container>
+//   ))
+//   .add('Columns', () => (
+//     // notes:'The power of Flexbox in a simple interface',
+//     <Container>
+      
+//     </Container>
+//   ))
+//   .add('CSS Grid', () => (
+//     <Container></Container>
+//   ));
+  
 storiesOf('Elements', module)
   .add('Box', () => (
     <Container>
