@@ -57,7 +57,7 @@
     }
 
     .tile-health {
-        grid-column: col1-start / col3-start;
+        grid-column: col1-start / col2-start;
         grid-row: row2-start / row4-start;
     }
 
@@ -69,6 +69,11 @@
     .tile-activity {
         grid-column: col4-start / col4-end;
         grid-row: row1-start / row4-start;
+    }
+
+    .tile-protrack {
+        grid-column: col2-start / col3-start;
+        grid-row: row2-start / row3-start;
     }
 
     /*.tile-weights {
