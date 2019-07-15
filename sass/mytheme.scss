@@ -1,8 +1,12 @@
 @charset "utf-8";
-//@import "../node_modules/bulma/bulma.sass";
+// @import "../node_modules/bulma/bulma.sass";
 
-// Import a Google Font
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,500,700');
+@font-face {font-family: 'BoosterNextFY-Regular';src: url('../webfonts/39C314_0_0.eot');src: url('../webfonts/39C314_0_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/39C314_0_0.woff2') format('woff2'),url('../webfonts/39C314_0_0.woff') format('woff'),url('../webfonts/39C314_0_0.ttf') format('truetype');}
+@font-face {font-family: 'BoosterNextFY-Light';src: url('../webfonts/39C314_1_0.eot');src: url('../webfonts/39C314_1_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/39C314_1_0.woff2') format('woff2'),url('../webfonts/39C314_1_0.woff') format('woff'),url('../webfonts/39C314_1_0.ttf') format('truetype');}
+@font-face {font-family: 'BoosterNextFY-Bold';src: url('../webfonts/39C314_2_0.eot');src: url('../webfonts/39C314_2_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/39C314_2_0.woff2') format('woff2'),url('../webfonts/39C314_2_0.woff') format('woff'),url('../webfonts/39C314_2_0.ttf') format('truetype');}
+
+// back up font
+// @import url('https://fonts.googleapis.com/css?family=Nunito:400,500,700');
 
 // Set your brand colors
 $darkblue: #001e62;
@@ -21,7 +25,7 @@ $danger: #EB4841;
 
 
 // Update Bulma's global variables
-$family-sans-serif: "Booster Next FY","Nunito", sans-serif;
+$family-sans-serif: "BoosterNextFY-Regular", Helvetica, sans-serif;
 $grey-dark: $grey;
 $grey-light: $bluewhite;
 
@@ -64,7 +68,7 @@ $subtitle-size: $size-3;
 $tag-radius: 2px;
 
 // Navbar
-$navbar-height: 6rem;
+// $navbar-height: 6rem;
 
 $navbar-item-color: $primary;
 $navbar-item-hover-color: $info;
@@ -87,7 +91,6 @@ $box-padding: 1rem;
 // Breadcrumb
 $breadcrumb-item-separator-color: $primary;
 
-
 // Import only what you need from Bulma
 @import "../node_modules/bulma/sass/utilities/_all.sass";
 @import "../node_modules/bulma/sass/base/_all.sass";
@@ -96,4 +99,8 @@ $breadcrumb-item-separator-color: $primary;
 @import "../node_modules/bulma/sass/form/_all.sass";
 @import "../node_modules/bulma/sass/components/navbar.sass";
 @import "../node_modules/bulma/sass/components/card.sass";
+@import "../node_modules/bulma/sass/components/panel.sass";
 @import "../node_modules/bulma/sass/layout/section.sass";
+
+// Extensions
+@import "../node_modules/bulma-timeline/dist/css/bulma-timeline.sass";
