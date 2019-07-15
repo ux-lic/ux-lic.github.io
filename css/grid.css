@@ -23,17 +23,17 @@
         }
     }
 
-    .grid .col2 {
+   /* .grid .col2 {
         grid-template-columns: 1fr 1fr;
     }
 
     .grid .col3 {
         grid-template-columns: 1fr 1fr 1fr;
-    }
+    }*/
 
     .links {
         grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
-        grid-template-rows: [row1-start] auto [row2-start] auto [row3-start] auto] [row3-end]; 
+        grid-template-rows: [row1-start] auto [row2-start] auto [row3-start] auto] [row3-end];
     }
 
     .main { 
@@ -41,43 +41,48 @@
         grid-template-rows: [row1-start] auto [row2-start] auto [row3-start] auto [row4-start] auto [row5-start] auto [row5-end];
     }
 
-    .goals {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    .seasonal {
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        grid-template-rows: auto
     }
 
-    .a {
+    .tile-inventory {
         grid-column: col1-start / col2-start;
         grid-row: auto ;
     }
 
-    .b {
+    .tile-movement {
         grid-column: col2-start / col3-start;
         grid-row: auto ;
     }
 
-    .c {
+    .tile-health {
         grid-column: col1-start / col3-start;
         grid-row: row2-start / row4-start;
     }
 
-    .d {
-        grid-column: col3-start / col4-end;
+    .tile-joblist {
+        grid-column: col3-start / col4-start;
         grid-row: row1-start / row4-start;
     }
 
-    .e {
-        grid-column: col1-start / col3-start;
-        grid-row: auto;
-        /*min-height: 600px !important;*/
-    }
-    .f {
-        grid-column: col3-start / col4-end;
-        grid-row: auto ;
-        /*min-height: 600px !important;*/
+    .tile-activity {
+        grid-column: col4-start / col4-end;
+        grid-row: row1-start / row4-start;
     }
 
+    /*.tile-weights {
+        grid-column: 1 / 3;
+        grid-row: auto;
+        
+    }
+    .tile-reproduction {
+        grid-column: col3-start / col4-end;
+        grid-row: auto ;
+    }*/
+
     @media(max-width: 768px) {
-        .a,.b,.c,.d {
+        .tile-inventory,.tile-movement,.tile-activity,.tile-health,.tile-joblist,{
             grid-column: col1-start / col4-end;
             grid-row: auto;
         }

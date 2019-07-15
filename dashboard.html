@@ -6,128 +6,19 @@
     <link rel="stylesheet" type="text/css" href="css/mystyles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/292d19d4f5.js"></script>
-    <script src="js/demo.js"></script>
 </head>
 
 <style>
     /* STYLES */
 
     .wrapper {
-        margin:12rem 0;
+        margin:8rem 0;
     }
 
     .subnav {
-        margin-top:6rem; min-height: 3.25rem;
+        margin-top:3.25rem; min-height: 3.25rem;
     }
 
-    /* Temp style for layout*/
-    .bg {
-        background-color: #fff;
-        border-radius: 0.25rem;
-        color: #001e62;
-        min-height: 240px;
-    }
-
-    /*We add some control to the to the hieght of a tile on 2 or more columns*/
-    .tile {
-        background-color: #fff;
-        border-radius: 0.25rem;
-        color: #001e62;
-        min-height: 180px;
-    }
-    /*Tiles can be taller on single column display*/
-    @media(max-width: 360px) {
-        .tile {
-            min-height: 185px;
-        }
-    }
-
-    .link {
-        display: grid;
-        grid-template-columns: auto 3fr;
-        background-color: white;
-        border-radius: 0.25rem;
-        color: #001e62;
-        padding: 1rem;
-        margin-bottom: 1rem;
-    }
-
-    .link > .header {
-        list-style: none;
-    }
-    .link > .header li {
-        display: inline-block;
-    }
-
-    .link .icon {
-        width: 3rem;
-        height: 3rem;
-        border-radius: 50%;
-        background-color: #001e62;
-        text-align: center;
-        color: white;
-        padding-top: 2rem;
-    }
-
-    /* Tile */
-
-    .tile .header, .tile .footer, .tile .content {
-        padding:1rem;
-    }
-
-    .tile .content {
-        padding-top: 0;
-    }
-
-    .tile .header > h3 {
-        margin:0;
-        padding:0;
-    }
-
-    .tile .content {
-        min-height: 114px;
-    }
-
-    .tile .content .left {
-        background-color: grey;
-
-    }
-
-    .tile .content .right {
-        background-color: limegreen;
-        padding-left:1rem;
-    }
-
-    /* iPhone 5 view stack tile content */
-    @media(max-width: 320px) {
-        .tile .col2, .tile .col3 {
-            grid-template-columns: 1fr;
-        }
-    }
-
-    .tile .footer {
-        margin: 0px;
-    }
-
-    .tile .footer label {
-        text-transform: uppercase;
-        font-size: 0.875rem;
-    }
-
-    .tile .footer p {
-        margin: 0;
-    }
-
-    /*.value-comp > label {
-        font-size: 0.875rem;
-        color: #001e62;
-        text-transform: uppercase;
-    }
-
-    .value-comp > a {
-        display: block;
-        margin-top: .25rem;
-    }*/
 </style>
 
 <body>
@@ -212,62 +103,104 @@
             </div>
         </div>
     </nav>
-
-
     <div class="wrapper">
-        <div class="grid links">
-            <div class="link">
-                <span class="fa-stack fa-2x" style="vertical-align: top;">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fas fa-calendar fa-stack-1x fa-inverse"></i>
-                </span>
-                <h3 class="title is-3">Event recorder</h3>
-            </div>
-            <div class=" link">
-                <span class="fa-stack fa-2x" style="vertical-align: top;">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fas fa-layer-group fa-stack-1x fa-inverse"></i>
-                </span>
-                <h3 class="title is-3">Groups</h3>
-            </div>
-            <div class=" link">
-                <span class="fa-stack fa-2x" style="vertical-align: top;">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fas fa-chart-bar fa-stack-1x fa-inverse"></i>
-                </span>
-                <h3 class="title is-3">Reports</h3>
+        <div class="box" style="max-width:1600px;margin:0 auto">
+            <div class="columns">
+                <div class="column">
+                    <a class="button is-fullwidth is-large">
+                        <span class="icon is-medium">
+                          <i class="fa fa-calendar"></i>
+                        </span>
+                        <span>Event recorder</span>
+                    </a>
+                </div>
+                <div class="column">
+                    <a class="button is-fullwidth  is-large">
+                        <span class="icon is-medium">
+                          <i class="fa fa-layer-group"></i>
+                        </span>
+                        <span>Groups</span>
+                    </a>
+                </div>
+                <div class="column">
+                    <a class="button is-fullwidth  is-large">
+                        <span class="icon is-medium">
+                          <i class="fa fa-chart-bar"></i>
+                        </span>
+                        <span>Reports</span>
+                    </a>
+                </div>
             </div>
         </div>
 
-        <div class="grid main">
-            <div class="field is-grouped is-grouped-multiline">
-              <div class="control">
-                <div class="tags has-addons">
-                  <span class="tag">Total animals</span>
-                  <span class="tag is-primary">300</span>
-                </div>
-              </div>
-
-              <div class="control">
-                <div class="tags has-addons">
-                  <span class="tag">NAIT</span>
-                  <span class="tag is-warning">298</span>
-                </div>
-              </div>
-
-              <div class="control">
-                <div class="tags has-addons">
-                  <span class="tag">Without EID</span>
-                  <span class="tag is-danger">3</span>
-                </div>
-              </div>
+                
+        <div class="grid main" style="margin-top:1rem;">
+           
+            <div class="card tile-joblist">
+                <header class="card-header">
+                    <p class="card-header-title">Your job list</p>
+                    <a href="#" class="card-header-icon" aria-label="more options">
+                      <span class="icon">
+                        <i class="far fa-plus" aria-hidden="true"></i>
+                      </span>
+                        Add
+                    </a>
+                </header>
             </div>
-            <div class="tile d">
-                <div class="header">
-                    <h3>Recent activity</h3>
+            <div class="card tile-activity">
+                <header class="card-header">
+                    <p class="card-header-title">Recent activity</p>
+                    <a href="activity.html" class="card-header-icon" aria-label="more options">
+                        View all
+                      <!-- <span class="icon">
+                        <i class="far fa-plus-square" aria-hidden="true"></i>
+                      </span> -->
+                    </a>
+                </header>
+                <div class="card-content">
+                    <div class="timeline">
+                      <!-- <header class="timeline-header">
+                        <span class="tag is-medium is-primary">Start</span>
+                      </header> -->
+                      <div class="timeline-item">
+                        <div class="timeline-marker is-success"></div>
+                        <div class="timeline-content">
+                          <p class="heading">July 2019</p>
+                        </div>
+                      </div>
+                      <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                          <!-- <p class="heading">February 2016</p> -->
+                          <p>Duncan Cheetham - approved <a>6 remove animals</a></p>
+                        </div>
+                      </div>
+                      <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                          <!-- <p class="heading">February 2016</p> -->
+                          <p>Duncan Cheetham - deleted <a>6 remove animals</a></p>
+                        </div>
+                      </div>
+                      <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                          <!-- <p class="heading">February 2016</p> -->
+                          <p>Duncan Cheetham - approved <a>6 remove animals</a></p>
+                        </div>
+                      </div>
+                      <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                          <!-- <p class="heading">February 2016</p> -->
+                          <p>Duncan Cheetham - approved <a>6 remove animals</a></p>
+                        </div>
+                      </div>
+                      
+                    </div>
                 </div>
             </div>
-            <div class="card a">
+            <div class="card tile-inventory">
               <header class="card-header">
                 <p class="card-header-title">
                   Inventory
@@ -290,7 +223,7 @@
               </div>
             </div>
 
-            <div class="card b">
+            <div class="card tile-movement">
                 <header class="card-header">
                     <p class="card-header-title">Movement</p>
                 </header>
@@ -321,7 +254,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card c">
+            <div class="card tile-health">
                 <header class="card-header">
                     <p class="card-header-title">Health</p>
                 </header>
@@ -352,42 +285,231 @@
                     </div>
                 </div>
             </div>
-            <div class="tile e">
-                <div class="header">
-                    <h3>Weights</h3>
-                </div>
-                <div class="content">
+        </div>  
+     
+        <div class="grid seasonal">
+            <div class="card tile-weights">
+                  <header class="card-header">
+                    <p class="card-header-title">
+                      Weights
+                    </p>
+                  </header>
+                
+                <div class="card-content">
                     <canvas id="myWeightChart" width="1600" height="800" class="chartjs-render-monitor" style="display: block; height: 800; width: 800px;"></canvas>
                 </div>
+
+                <footer class="card-footer">
+                    <p class="card-footer-title">
+                        <span><a class="card-footer-item">This season</a></span>
+                    </p>
+                    <p class="card-footer-title">
+                        <span><a class="card-footer-item">This season</a></span>
+                    </p>
+                </footer>
             </div>
-            <div class="tile f">
-                <div class="header">
-                    <h3>Reproduction</h3>
-                </div>
-                <div class="content">
+            <div class="card tile-reproduction">
+                  <header class="card-header">
+                    <p class="card-header-title">
+                      Reproduction
+                    </p>
+                  </header>
+                
+                <div class="card-content">
                     <canvas id="myReproChart" width="1600" height="800" class="chartjs-render-monitor" style="display: block; height: 800; width: 800px;"></canvas>
                     
                 </div>
             </div>
+            <div class="card tile-weights">
+                  <header class="card-header">
+                    <p class="card-header-title">
+                      Weights
+                    </p>
+                  </header>
+                
+                <div class="card-content">
+                    <canvas id="myWeightChart" width="1600" height="800" class="chartjs-render-monitor" style="display: block; height: 800; width: 800px;"></canvas>
+                </div>
+
+                <footer class="card-footer">
+                    <p class="card-footer-title">
+                        <span><a class="card-footer-item">This season</a></span>
+                    </p>
+                    <p class="card-footer-title">
+                        <span><a class="card-footer-item">This season</a></span>
+                    </p>
+                </footer>
+            </div>
+            <div class="card tile-weights">
+                  <header class="card-header">
+                    <p class="card-header-title">
+                      Weights
+                    </p>
+                  </header>
+                
+                <div class="card-content">
+                    <canvas id="myWeightChart" width="1600" height="800" class="chartjs-render-monitor" style="display: block; height: 800; width: 800px;"></canvas>
+                </div>
+
+                <footer class="card-footer">
+                    <p class="card-footer-title">
+                        <span><a class="card-footer-item">This season</a></span>
+                    </p>
+                    <p class="card-footer-title">
+                        <span><a class="card-footer-item">This season</a></span>
+                    </p>
+                </footer>
+            </div>
+            <div class="card tile-weights">
+                  <header class="card-header">
+                    <p class="card-header-title">
+                      Weights
+                    </p>
+                  </header>
+                
+                <div class="card-content">
+                    <canvas id="myWeightChart" width="1600" height="800" class="chartjs-render-monitor" style="display: block; height: 800; width: 800px;"></canvas>
+                </div>
+
+                <footer class="card-footer">
+                    <p class="card-footer-title">
+                        <span><a class="card-footer-item">This season</a></span>
+                    </p>
+                    <p class="card-footer-title">
+                        <span><a class="card-footer-item">This season</a></span>
+                    </p>
+                </footer>
+            </div>
+            
         </div>
-        <div class="grid goals">
-            <div class="tile">
-                <div class="header">
-                    <h3>Seasonal</h3>
-                </div>
-                <div class="content grid col2">
-                    
-                </div>
-            </div>
-            <div class="tile">
-                <div class="header">
-                    <h3>Seasonal</h3>
-                </div>
-                <div class="content grid col2">
-                    
-                </div>
-            </div>
+            
         </div>
     </div>
+
+
+<script>
+    // demo charts
+    var ctx = document.getElementById('myWeightChart');
+    var myWeightChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: [3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24],
+
+            datasets: [{
+                label: 'Actual weight',
+                data: [103,130,145,155,170,180,200,220,232,240,251,268,300,345,356,358,360,395,432,440,448],
+                pointBackgroundColor: 'rgba(0, 56, 164, 0.8)',
+                borderWidth: 1,
+                fill: false,
+            },
+            {
+                label: 'Industry standard',
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                ],
+                borderWidth: 2,
+                fill: false,
+                borderDash: [4,4],
+                data: [{
+                    x: 3,
+                    y: 100
+                }, {
+                    x: 15,
+                    y: 300
+                }, {
+                    x: 22,
+                    y: 450
+                }],
+                type: 'scatter'
+            },
+            {
+                label: 'upper',
+                data: [118,145,160,170,185,195,215,235,247,255,266,283,320,360,371,373,375,410,447,455,480],
+                fill: '+1',
+                backgroundColor: [
+                    'rgba(0, 56, 164, 0.1)'
+                    
+                ],
+                borderColor: [
+                    'rgba(0, 0, 0, 0)'
+                ],
+                borderWidth: 1,
+                pointStyle: 'line'
+            },
+            {
+                label: 'lower',
+                data: [88,115,130,140,155,165,185,205,217,225,236,253,280,330,341,343,345,380,417,425,433],
+                fill:false,
+                backgroundColor: [
+                    'rgba(0, 56, 164, 0.1)'
+                    
+                ],
+                borderColor: [
+                    'rgba(0, 0, 0, 0)'
+                ],
+                borderWidth: 1,
+                pointStyle: 'line'
+            },
+        ]},
+
+        options: {
+            responsive: true,
+            scales: {
+                yAxes: [{
+                        // stacked: true,
+                        // min: 50,
+                        // max: 500,
+                        // stepSize: 0.5
+                }]
+            }
+        }
+    });
+
+    var ctx = document.getElementById('myReproChart');
+    var myReproductiveChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: [0,3,6,9,12],
+            datasets: [{
+                label: 'Target',
+                data: [0,50,75,85,84],
+                type: 'line',
+                borderDash: [4,4],
+                pointStyle: 'line',
+                fill: false,
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)'
+                ],
+                borderWidth: 1
+            },
+            {
+                label: 'Your herd',
+                data: [0,25,35,51,64,68,72,74,77,82,81,80],
+                backgroundColor: [
+                    'rgba(0, 156, 255, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(0, 156, 255, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                yAxes: [{
+                        stacked: false,
+                        min: 0,
+                        max: 100,
+                        stepSize: 10
+                }]
+            }
+        }
+    });
+</script>
+
 </body>
 </html>

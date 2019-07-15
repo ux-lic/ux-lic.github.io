@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Grid Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="css/grid.css">
+    <link rel="stylesheet" type="text/css" href="css/mystyles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/292d19d4f5.js"></script>
+</head>
+
+<style>
+    /* STYLES */
+
+    .wrapper {
+        /*margin:12rem 0;*/
+        margin-top: 12rem;
+    }
+
+    .subnav {
+        margin-top:3.25rem; min-height: 3.25rem;
+    }
+
+
+</style>
+
+<body>
+
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://bulma.io">
+              <img src="logo.svg" width="112" height="28">
+            </a>
+
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div class="navbar-menu">
+        <!-- navbar start, navbar end -->
+
+        <div class="navbar-end">
+            <div class="navbar-item has-dropdown is-hoverable is-right">
+            <!-- Account dropdown -->
+                <a class="navbar-link">
+                Jess Jacobson
+                </a>
+                <div class="navbar-dropdown">
+                <!-- Other navbar items -->
+                <a class="navbar-item">Account settings</a>
+                <a class="navbar-item">Change password</a>
+                <hr class="navbar-divider">
+                <a class="navbar-item">NAIT stuff</a>
+                </div>
+            </div>
+            <div class="navbar-item">
+                <figure class="image is-32x32">
+                  <img class="is-rounded" src="https://bulma.io/images/placeholders/32x32.png">
+                </figure>
+            </div>
+            <div class="navbar-item has-dropdown is-right is-hoverable">
+                <a class="navbar-link">
+                    <i class="fa fa-bell"></i>
+                </a>
+                <div class="navbar-dropdown">
+                <!-- Other navbar items -->
+                
+                </div>
+            </div>
+          </div>
+        </div>
+    </nav>
+
+    <nav class="navbar has-background-info is-fixed-top subnav" role="navigation" aria-label="sub-navigation">
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <div class="navbar-item">
+                    <div class="field has-addons">
+                      <div class="control">
+                        <input class="input" type="text" placeholder="Lookup an animal">
+                      </div>
+                      <div class="control">
+                        <a class="button is-primary">
+                          Lookup
+                        </a>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-end">
+                <div class="navbar-item">
+                  <div class="select">
+                    <select>
+                        <option>ABCD JJ Family Farm</option>
+                        <option>WWXY Potter Farm</option>
+                    </select>
+                  </div>
+                  <button class="button is-primary"><span class="icon is-small">
+      <i class="fa fa-key"></i>
+    </span>
+    <span>Manage herds</span></button>Preferences
+                </div>                
+            </div>
+        </div>
+    </nav>
+
+    <div class="wrapper container">
+      <!-- Timescale -->
+      <div class="columns is-centered">
+<div class="column">
+        <div class="field is-grouped">
+          <p class="control">
+            <a class="button is-primary">
+              Show all
+            </a>
+          </p>
+          <p class="control">
+            <a class="button is-static">
+              Today
+            </a>
+          </p>
+          <p class="control">
+            <a class="button is-static">
+              Yesterday
+            </a>
+          </p>
+          <p class="control">
+            <a class="button is-outlined is-primary">
+              Custom
+            </a>
+          </p>
+        </div>
+        </div>
+      </div>
+
+
+      <!-- Timeline -->
+      <div class="columns is-centered">
+        <div class="column is-two-thirds">
+          <div class="timeline">
+          <header class="timeline-header">
+            <span class="tag is-medium is-primary">Start</span>
+          </header>
+          <div class="timeline-item">
+            <div class="timeline-marker is-success"></div>
+            <div class="timeline-content">
+              <p class="heading">January 2019</p>
+              <!-- <p>3 activities</p> -->
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker is-icon is-success">
+              <i class="fa fa-check"></i>
+            </div>
+            <div class="timeline-content">
+              <!-- <p class="heading">February 2016</p> -->
+              <p>Duncan Cheetham - approved <a>6 remove animals</a></p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker is-icon is-info">
+              <i class="fa fa-pen"></i>
+            </div>
+            <div class="timeline-content">
+              <!-- <p class="heading">February 2016</p> -->
+              <p>Duncan Cheetham - deleted <a>12 remove animals</a></p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker is-icon is-info">
+              <i class="fa fa-pen"></i>
+            </div>
+            <div class="timeline-content">
+              <!-- <p class="heading">February 2016</p> -->
+              <p>Duncan Cheetham - recorded <a>2 remove animals</a></p>
+            </div>
+          </div>
+          <header class="timeline-header">
+            <span class="tag is-primary">2018</span>
+          </header>
+          <div class="timeline-item">
+            <div class="timeline-marker is-icon">
+              <i class="fa fa-flag"></i>
+            </div>
+            <div class="timeline-content">
+              <p class="heading">March 2017</p>
+              <p>Timeline content - Can include any HTML element</p>
+            </div>
+          </div>
+          <div class="timeline-header">
+            <span class="tag is-medium is-primary">End</span>
+          </div>
+        </div>
+        </div>
+        <div class="column is-one-third">
+          <!-- side bar filters -->
+
+          <nav class="panel">
+            <p class="panel-heading">
+              Filter by
+            </p>
+
+            <p class="panel-heading">
+              Team
+            </p>
+            <label class="panel-block">
+              <input type="checkbox">
+              David Cheetham
+            </label>
+            <label class="panel-block">
+              <input type="checkbox">
+              John Walker
+            </label>
+            <p class="panel-heading">
+              Activity
+            </p>
+            <label class="panel-block">
+              <input type="checkbox">
+              Removal
+            </label>
+            <label class="panel-block">
+              <input type="checkbox">
+              Health
+            </label>
+            <label class="panel-block">
+              <input type="checkbox">
+              EID
+            </label>
+            <div class="panel-block">
+              <button class="button is-link is-outlined is-fullwidth">
+                reset all filters
+              </button>
+            </div>
+          </nav>
+        </div>
+        
+
+      </div>
+</div>
+</body>
+</html>
