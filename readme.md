@@ -1,4 +1,5 @@
 # LIC UI framework
+
 ## Getting started
 `npm install`
 
@@ -18,13 +19,13 @@ Make any changes required to `sass/mytheme.scss`variables then run
 
 This will produce the compiled CSS `mystyles.css`
 You can also use  the following command build on-the-fly
-`npm run css-watch`
 
-## Bloomer 
-When using react we use Bloomer this provides us with a set of out of the box *React components* for  Burma we can see and manipulate these components through storybook.
+`npm run css-watch`
 
 ## Storybook
 
-Rub your storybook with 
+We use storybook to display our UI elements and componentry for use with ReactJS.
 
-` yarn storybook`
+Run your storybook with 
+
+`yarn storybook`
