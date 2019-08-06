@@ -4259,10 +4259,10 @@ a.tag:hover {
     font-size: 14px; }
 
 .label {
-  color: #363636;
+  color: #001e62;
   display: block;
   font-size: 1rem;
-  font-weight: 700; }
+  font-weight: 600; }
   .label:not(:last-child) {
     margin-bottom: 0.5em; }
   .label.is-small {

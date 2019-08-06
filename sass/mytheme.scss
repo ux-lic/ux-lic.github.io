@@ -56,6 +56,12 @@ $size-small: $size-6;
 $size-normal: $size-5;
 $size-medium: $size-4;
 
+$weight-light: 300;
+$weight-normal: 400;
+$weight-medium: 500;
+$weight-semibold: 600;
+$weight-bold: 700;
+
 // Titles
 $title-color: $primary;
 $title-size: $size-6;
@@ -83,6 +89,9 @@ $navbar-item-img-max-height: 2rem;
 $control-border-width: 1px;
 $input-border-color: $lightsky;
 $input-shadow: none;
+
+$label-color: $primary;
+$label-weight: $weight-semibold;
 
 //Cards
 $card-content-padding: 1rem;
