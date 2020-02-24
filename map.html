@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LIC Map (beta)</title>
+    <link rel="stylesheet" type="text/css" href="css/mystyles.css">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.js'></script>
+</head>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+nav {
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    right: 10px;
+}
+</style>
+
+<body>
+    <nav class="box">
+        <div id="menu" class="buttons"></div>
+    </nav>
+    <div id='map'></div>
+    <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoidXgtZG9tIiwiYSI6ImNrNnp0cHpwdDFjZXYzZnJ4Y3FkbnNvdHQifQ.0G06o_CzMiaIGUEqvw9x6g';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/ux-dom/ck6ztt76x02d71ipi0cj5qd0o',
+        center: [175.351411, -37.781275],
+        zoom: 17.66
+    });
+
+    var toggleableLayerIds = ['meeting-rooms', 'break-out', 'poi'];
+
+    for (var i = 0; i < toggleableLayerIds.length; i++) {
+        var id = toggleableLayerIds[i];
+
+        var link = document.createElement('button');
+        link.href = '#';
+        link.className = 'button is-fullwidth is-primary';
+        link.textContent = id;
+
+        link.onclick = function(e) {
+            var clickedLayer = this.textContent;
+            e.preventDefault();
+            e.stopPropagation();
+
+            var visibility = map.getLayoutProperty(clickedLayer, 'visibility');
+
+            if (visibility === 'visible') {
+                map.setLayoutProperty(clickedLayer, 'visibility', 'none');
+                this.className = 'button is-fullwidth';
+            } else {
+                this.className = 'button is-fullwidth is-primary';
+                map.setLayoutProperty(clickedLayer, 'visibility', 'visible');
+            }
+        };
+
+        var layers = document.getElementById('menu');
+        layers.appendChild(link);
+    }
+
+    map.on('load', function() {
+        map.on('click', 'poi', function(e) {
+            var coordinates = e.features[0].geometry.coordinates.slice();
+            var description = e.features[0].properties.name;
+
+            // Ensure that if the map is zoomed out such that multiple
+            // copies of the feature are visible, the popup appears
+            // over the copy being pointed to.
+            while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+            }
+
+            new mapboxgl.Popup()
+                .setLngLat(coordinates)
+                .setHTML(description)
+                .addTo(map);
+        });
+
+        // Change the cursor to a pointer when the mouse is over the places layer.
+        map.on('mouseenter', 'poi', function() {
+            map.getCanvas().style.cursor = 'pointer';
+        });
+
+        // Change it back to a pointer when it leaves.
+        map.on('mouseleave', 'poi', function() {
+            map.getCanvas().style.cursor = '';
+        });
+    
+    });
+    </script>
+</body>
+
+</html>
