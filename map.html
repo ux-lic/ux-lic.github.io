@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="css/mystyles.css">
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.css' rel='stylesheet' />
     <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.js'></script>
+    <script src="https://kit.fontawesome.com/292d19d4f5.js"></script>
 </head>
 <style>
 body {
@@ -23,14 +24,67 @@ body {
 nav {
     position: absolute;
     z-index: 1;
-    top: 10px;
+    top: 50px;
     right: 10px;
 }
 </style>
 
 <body>
     <nav class="box">
-        <div id="menu" class="buttons"></div>
+        	<input type="text" id="myInput" onkeyup="filterList()" class="input" placeholder="Search for somewhere">
+    	
+        <aside id="menu" class="menu">
+        	<p class="menu-label">
+                Buildings
+            </p>
+            <ul class="menu-list">
+                <li><a>Tempero</a></li>
+                <li><a>Shannon building</a></li>
+                <li><a>Warehouse</a></li>
+                <li><a>Bull barn</a></li>
+                <li><a>B Block</a></li>
+                <li><a>C Block</a></li>
+                <li><a>D Block</a></li>
+                <li><a>E Block</a></li>
+                <li><a>F Block</a></li>
+            </ul>
+            <p class="menu-label">
+                Meeting rooms
+            </p>
+            <ul class="menu-list">
+                <li><a>Tempero</a></li>
+                <li><a>Atlas</a></li>
+                <li><a>Fjord</a></li>
+                <li><a>Admiral</a></li>
+                <li><a>Vanamo</a></li>
+                <li><a>President</a></li>
+                <li><a>Belvedere</a></li>
+                <li><a>Collins Hugo board room</a></li>
+                <li><a>Bramble</a></li>
+                <li><a>DC Carl</a></li>
+                <li><a>Samual</a></li>
+                <li><a>Dauntless</a></li>
+                <li><a>Elliot</a></li>
+                <li><a>Senator</a></li>
+                <li><a>Shamrock</a></li>
+                <li><a>Casper</a></li>
+                <li><a>Dante</a></li>
+                <li><a>Walesa</a></li>
+                <li><a>Viewing gallery</a></li>
+                <li><a>Northsea</a></li>
+                <li><a>Maori Bestman</a></li>
+                <li><a>NSSC</a></li>
+            </ul>
+            <p class="menu-label">
+                Recreational areas
+            </p>
+            <ul class="menu-list">
+                <li><a>Pool</a></li>
+                <li><a>Changing rooms</a></li>
+                <li><a>Multi-sport surface</a></li>
+                <li><a>Social club (NSSC)</a></li>
+            </ul>
+        </aside>
     </nav>
     <div id='map'></div>
     <script>
@@ -40,42 +94,34 @@ nav {
         style: 'mapbox://styles/ux-dom/ck6ztt76x02d71ipi0cj5qd0o',
         center: [175.351411, -37.781275],
         zoom: 17.66
+		// pitch: 40,
+		// bearing: 20,
+		// antialias: true
     });
 
-    var toggleableLayerIds = ['meeting-rooms', 'break-out', 'poi'];
+    
+    // Add geolocate control to the map.
+    map.addControl(
+        new mapboxgl.GeolocateControl({
+            positionOptions: {
+                enableHighAccuracy: true
+            },
+            trackUserLocation: true
+        })
+    );
 
-    for (var i = 0; i < toggleableLayerIds.length; i++) {
-        var id = toggleableLayerIds[i];
 
-        var link = document.createElement('button');
-        link.href = '#';
-        link.className = 'button is-fullwidth is-primary';
-        link.textContent = id;
+    // generate popup
+    var popup = new mapboxgl.Popup({ closeOnClick: false })
+		.setLngLat([-96, 37.8])
+		.setHTML('<h1>Hello World!</h1>')
+		.addTo(map);
 
-        link.onclick = function(e) {
-            var clickedLayer = this.textContent;
-            e.preventDefault();
-            e.stopPropagation();
-
-            var visibility = map.getLayoutProperty(clickedLayer, 'visibility');
-
-            if (visibility === 'visible') {
-                map.setLayoutProperty(clickedLayer, 'visibility', 'none');
-                this.className = 'button is-fullwidth';
-            } else {
-                this.className = 'button is-fullwidth is-primary';
-                map.setLayoutProperty(clickedLayer, 'visibility', 'visible');
-            }
-        };
-
-        var layers = document.getElementById('menu');
-        layers.appendChild(link);
-    }
+    //click on items
 
     map.on('load', function() {
-        map.on('click', 'poi', function(e) {
+        map.on('click', 'other-areas', function(e) {
             var coordinates = e.features[0].geometry.coordinates.slice();
-            var description = e.features[0].properties.name;
 
             // Ensure that if the map is zoomed out such that multiple
             // copies of the feature are visible, the popup appears
@@ -86,21 +132,71 @@ nav {
 
             new mapboxgl.Popup()
                 .setLngLat(coordinates)
-                .setHTML(description)
+                .setHTML(e.features[0].properties.name)
                 .addTo(map);
         });
 
         // Change the cursor to a pointer when the mouse is over the places layer.
-        map.on('mouseenter', 'poi', function() {
+        map.on('mouseenter', 'other-areas', function() {
             map.getCanvas().style.cursor = 'pointer';
         });
 
         // Change it back to a pointer when it leaves.
-        map.on('mouseleave', 'poi', function() {
+        map.on('mouseleave', 'other-areas', function() {
             map.getCanvas().style.cursor = '';
         });
-    
+
+
+        map.on('click', 'meeting-rooms', function(e) {
+        	var coordinates = e.features[0].geometry.coordinates.slice();
+            var name = e.features[0].properties.name;
+            var cap = e.features[0].properties.capacity;
+            var vc = (e.features[0].properties.vc == 'true') ? '<i class="fas fa-video"></i>':' '; //@TODO
+            var display = (e.features[0].properties.display == 'true') ? '<i class="fas fa-desktop"></i>' : ' ';
+            var level = (e.features[0].properties.level == 0) ? 'Ground floor' : 'First floor';
+
+            new mapboxgl.Popup()
+                .setLngLat(e.lngLat)
+                .setHTML('<strong>'+name+'</strong><ul><li>'+level+'</li><li><i class="fas fa-chair"></i> '+cap+'</li><li>'+vc+'</li><li>'+display+'</li></ul>')
+                .addTo(map);
+        });
+
+        // Change the cursor to a pointer when the mouse is over the states layer.
+        map.on('mouseenter', 'meeting-rooms', function() {
+            map.getCanvas().style.cursor = 'pointer';
+        });
+
+        // Change it back to a pointer when it leaves.
+        map.on('mouseleave', 'meeting-rooms', function() {
+            map.getCanvas().style.cursor = '';
+        });
+
+
     });
+
+    
+
+    function filterList() {
+	  // Declare variables
+	  var input, filter, menu, ul, li, a, i, txtValue;
+	  input = document.getElementById('myInput');
+	  filter = input.value.toUpperCase();
+	  menu = document.getElementById("menu");
+	  ul = menu.getElementsByTagName("ul");
+	  li = menu.getElementsByTagName('li');
+
+	  // Loop through all list items, and hide those who don't match the search query
+	  for (i = 0; i < li.length; i++) {
+	    a = li[i].getElementsByTagName("a")[0];
+	    txtValue = a.textContent || a.innerText;
+	    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+	      li[i].style.display = "";
+	    } else {
+	      li[i].style.display = "none";
+	    }
+	  }
+	}
+
     </script>
 </body>
 
