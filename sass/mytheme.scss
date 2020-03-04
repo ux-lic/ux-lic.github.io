@@ -109,11 +109,8 @@ $breadcrumb-item-separator-color: $primary;
 @import "../node_modules/bulma/sass/grid/_all.sass";
 @import "../node_modules/bulma/sass/elements/_all.sass";
 @import "../node_modules/bulma/sass/form/_all.sass";
-@import "../node_modules/bulma/sass/components/navbar.sass";
-@import "../node_modules/bulma/sass/components/card.sass";
-@import "../node_modules/bulma/sass/components/panel.sass";
-@import "../node_modules/bulma/sass/components/breadcrumb.sass";
-@import "../node_modules/bulma/sass/layout/section.sass";
+@import "../node_modules/bulma/sass/components/_all.sass";
+@import "../node_modules/bulma/sass/layout/_all.sass";
 
 // Extensions
 @import "../node_modules/bulma-timeline/dist/css/bulma-timeline.sass";
