@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/292d19d4f5.js"></script>
+    <link href="css/mystyles.css" rel="stylesheet">
+    <title>SPACE test</title>
+</head>
+<style>
+	.search-tool {
+		padding-left: 1rem;
+	}
+</style>
+<body>
+	<noscript>You need to enable JavaScript to run this app.</noscript>
+
+	<nav class="navbar is-white level is-marginless">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="http://bulma.io"><svg xmlns="http://www.w3.org/2000/svg" width="99" height="28" viewBox="0 0 99 28"><g fill="#009CDE"><path d="M29.7 22.6c.3.5.4 1 .4 1.6 0 1.7-1.4 3.1-3.1 3.1h-7.7c-.5 0-1 0-1.4-.1-3.9-.6-7-3.4-7.9-7.2 2.7 3.9 8.2 4.9 12.1 2.1 2-1.4 3.3-3.6 3.6-6v-.4l4 6.9z"></path><path d="M12.4 1.6c.3-.5.7-.9 1.1-1.1 1.4-.9 3.3-.4 4.1 1 0 0 0 .1.1.1l3.9 6.8c.2.4.5.9.6 1.3 1.5 3.7.6 7.8-2.2 10.6 1-2.2 1.1-4.7.1-7-1.7-4.5-6.8-6.7-11.2-4.9 0 0-.1 0-.1.1h-.3l3.9-6.9z"></path><path d="M3.1 27.3c-.5 0-1.1-.1-1.5-.4-1.5-.9-2-2.8-1.1-4.2l3.9-6.8c.2-.4.5-.8.8-1.2 2.4-3.1 6.4-4.4 10.2-3.3-2.4.2-4.5 1.5-6 3.4-3 3.9-2.3 9.4 1.5 12.4l.3.2-8.1-.1z"></path></g><path fill="#001E62" d="M91.2 8.6h-9.4c-1.2 0-1.8.4-2 1.4l-3 12.1c-.2.9.1 1.4 1.3 1.4h9.4l-.9 3.7h-14c-3.7 0-4.9-2.3-3.9-6.2l2.4-10c1-3.9 3.2-6.2 7-6.2h14l-.9 3.8zm4.5.4c-1.3 0-2.3-1-2.3-2.3 0-1.3 1-2.3 2.3-2.3 1.3 0 2.3 1 2.3 2.3C98 8 96.9 9 95.7 9zm0-4.1c-1 0-1.7.8-1.8 1.7v.1c0 1 .8 1.8 1.8 1.8s1.8-.8 1.8-1.8c-.1-1-.8-1.8-1.8-1.8zm.4 3l-.5-.9h-.3v.9h-.6V5.4h1c.4 0 .8.3.8.7 0 .3-.2.5-.4.7l.5 1-.5.1zm-.4-2h-.4v.6h.4c.2 0 .3-.1.3-.3.1-.1-.1-.3-.3-.3zm-25.4-1h-8.4l-5.5 22.3h8.4m-10-3.7H44.1l4.6-18.6h-8.4l-5.5 22.3h19.1"></path></svg></a>
+           
+            <div class="navbar-burger burger" data-target="navMenuExample2">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+
+                    <div id="navMenuExample2" class="navbar-menu">
+                        <div class="navbar-start">
+                            
+                            
+                        </div>
+                        <div class="navbar-end">
+                        	<div class="navbar-item has-dropdown is-hoverable">
+                                <a class="navbar-link" href="#blog/">Download</a>
+                                <div id="blogDropdown" class="navbar-dropdown is-right" data-style="width: 18rem;">
+                                    <a class="navbar-item" href="#">
+						              <div class="navbar-content">
+						              	
+								          <span class="icon">
+								            <i class="far fa-file-pdf fa-lg"></i>
+								          </span>
+								          <span>Printable PDF</span>
+								       
+						              </div>
+						            </a>
+						            <a class="navbar-item" href="#">
+						              <div class="navbar-content">
+						              	
+								          <span class="icon">
+								            <i class="far fa-file-csv fa-lg"></i>
+								          </span>
+								          <span>CSV</span>
+								       
+						              </div>
+						            </a>
+                                    <hr class="navbar-divider">
+                                    <div class="navbar-item">
+                                        <div class="navbar-content">
+                                            <div class="level is-mobile">
+                                                <div class="level-left">
+                                                    <div class="level-item">
+                                                        <strong>Stay up to date!</strong>
+                                                    </div>
+                                                </div>
+                                                <div class="level-right">
+                                                    <div class="level-item">
+														<a class="button is-rss is-small" href="#atom.xml">
+															<span class="icon is-small">
+															  <i class="fa fa-rss" aria-hidden="true"></i>
+															</span>
+															<span>Subscribe</span>
+														</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </nav>
+                <!-- subnav -->
+                <nav class="level navbar is-mobile" style="z-index: 0;border-top: 1px solid #EDF3FA;">
+				    <div class="level-item has-text-centered">
+					    <div>
+					      <p class="heading">Sun Jan 26 2020</p>
+					      <p class="title">FYPQ</p>
+					    </div>
+					  </div>
+				    <div class="level-item has-text-centered">
+					    <div>
+					      <p class="heading">Average</p>
+					      <p class="title"><strong>3,456</strong> KG DM/ha</p>
+					    </div>
+					  </div>
+				</nav>
+
+    
+
+<div id="root">
+	<div class="columns">
+		<div class="column is-3 is-hidden-mobile has-background-white">
+
+			<div class="field is-grouped search-tool">
+			  <p class="control has-icons-left is-expanded">
+			    <input class="input" type="text" placeholder="Find a paddock">
+			    <span class="icon is-small is-left">
+      <i class="fas fa-search"></i>
+    </span>
+			  </p>
+			  <p class="control">
+			    <a class="button is-info">
+			      Search
+			    </a>
+			  </p>
+			</div>
+
+			<table class="table is-striped is-fullwidth is-hoverable">
+				<thead>
+                    <tr>
+                        <th>Paddock Name</th>
+                        <th>Kg DM/ha</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>86</td>
+                        <td>3931.88416172812</td>
+                    </tr>
+                    <tr>
+                        <td>79</td>
+                        <td>3898.99130390508</td>
+                    </tr>
+                    <tr>
+                        <td>77</td>
+                        <td>3859.14602092893</td>
+                    </tr>
+                    <tr>
+                        <td>53</td>
+                        <td>3837.48764511665</td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td>3823.58531867761</td>
+                    </tr>
+                    <tr>
+                        <td>55</td>
+                        <td>3814.79461218745</td>
+                    </tr>
+                    <tr>
+                        <td>81</td>
+                        <td>3751.37730443224</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>3718.17332060922</td>
+                    </tr>
+                    <tr>
+                        <td>69</td>
+                        <td>3713.9388484822</td>
+                    </tr>
+                    <tr>
+                        <td>67</td>
+                        <td>3689.38851297146</td>
+                    </tr>
+                    <tr>
+                        <td>70</td>
+                        <td>3687.03333678503</td>
+                    </tr>
+                    <tr>
+                        <td>85</td>
+                        <td>3683.53657068496</td>
+                    </tr>
+                    <tr>
+                        <td>57</td>
+                        <td>3682.45020173822</td>
+                    </tr>
+                    <tr>
+                        <td>19</td>
+                        <td>3678.96390192547</td>
+                    </tr>
+                    <tr>
+                        <td>37</td>
+                        <td>3668.6535918057</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>3667.7603319795</td>
+                    </tr>
+                    <tr>
+                        <td>84</td>
+                        <td>3654.04559736135</td>
+                    </tr>
+                    <tr>
+                        <td>83</td>
+                        <td>3645.49289458067</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>3643.01651881279</td>
+                    </tr>
+                    <tr>
+                        <td>65</td>
+                        <td>3629.75343229099</td>
+                    </tr>
+                    <tr>
+                        <td>80</td>
+                        <td>3626.95596637614</td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td>3616.24076065363</td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td>3602.70779946118</td>
+                    </tr>
+                    <tr>
+                        <td>63</td>
+                        <td>3602.70485346378</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>3599.49232805731</td>
+                    </tr>
+                    <tr>
+                        <td>26</td>
+                        <td>3552.64699065487</td>
+                    </tr>
+                    <tr>
+                        <td>21</td>
+                        <td>3541.22595907932</td>
+                    </tr>
+                    <tr>
+                        <td>44</td>
+                        <td>3535.33138403183</td>
+                    </tr>
+                    <tr>
+                        <td>74</td>
+                        <td>3532.54691333109</td>
+                    </tr>
+                    <tr>
+                        <td>24</td>
+                        <td>3507.56096158377</td>
+                    </tr>
+                    <tr>
+                        <td>41</td>
+                        <td>3453.42873714314</td>
+                    </tr>
+                    <tr>
+                        <td>82</td>
+                        <td>3449.74504664739</td>
+                    </tr>
+                    <tr>
+                        <td>61</td>
+                        <td>3330.31158075631</td>
+                    </tr>
+                    <tr>
+                        <td>59</td>
+                        <td>3274.74134019407</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>3157.34525362476</td>
+                    </tr>
+                    <tr>
+                        <td>25</td>
+                        <td>3156.73452552291</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>3117.71641995677</td>
+                    </tr>
+                    <tr>
+                        <td>23</td>
+                        <td>3098.45982001182</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>3068.25586833322</td>
+                    </tr>
+                    <tr>
+                        <td>32</td>
+                        <td>3066.11886574153</td>
+                    </tr>
+                    <tr>
+                        <td>45</td>
+                        <td>3056.3227805447</td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td>3048.05050239175</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>3047.27531909119</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>3031.31515294444</td>
+                    </tr>
+                    <tr>
+                        <td>38</td>
+                        <td>3024.82484770405</td>
+                    </tr>
+                    <tr>
+                        <td>34</td>
+                        <td>3011.89984679175</td>
+                    </tr>
+                    <tr>
+                        <td>51</td>
+                        <td>2998.95416691327</td>
+                    </tr>
+                    <tr>
+                        <td>47</td>
+                        <td>2985.62617920316</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>2977.1756487914</td>
+                    </tr>
+                    <tr>
+                        <td>22</td>
+                        <td>2955.93945426043</td>
+                    </tr>
+                    <tr>
+                        <td>49</td>
+                        <td>2929.90341880048</td>
+                    </tr>
+                    <tr>
+                        <td>30</td>
+                        <td>2867.62097576382</td>
+                    </tr>
+                    <tr>
+                        <td>33</td>
+                        <td>2866.30639346007</td>
+                    </tr>
+                    <tr>
+                        <td>35</td>
+                        <td>2824.83537437838</td>
+                    </tr>
+                    <tr>
+                        <td>28</td>
+                        <td>2819.88859962994</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>2818.45010728242</td>
+                    </tr>
+                    <tr>
+                        <td>62</td>
+                        <td>2814.63848967811</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>2805.85306912296</td>
+                    </tr>
+                    <tr>
+                        <td>68</td>
+                        <td>2746.6551373177</td>
+                    </tr>
+                    <tr>
+                        <td>36</td>
+                        <td>2732.70493841502</td>
+                    </tr>
+                    <tr>
+                        <td>29</td>
+                        <td>2708.17983271429</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>2659.42273854076</td>
+                    </tr>
+                    <tr>
+                        <td>27</td>
+                        <td>2646.54108597085</td>
+                    </tr>
+                    <tr>
+                        <td>40</td>
+                        <td>2626.45132178338</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>2622.29444659134</td>
+                    </tr>
+                    <tr>
+                        <td>31</td>
+                        <td>2564.10396827334</td>
+                    </tr>
+                    <tr>
+                        <td>42</td>
+                        <td>2544.45631252082</td>
+                    </tr>
+                    <tr>
+                        <td>75</td>
+                        <td>2538.90118477718</td>
+                    </tr>
+                    <tr>
+                        <td>64</td>
+                        <td>2481.48646890174</td>
+                    </tr>
+                    <tr>
+                        <td>46</td>
+                        <td>2464.48646172798</td>
+                    </tr>
+                    <tr>
+                        <td>43</td>
+                        <td>2424.44055180778</td>
+                    </tr>
+                    <tr>
+                        <td>71</td>
+                        <td>2420.33841274546</td>
+                    </tr>
+                    <tr>
+                        <td>52</td>
+                        <td>2394.74432944084</td>
+                    </tr>
+                    <tr>
+                        <td>60</td>
+                        <td>2346.58386572043</td>
+                    </tr>
+                    <tr>
+                        <td>58</td>
+                        <td>2327.18012945221</td>
+                    </tr>
+                    <tr>
+                        <td>56</td>
+                        <td>2292.0288365838</td>
+                    </tr>
+                </tbody>
+			</table>
+
+		</div>
+		<div class="column">
+
+			<div id="tabs" class="tabs is-fullwidth is-boxed is-medium is-marginless has-padding">
+			  <ul>
+			    <li data-tab="1" class="is-active">
+			      <a>
+			        <span class="icon is-small"><i class="fas fa-map" aria-hidden="true"></i></span>
+			        <span>Map</span>
+			      </a>
+			    </li>
+			    <li data-tab="2" class="is-hidden-desktop">
+			      <a>
+			        <span class="icon is-small"><i class="fas fa-table" aria-hidden="true"></i></span>
+			        <span>Paddocks</span>
+			      </a>
+			    </li>
+			    <li data-tab="3">
+			      <a>
+			        <span class="icon is-small"><i class="far fa-chart-bar" aria-hidden="true"></i></span>
+			        <span>Feed wedge</span>
+			      </a>
+			    </li>
+			    
+			  </ul>
+			</div>
+
+			<div id="tab-content" class="has-background-white">
+                <p data-content="1" class="is-active">
+
+
+                	<figure class="image is-1x1 is-fullwidth">
+                    	<img src="https://licnz-space-farmshots-data-dev.s3-ap-southeast-2.amazonaws.com/a73db6d2-e708-4f88-9f24-053ad5b1d067/20200126_233801_16_106c/cover+map.png" alt="Pasture">
+                	</figure>
+            		
+            		<button class="button">
+					    <span class="icon">
+					      <i class="fas fa-layer-group fa-lg"></i>
+					    </span>
+					 </button>
+					
+                    <div class="download-buttons-mobile d-block d-lg-none"><button type="button" class="menu-button btn btn-outline-secondary"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 48 48">
+                                            <style type="text/css">
+                                            .st0 {
+                                                fill: #1F3B70;
+                                            }
+                                            </style>
+                                            <g>
+                                                <rect x="0" y="38" class="st0" width="48" height="6"></rect>
+                                                <rect x="0" y="21.3" class="st0" width="36" height="6"></rect>
+                                                <rect x="0" y="4" class="st0" width="48" height="6"></rect>
+                                            </g>
+                                        </svg></button></div>
+                                <div class="dry-matter-palette-container">
+                                    <div class="row">
+                                        <div class="left-label col-3 col-lg-3">No Pasture</div>
+                                        <div class="col-5 col-lg-5"></div>
+                                        <div class="right-label col-4 col-lg-4">Abundant Pasture</div>
+                                    </div>
+                                    <div class="dry-matter-color-palette row" style="background-image: linear-gradient(to right, rgb(128, 128, 128) 0%, rgb(128, 128, 128) 2.857142857142857%, rgb(255, 14, 0) 2.857142857142857%, rgb(255, 14, 0) 5.714285714285714%, rgb(255, 27, 0) 5.714285714285714%, rgb(255, 27, 0) 8.571428571428571%, rgb(255, 41, 0) 8.571428571428571%, rgb(255, 41, 0) 11.428571428571429%, rgb(255, 51, 0) 11.428571428571429%, rgb(255, 51, 0) 14.285714285714286%, rgb(255, 69, 0) 14.285714285714286%, rgb(255, 69, 0) 17.142857142857142%, rgb(255, 83, 0) 17.142857142857142%, rgb(255, 83, 0) 20%, rgb(255, 97, 0) 20%, rgb(255, 97, 0) 22.857142857142858%, rgb(255, 112, 0) 22.857142857142858%, rgb(255, 112, 0) 25.714285714285715%, rgb(255, 126, 0) 25.714285714285715%, rgb(255, 126, 0) 28.571428571428573%, rgb(255, 141, 0) 28.571428571428573%, rgb(255, 141, 0) 31.42857142857143%, rgb(255, 155, 0) 31.42857142857143%, rgb(255, 155, 0) 34.285714285714285%, rgb(255, 169, 0) 34.285714285714285%, rgb(255, 169, 0) 37.142857142857146%, rgb(255, 184, 0) 37.142857142857146%, rgb(255, 184, 0) 40%, rgb(255, 212, 0) 40%, rgb(255, 212, 0) 42.85714285714286%, rgb(255, 226, 0) 42.85714285714286%, rgb(255, 226, 0) 45.714285714285715%, rgb(255, 240, 0) 45.714285714285715%, rgb(255, 240, 0) 48.57142857142857%, rgb(255, 254, 0) 48.57142857142857%, rgb(255, 254, 0) 51.42857142857143%, rgb(241, 246, 0) 51.42857142857143%, rgb(241, 246, 0) 54.285714285714285%, rgb(226, 238, 0) 54.285714285714285%, rgb(226, 238, 0) 57.142857142857146%, rgb(212, 230, 0) 57.142857142857146%, rgb(212, 230, 0) 60%, rgb(198, 221, 0) 60%, rgb(198, 221, 0) 62.85714285714286%, rgb(184, 213, 0) 62.85714285714286%, rgb(184, 213, 0) 65.71428571428572%, rgb(170, 205, 0) 65.71428571428572%, rgb(170, 205, 0) 68.57142857142857%, rgb(156, 196, 0) 68.57142857142857%, rgb(156, 196, 0) 71.42857142857143%, rgb(142, 188, 0) 71.42857142857143%, rgb(142, 188, 0) 74.28571428571429%, rgb(127, 180, 0) 74.28571428571429%, rgb(127, 180, 0) 77.14285714285714%, rgb(112, 171, 0) 77.14285714285714%, rgb(112, 171, 0) 80%, rgb(98, 163, 0) 80%, rgb(98, 163, 0) 82.85714285714286%, rgb(84, 155, 0) 82.85714285714286%, rgb(84, 155, 0) 85.71428571428572%, rgb(70, 146, 0) 85.71428571428572%, rgb(70, 146, 0) 88.57142857142857%, rgb(56, 138, 0) 88.57142857142857%, rgb(56, 138, 0) 91.42857142857143%, rgb(41, 130, 0) 91.42857142857143%, rgb(41, 130, 0) 94.28571428571429%, rgb(27, 120, 0) 94.28571428571429%, rgb(27, 120, 0) 97.14285714285714%, rgb(14, 112, 0) 97.14285714285714%, rgb(14, 112, 0) 100%); background-position: initial initial; background-repeat: initial initial;"></div>
+                                </div>
+                            </div>
+                </p>
+                        <p data-content="2" class="is-hidden">
+                        	paddocks
+                        </p>
+                        <p data-content="3" class="is-hidden">
+                        	<div id="chart">
+                        		<svg width="504" height="610">
+                                <g transform="translate(70,80)">
+                                    <g class="x axis" transform="translate(0, 470)" fill="none" font-size="10" font-family="sans-serif" text-anchor="middle">
+                                        <path class="domain" stroke="currentColor" d="M0.5,6V0.5H424.5V6"></path>
+                                        <g class="tick" opacity="1" transform="translate(23.5,0)">
+                                            <line stroke="currentColor" y2="6"></line><text fill="currentColor" y="9" dy="0.71em">86</text>
+                                        </g>
+                                        <g class="tick" opacity="1" transform="translate(52.5,0)">
+                                            <line stroke="currentColor" y2="6"></line><text fill="currentColor" y="9" dy="0.71em">79</text>
+                                        </g>
+                                        <g class="tick" opacity="1" transform="translate(81.5,0)">
+                                            <line stroke="currentColor" y2="6"></line><text fill="currentColor" y="9" dy="0.71em">77</text>
+                                        </g>
+                                        <g class="tick" opacity="1" transform="translate(110.5,0)">
+                                            <line stroke="currentColor" y2="6"></line><text fill="currentColor" y="9" dy="0.71em">53</text>
+                                        </g>
+                                        <g class="tick" opacity="1" transform="translate(139.5,0)">
+                                            <line stroke="currentColor" y2="6"></line><text fill="currentColor" y="9" dy="0.71em">17</text>
+                                        </g>
+                                        <g class="tick" opacity="1" transform="translate(168.5,0)">
+                                            <line stroke="currentColor" y2="6"></line><text fill="currentColor" y="9" dy="0.71em">55</text>
+                                        </g>
+                                        <g class="tick" opacity="1" transform="translate(197.5,0)">
+                                            <line stroke="currentColor" y2="6"></line><text fill="currentColor" y="9" dy="0.71em">81</text>
+                                        </g>
+                                        <g class="tick" opacity="1" transform="translate(226.5,0)">
+                                            <line stroke="currentColor" y2="6"></line><text fill="currentColor" y="9" dy="0.71em">13</text>
+                                        </g>
+                                        <g class="tick" opacity="1" transform="translate(255.5,0)">
+                                            <line stroke="currentColor" y2="6"></line><text fill="currentColor" y="9" dy="0.71em">69</text>
+                                        </g>
+                                        <g class="tick" opacity="1" transform="translate(284.5,0)">
+                                            <line stroke="currentColor" y2="6"></line><text fill="currentColor" y="9" dy="0.71em">67</text>
+                                        </g>
+                                        <g class="tick" opacity="1" transform="translate(313.5,0)">
+                                            <line stroke="currentColor" y2="6"></line><text fill="currentColor" y="9" dy="0.71em">70</text>
+                                        </g>
+                                        <g class="tick" opacity="1" transform="translate(342.5,0)">
+                                            <line stroke="currentColor" y2="6"></line><text fill="currentColor" y="9" dy="0.71em">85</text>
+                                        </g>
+                                        <g class="tick" opacity="1" transform="translate(371.5,0)">
+                                            <line stroke="currentColor" y2="6"></line><text fill="currentColor" y="9" dy="0.71em">57</text>
+                                        </g>
+                                        <g class="tick" opacity="1" transform="translate(400.5,0)">
+                                            <line stroke="currentColor" y2="6"></line><text fill="currentColor" y="9" dy="0.71em">19</text>
+                                        </g>
+                                    </g>
+                                    <g class="y axis" fill="none" font-size="10" font-family="sans-serif" text-anchor="end">
+                                        <path class="domain" stroke="currentColor" d="M-6,470.5H0.5V0.5H-6"></path>
+                                        <g class="tick" opacity="1" transform="translate(0,470.5)">
+                                            <line stroke="currentColor" x2="-6"></line><text fill="currentColor" x="-9" dy="0.32em">0</text>
+                                        </g>
+                                        <g class="tick" opacity="1" transform="translate(0,423.5)">
+                                            <line stroke="currentColor" x2="-6"></line><text fill="currentColor" x="-9" dy="0.32em">500</text>
+                                        </g>
+                                        <g class="tick" opacity="1" transform="translate(0,376.5)">
+                                            <line stroke="currentColor" x2="-6"></line><text fill="currentColor" x="-9" dy="0.32em">1,000</text>
+                                        </g>
+                                        <g class="tick" opacity="1" transform="translate(0,329.5)">
+                                            <line stroke="currentColor" x2="-6"></line><text fill="currentColor" x="-9" dy="0.32em">1,500</text>
+                                        </g>
+                                        <g class="tick" opacity="1" transform="translate(0,282.5)">
+                                            <line stroke="currentColor" x2="-6"></line><text fill="currentColor" x="-9" dy="0.32em">2,000</text>
+                                        </g>
+                                        <g class="tick" opacity="1" transform="translate(0,235.5)">
+                                            <line stroke="currentColor" x2="-6"></line><text fill="currentColor" x="-9" dy="0.32em">2,500</text>
+                                        </g>
+                                        <g class="tick" opacity="1" transform="translate(0,188.5)">
+                                            <line stroke="currentColor" x2="-6"></line><text fill="currentColor" x="-9" dy="0.32em">3,000</text>
+                                        </g>
+                                        <g class="tick" opacity="1" transform="translate(0,141.50000000000003)">
+                                            <line stroke="currentColor" x2="-6"></line><text fill="currentColor" x="-9" dy="0.32em">3,500</text>
+                                        </g>
+                                        <g class="tick" opacity="1" transform="translate(0,94.49999999999999)">
+                                            <line stroke="currentColor" x2="-6"></line><text fill="currentColor" x="-9" dy="0.32em">4,000</text>
+                                        </g>
+                                        <g class="tick" opacity="1" transform="translate(0,47.49999999999999)">
+                                            <line stroke="currentColor" x2="-6"></line><text fill="currentColor" x="-9" dy="0.32em">4,500</text>
+                                        </g>
+                                        <g class="tick" opacity="1" transform="translate(0,0.5)">
+                                            <line stroke="currentColor" x2="-6"></line><text fill="currentColor" x="-9" dy="0.32em">5,000</text>
+                                        </g>
+                                    </g><text transform="rotate(-90)" y="-70" x="-235" dy="1em" class="yAxis-text">Value (kg/DM)</text>
+                                    <g>
+                                        <rect class="bar" x="12" y="100.4028887975567" width="23" height="369.59711120244333"></rect>
+                                        <rect class="bar" x="41" y="103.49481743292249" width="23" height="366.5051825670775"></rect>
+                                        <rect class="bar" x="70" y="107.24027403268062" width="23" height="362.75972596731935"></rect>
+                                        <rect class="bar" x="99" y="109.27616135903489" width="23" height="360.72383864096514"></rect>
+                                        <rect class="bar" x="128" y="110.58298004430468" width="23" height="359.4170199556953"></rect>
+                                        <rect class="bar" x="157" y="111.40930645437966" width="23" height="358.59069354562035"></rect>
+                                        <rect class="bar" x="186" y="117.37053338336942" width="23" height="352.62946661663057"></rect>
+                                        <rect class="bar" x="215" y="120.49170786273334" width="23" height="349.50829213726666"></rect>
+                                        <rect class="bar" x="244" y="120.88974824267319" width="23" height="349.1102517573268"></rect>
+                                        <rect class="bar" x="273" y="123.19747978068277" width="23" height="346.8025202193172"></rect>
+                                        <rect class="bar" x="302" y="123.41886634220718" width="23" height="346.5811336577928"></rect>
+                                        <rect class="bar" x="331" y="123.74756235561372" width="23" height="346.2524376443863"></rect>
+                                        <rect class="bar" x="360" y="123.84968103660732" width="23" height="346.1503189633927"></rect>
+                                        <rect class="bar" x="389" y="124.17739321900582" width="23" height="345.8226067809942"></rect>
+                                    </g>
+                                    <g class="grazing-line">
+                                        <line x1="12" y1="197.4" x2="412" y2="244.15263157894736" style="stroke: orange; stroke-width: 2px;"></line>
+                                    </g>
+                                    <rect class="subBar" height="23.59130497036872" width="4" x="23" y="506.4086950296313"></rect>
+                                    <rect class="subBar" height="23.39394782343048" width="4" x="28" y="506.6060521765695"></rect>
+                                    <rect class="subBar" height="23.15487612557358" width="4" x="33" y="506.8451238744264"></rect>
+                                    <rect class="subBar" height="23.0249258706999" width="4" x="38" y="506.9750741293001"></rect>
+                                    <rect class="subBar" height="22.941511912065657" width="4" x="43" y="507.05848808793434"></rect>
+                                    <rect class="subBar" height="22.888767673124704" width="4" x="48" y="507.1112323268753"></rect>
+                                    <rect class="subBar" height="22.508263826593442" width="4" x="53" y="507.49173617340654"></rect>
+                                    <rect class="subBar" height="22.30903992365532" width="4" x="58" y="507.6909600763447"></rect>
+                                    <rect class="subBar" height="22.2836330908932" width="4" x="63" y="507.7163669091068"></rect>
+                                    <rect class="subBar" height="22.136331077828757" width="4" x="68" y="507.86366892217126"></rect>
+                                    <rect class="subBar" height="22.12220002071018" width="4" x="73" y="507.8777999792898"></rect>
+                                    <rect class="subBar" height="22.101219424109765" width="4" x="78" y="507.8987805758902"></rect>
+                                    <rect class="subBar" height="22.09470121042932" width="4" x="83" y="507.9052987895707"></rect>
+                                    <rect class="subBar" height="22.07378341155282" width="4" x="88" y="507.9262165884472"></rect>
+                                    <rect class="subBar" height="22.011921550834202" width="4" x="93" y="507.9880784491658"></rect>
+                                    <rect class="subBar" height="22.006561991877" width="4" x="98" y="507.993438008123"></rect>
+                                    <rect class="subBar" height="21.9242735841681" width="4" x="103" y="508.0757264158319"></rect>
+                                    <rect class="subBar" height="21.87295736748402" width="4" x="108" y="508.12704263251595"></rect>
+                                    <rect class="subBar" height="21.85809911287674" width="4" x="113" y="508.14190088712326"></rect>
+                                    <rect class="subBar" height="21.77852059374594" width="4" x="118" y="508.22147940625405"></rect>
+                                    <rect class="subBar" height="21.761735798256844" width="4" x="123" y="508.23826420174316"></rect>
+                                    <rect class="subBar" height="21.69744456392178" width="4" x="128" y="508.3025554360782"></rect>
+                                    <rect class="subBar" height="21.61624679676708" width="4" x="133" y="508.3837532032329"></rect>
+                                    <rect class="subBar" height="21.61622912078268" width="4" x="138" y="508.3837708792173"></rect>
+                                    <rect class="subBar" height="21.59695396834386" width="4" x="143" y="508.4030460316561"></rect>
+                                    <rect class="subBar" height="21.31588194392922" width="4" x="148" y="508.68411805607076"></rect>
+                                    <rect class="subBar" height="21.24735575447592" width="4" x="153" y="508.7526442455241"></rect>
+                                    <rect class="subBar" height="21.21198830419098" width="4" x="158" y="508.788011695809"></rect>
+                                    <rect class="subBar" height="21.19528147998654" width="4" x="163" y="508.80471852001347"></rect>
+                                    <rect class="subBar" height="21.04536576950262" width="4" x="168" y="508.9546342304974"></rect>
+                                    <rect class="subBar" height="20.72057242285884" width="4" x="173" y="509.2794275771412"></rect>
+                                    <rect class="subBar" height="20.69847027988434" width="4" x="178" y="509.30152972011564"></rect>
+                                    <rect class="subBar" height="19.98186948453786" width="4" x="183" y="510.01813051546213"></rect>
+                                    <rect class="subBar" height="19.64844804116442" width="4" x="188" y="510.35155195883556"></rect>
+                                    <rect class="subBar" height="18.94407152174856" width="4" x="193" y="511.0559284782514"></rect>
+                                    <rect class="subBar" height="18.94040715313746" width="4" x="198" y="511.05959284686253"></rect>
+                                    <rect class="subBar" height="18.70629851974062" width="4" x="203" y="511.29370148025936"></rect>
+                                    <rect class="subBar" height="18.59075892007092" width="4" x="208" y="511.4092410799291"></rect>
+                                    <rect class="subBar" height="18.40953520999932" width="4" x="213" y="511.5904647900007"></rect>
+                                    <rect class="subBar" height="18.39671319444918" width="4" x="218" y="511.6032868055508"></rect>
+                                    <rect class="subBar" height="18.3379366832682" width="4" x="223" y="511.6620633167318"></rect>
+                                    <rect class="subBar" height="18.288303014350497" width="4" x="228" y="511.7116969856495"></rect>
+                                    <rect class="subBar" height="18.28365191454714" width="4" x="233" y="511.71634808545286"></rect>
+                                    <rect class="subBar" height="18.18789091766664" width="4" x="238" y="511.81210908233334"></rect>
+                                    <rect class="subBar" height="18.1489490862243" width="4" x="243" y="511.8510509137757"></rect>
+                                    <rect class="subBar" height="18.071399080750503" width="4" x="248" y="511.9286009192495"></rect>
+                                    <rect class="subBar" height="17.99372500147962" width="4" x="253" y="512.0062749985203"></rect>
+                                    <rect class="subBar" height="17.91375707521896" width="4" x="258" y="512.086242924781"></rect>
+                                    <rect class="subBar" height="17.863053892748397" width="4" x="263" y="512.1369461072516"></rect>
+                                    <rect class="subBar" height="17.73563672556258" width="4" x="268" y="512.2643632744374"></rect>
+                                    <rect class="subBar" height="17.579420512802876" width="4" x="273" y="512.4205794871971"></rect>
+                                    <rect class="subBar" height="17.20572585458292" width="4" x="278" y="512.794274145417"></rect>
+                                    <rect class="subBar" height="17.19783836076042" width="4" x="283" y="512.8021616392396"></rect>
+                                    <rect class="subBar" height="16.94901224627028" width="4" x="288" y="513.0509877537297"></rect>
+                                    <rect class="subBar" height="16.91933159777964" width="4" x="293" y="513.0806684022203"></rect>
+                                    <rect class="subBar" height="16.910700643694522" width="4" x="298" y="513.0892993563054"></rect>
+                                    <rect class="subBar" height="16.88783093806866" width="4" x="303" y="513.1121690619314"></rect>
+                                    <rect class="subBar" height="16.83511841473776" width="4" x="308" y="513.1648815852623"></rect>
+                                    <rect class="subBar" height="16.4799308239062" width="4" x="313" y="513.5200691760938"></rect>
+                                    <rect class="subBar" height="16.39622963049012" width="4" x="318" y="513.6037703695099"></rect>
+                                    <rect class="subBar" height="16.249078996285743" width="4" x="323" y="513.7509210037142"></rect>
+                                    <rect class="subBar" height="15.956536431244558" width="4" x="328" y="514.0434635687554"></rect>
+                                    <rect class="subBar" height="15.8792465158251" width="4" x="333" y="514.1207534841749"></rect>
+                                    <rect class="subBar" height="15.75870793070028" width="4" x="338" y="514.2412920692997"></rect>
+                                    <rect class="subBar" height="15.73376667954804" width="4" x="343" y="514.266233320452"></rect>
+                                    <rect class="subBar" height="15.384623809640038" width="4" x="348" y="514.6153761903599"></rect>
+                                    <rect class="subBar" height="15.266737875124921" width="4" x="353" y="514.7332621248751"></rect>
+                                    <rect class="subBar" height="15.233407108663078" width="4" x="358" y="514.7665928913369"></rect>
+                                    <rect class="subBar" height="14.888918813410442" width="4" x="363" y="515.1110811865896"></rect>
+                                    <rect class="subBar" height="14.78691877036788" width="4" x="368" y="515.2130812296322"></rect>
+                                    <rect class="subBar" height="14.546643310846683" width="4" x="373" y="515.4533566891533"></rect>
+                                    <rect class="subBar" height="14.52203047647276" width="4" x="378" y="515.4779695235272"></rect>
+                                    <rect class="subBar" height="14.368465976645039" width="4" x="383" y="515.631534023355"></rect>
+                                    <rect class="subBar" height="14.079503194322578" width="4" x="388" y="515.9204968056774"></rect>
+                                    <rect class="subBar" height="13.963080776713259" width="4" x="393" y="516.0369192232868"></rect>
+                                    <rect class="subBar" height="13.752173019502802" width="4" x="398" y="516.2478269804972"></rect>
+                                    <rect transform="translate(0, 490)" class="mover" x="0" y="10" height="40" width="78" pointer-events="all" cursor="ew-resize"></rect>
+                                </g>
+                            </svg>
+                        </div>
+                        </p>
+
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+    <div id="root">
+        <div>
+            <div class="app-container h-100 container">
+              
+                <div class="row">
+                    <div class="d-none d-lg-block paddock-col col-lg-3">
+                        <div>
+                            <div class="paddock-tab-name input-group"><svg class="search-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 96 96">
+                                    <style type="text/css">
+                                    .st0 {
+                                        fill: #1F3B70;
+                                    }
+                                    </style>
+                                    <path class="st0" d="M94.5,81.8c-0.1-0.1-0.1-0.1-0.2-0.1L68.7,56.1c10.5-17.4,4.9-40-12.4-50.4C38.9-4.8,16.3,0.7,5.9,18.1 C-4.6,35.5,1,58.1,18.3,68.6c11.7,7.1,26.3,7.1,37.9,0l25.6,25.6c2,2,5.3,2,7.4,0c0,0,0,0,0,0l5-5.1C96.3,87.1,96.5,83.8,94.5,81.8z M52.7,52.5c-8.5,8.5-22.3,8.5-30.8,0c-8.5-8.5-8.5-22.3,0-30.9s22.3-8.5,30.8,0S61.2,44,52.7,52.5z"></path>
+                                </svg><input placeholder="Enter a paddock name..." type="text" class="form-control" value="">
+                                <div class="input-group-append"><button type="button" class="search-button btn btn-secondary">Search</button></div>
+                            </div>
+                            <div class="table-responsive paddocks-list">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map-column col-lg-9">
+                        <ul class="nav nav-tabs">
+                            <li class="tab-list-items nav-item"><a class="active nav-link">Maps</a></li>
+                            <li class="tab-list-items nav-item"><a class="nav-link">Feed Wedge</a></li>
+                            <li class="paddock-tab tab-list-items d-lg-none nav-item"><a class="nav-link">Paddocks</a></li>
+                        </ul>
+                        <div class="tab-content tab-data">
+                            
+                                <div class="tab-pane">
+                                    <div>
+                                        <div style="width: 1600px; max-width: 100%;">
+                                            <div id="Responsive-wrapper">
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="row-container">
+                                            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 row-cols-lg-3 row-cols-xl-3">
+                                                <div class="align-description col">Add Grazing target:</div>
+                                                <div class="align-control col"><button type="button" role="switch" aria-checked="true" class="ant-switch ant-switch-checked" ant-click-animating="true" style="max-width: 44px;"><span class="ant-switch-inner"></span>
+                                                        <div class="ant-click-animating-node"></div></button></div>
+                                                <div class="col"></div>
+                                            </div>
+                                            <div class="row-container row row-cols-1 row-cols-sm-1 row-cols-md-3 row-cols-lg-3 row-cols-xl-3">
+                                                <div class="align-description col">Set Pre-grazing target:</div>
+                                                <div class="align-control col">
+                                                    <div class="ant-slider">
+                                                        <div class="ant-slider-rail"></div>
+                                                        <div class="ant-slider-track" style="left: 0%; right: auto; width: 16%;"></div>
+                                                        <div class="ant-slider-step"></div>
+                                                        <div tabindex="0" class="ant-slider-handle" role="slider" aria-valuemin="2500" aria-valuemax="5000" aria-valuenow="2900" aria-disabled="false" style="left: 16%; right: auto; transform: translateX(-50%);"></div>
+                                                        <div class="ant-slider-mark"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="align-control col">
+                                                    <div class="ant-input-number">
+                                                        <div class="ant-input-number-handler-wrap"><span unselectable="unselectable" role="button" aria-label="Increase Value" aria-disabled="false" class="ant-input-number-handler ant-input-number-handler-up "><i aria-label="icon: up" class="anticon anticon-up ant-input-number-handler-up-inner"><svg viewBox="64 64 896 896" focusable="false" class="" data-icon="up" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M890.5 755.3L537.9 269.2c-12.8-17.6-39-17.6-51.7 0L133.5 755.3A8 8 0 0 0 140 768h75c5.1 0 9.9-2.5 12.9-6.6L512 369.8l284.1 391.6c3 4.1 7.8 6.6 12.9 6.6h75c6.5 0 10.3-7.4 6.5-12.7z"></path></svg></i></span><span unselectable="unselectable" role="button" aria-label="Decrease Value" aria-disabled="false" class="ant-input-number-handler ant-input-number-handler-down "><i aria-label="icon: down" class="anticon anticon-down ant-input-number-handler-down-inner"><svg viewBox="64 64 896 896" focusable="false" class="" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg></i></span></div>
+                                                        <div class="ant-input-number-input-wrap"><input role="spinbutton" aria-valuemin="2500" aria-valuemax="5000" aria-valuenow="2900" class="ant-input-number-input" autocomplete="off" max="5000" min="2500" step="100" value="2900"></div>
+                                                    </div><span class="grazing-unit">kg/DM</span>
+                                                </div>
+                                            </div>
+                                            <div class="row-container row row-cols-1 row-cols-sm-1 row-cols-md-3 row-cols-lg-3 row-cols-xl-3">
+                                                <div class="align-description col">Set Post-grazing target:</div>
+                                                <div class="align-control col">
+                                                    <div class="ant-slider">
+                                                        <div class="ant-slider-rail"></div>
+                                                        <div class="ant-slider-track" style="left: 0%; right: auto; width: 8%;"></div>
+                                                        <div class="ant-slider-step"></div>
+                                                        <div tabindex="0" class="ant-slider-handle" role="slider" aria-valuemin="0" aria-valuemax="2500" aria-valuenow="200" aria-disabled="false" style="left: 8%; right: auto; transform: translateX(-50%);"></div>
+                                                        <div class="ant-slider-mark"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="align-control col">
+                                                    <div class="ant-input-number">
+                                                        <div class="ant-input-number-handler-wrap"><span unselectable="unselectable" role="button" aria-label="Increase Value" aria-disabled="false" class="ant-input-number-handler ant-input-number-handler-up "><i aria-label="icon: up" class="anticon anticon-up ant-input-number-handler-up-inner"><svg viewBox="64 64 896 896" focusable="false" class="" data-icon="up" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M890.5 755.3L537.9 269.2c-12.8-17.6-39-17.6-51.7 0L133.5 755.3A8 8 0 0 0 140 768h75c5.1 0 9.9-2.5 12.9-6.6L512 369.8l284.1 391.6c3 4.1 7.8 6.6 12.9 6.6h75c6.5 0 10.3-7.4 6.5-12.7z"></path></svg></i></span><span unselectable="unselectable" role="button" aria-label="Decrease Value" aria-disabled="false" class="ant-input-number-handler ant-input-number-handler-down "><i aria-label="icon: down" class="anticon anticon-down ant-input-number-handler-down-inner"><svg viewBox="64 64 896 896" focusable="false" class="" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg></i></span></div>
+                                                        <div class="ant-input-number-input-wrap"><input role="spinbutton" aria-valuemin="0" aria-valuemax="2500" aria-valuenow="200" class="ant-input-number-input" autocomplete="off" max="2500" min="0" step="100" value="200"></div>
+                                                    </div><span class="grazing-unit">kg/DM</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane paddock-tab d-lg-none">
+                                    <div>
+                                        <div class="paddock-tab-name input-group"><svg class="search-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 96 96">
+                                                <style type="text/css">
+                                                .st0 {
+                                                    fill: #1F3B70;
+                                                }
+                                                </style>
+                                                <path class="st0" d="M94.5,81.8c-0.1-0.1-0.1-0.1-0.2-0.1L68.7,56.1c10.5-17.4,4.9-40-12.4-50.4C38.9-4.8,16.3,0.7,5.9,18.1 C-4.6,35.5,1,58.1,18.3,68.6c11.7,7.1,26.3,7.1,37.9,0l25.6,25.6c2,2,5.3,2,7.4,0c0,0,0,0,0,0l5-5.1C96.3,87.1,96.5,83.8,94.5,81.8z M52.7,52.5c-8.5,8.5-22.3,8.5-30.8,0c-8.5-8.5-8.5-22.3,0-30.9s22.3-8.5,30.8,0S61.2,44,52.7,52.5z"></path>
+                                            </svg><input placeholder="Enter a paddock name..." type="text" class="form-control" value="">
+                                            <div class="input-group-append"><button type="button" class="search-button btn btn-secondary">Search</button></div>
+                                        </div>
+                                        
+                                            
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="branding row">
+                        <nav class="navbar navbar-light bg-faded">
+                            <div class="col-6 order-1 col-sm-6 order-sm-1 col-md-6 order-md-1 col-lg-8 order-lg-1"><svg class="logo_image" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 97.95 27.31">
+                                    <defs>
+                                        <style>.cls-1{fill:#0095d6;}.cls-2{fill:#003473;}</style>
+                                    </defs>
+                                    <title>Artboard 1</title>
+                                    <path class="cls-1" d="M29.74,22.63a3.15,3.15,0,0,1,.41,1.57,3.09,3.09,0,0,1-3.06,3.12H19.37a10.28,10.28,0,0,1-1.44-.1A9.55,9.55,0,0,1,10,20a8.68,8.68,0,0,0,15.73-3.9l0-.35Z"></path>
+                                    <path class="cls-1" d="M12.4,1.56A3.09,3.09,0,0,1,13.53.42a3,3,0,0,1,4.19,1.13l3.86,6.77a10.35,10.35,0,0,1,.64,1.31A9.72,9.72,0,0,1,20,20.21a8.93,8.93,0,0,0,.15-7A8.68,8.68,0,0,0,8.77,8.34l-.32.14Z"></path>
+                                    <path class="cls-1" d="M3.08,27.3a3,3,0,0,1-1.54-.42A3.13,3.13,0,0,1,.41,22.64l3.86-6.78a10.54,10.54,0,0,1,.8-1.21,9.42,9.42,0,0,1,10.16-3.31,8.66,8.66,0,0,0-6,3.36,8.92,8.92,0,0,0,1.5,12.41l.28.21Z"></path>
+                                    <path class="cls-2" d="M91.23,8.57H81.86c-1.2,0-1.75.45-2,1.39l-3,12.12c-.24.94.1,1.39,1.3,1.39h9.38l-.89,3.69h-14c-3.74,0-4.88-2.3-3.92-6.17l2.44-10c1-3.87,3.23-6.17,7-6.17h14Z"></path>
+                                    <polyline class="cls-2" points="70.27 4.88 61.89 4.88 56.39 27.18 64.77 27.18"></polyline>
+                                    <polyline class="cls-2" points="54.77 23.48 44.12 23.48 48.72 4.88 40.34 4.88 34.84 27.17 53.88 27.17"></polyline>
+                                    <path class="cls-2" d="M95.65,9a2.3,2.3,0,1,1,2.3-2.3A2.3,2.3,0,0,1,95.65,9m0-4.09a1.73,1.73,0,0,0-1.75,1.79,1.75,1.75,0,1,0,3.51,0,1.73,1.73,0,0,0-1.76-1.79m.41,3-.44-.95h-.26v.95h-.55V5.43h1a.78.78,0,0,1,.81.77.69.69,0,0,1-.45.65l.52,1Zm-.32-2h-.38v.64h.38a.32.32,0,1,0,0-.64"></path>
+                                </svg></div>
+                            <div class="col-6 order-2 col-sm-5 order-sm-2 col-md-5 order-md-2 col-lg-3 order-lg-2"><svg class="space_image" id="Group_1032" data-name="Group 1032" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 61.277 13.555">
+                                    <g id="sapce-logo" transform="translate(0 1)">
+                                        <path id="Path_1237" data-name="Path 1237" d="M14.434,18.079a3.719,3.719,0,0,0,.823-.088,2.031,2.031,0,0,0,.676-.265,1.361,1.361,0,0,0,.47-.441,1.087,1.087,0,0,0,.176-.617,1.185,1.185,0,0,0-.176-.647,1.741,1.741,0,0,0-.529-.5,4.078,4.078,0,0,0-.941-.412c-.382-.118-.882-.265-1.441-.412a10.387,10.387,0,0,1-1.353-.441,4.715,4.715,0,0,1-1.117-.676,2.535,2.535,0,0,1-.735-1,3.359,3.359,0,0,1-.265-1.411,3.119,3.119,0,0,1,1.294-2.558A4.327,4.327,0,0,1,12.7,7.935,6.236,6.236,0,0,1,14.375,7.7a5.8,5.8,0,0,1,1.882.265,6,6,0,0,1,1.382.647,1.681,1.681,0,0,1,.559.559,1.235,1.235,0,0,1,.176.617.841.841,0,0,1-.118.5.719.719,0,0,1-.265.323.994.994,0,0,1-.353.176,1.476,1.476,0,0,1-.353.059,1.172,1.172,0,0,1-.5-.088,1.8,1.8,0,0,1-.412-.206c-.118-.059-.235-.147-.382-.235-.118-.088-.294-.147-.441-.235-.176-.059-.353-.118-.588-.176a3.114,3.114,0,0,0-.794-.059,2.16,2.16,0,0,0-1.441.412,1.171,1.171,0,0,0-.441.882,1.121,1.121,0,0,0,.706,1.029,8.71,8.71,0,0,0,2.235.764c.441.118.882.265,1.323.412a5.034,5.034,0,0,1,1.176.647,3.146,3.146,0,0,1,.853,1,3.364,3.364,0,0,1,.323,1.529,3.285,3.285,0,0,1-.294,1.411,3.748,3.748,0,0,1-.882,1.176,4.646,4.646,0,0,1-1.47.794,6.143,6.143,0,0,1-2.029.294,6.332,6.332,0,0,1-1.323-.118,5.273,5.273,0,0,1-1.088-.323,3.324,3.324,0,0,1-.853-.441,6.19,6.19,0,0,1-.647-.5,3.361,3.361,0,0,1-.412-.47,1.094,1.094,0,0,1-.206-.588,1.007,1.007,0,0,1,.118-.529,1.177,1.177,0,0,1,.294-.353.994.994,0,0,1,.353-.176,1.294,1.294,0,0,1,.294-.059,1.219,1.219,0,0,1,.47.088,2.938,2.938,0,0,1,.412.235,6.459,6.459,0,0,0,.529.412,2.115,2.115,0,0,0,.617.353,5.376,5.376,0,0,0,.735.235A2.977,2.977,0,0,0,14.434,18.079Z" transform="translate(-9.7 -7.7)" fill="#203a70"></path>
+                                        <path id="Path_1238" data-name="Path 1238" d="M52.54,8.4a5.381,5.381,0,0,1,1.882.294,4.163,4.163,0,0,1,1.441.853,3.551,3.551,0,0,1,.911,1.323,4.893,4.893,0,0,1,0,3.5,3.3,3.3,0,0,1-.941,1.323,3.983,3.983,0,0,1-1.47.823,6.511,6.511,0,0,1-1.911.294H50.305v2.646a1.086,1.086,0,0,1-.323.794,1.089,1.089,0,0,1-1.882-.794V9.517a1.014,1.014,0,0,1,1.088-1.088H52.54Zm-.088,6.469a2.387,2.387,0,0,0,1.764-.617A2.3,2.3,0,0,0,54.8,12.6a2.176,2.176,0,0,0-.617-1.676,2.5,2.5,0,0,0-1.764-.588H50.335V14.81h2.117Z" transform="translate(-36.809 -8.194)" fill="#203a70"></path>
+                                        <path id="Path_1239" data-name="Path 1239" d="M87.368,17.838H82.34L81.517,19.9a.985.985,0,0,1-.412.529,1.367,1.367,0,0,1-.617.147,1.177,1.177,0,0,1-.794-.265A.872.872,0,0,1,79.4,19.6a1.431,1.431,0,0,1,.029-.353c.029-.118.088-.235.147-.412L83.6,9.37a1.8,1.8,0,0,1,.5-.706,1.152,1.152,0,0,1,.764-.265,1.177,1.177,0,0,1,.794.265,1.8,1.8,0,0,1,.5.706l4.028,9.468a1.769,1.769,0,0,1,.176.676,1.086,1.086,0,0,1-.323.794,1.182,1.182,0,0,1-.823.294.9.9,0,0,1-.647-.206,1.569,1.569,0,0,1-.441-.647Zm-4.322-1.823h3.587l-1.764-4.557Z" transform="translate(-58.907 -8.194)" fill="#203a70"></path>
+                                        <path id="Path_1240" data-name="Path 1240" d="M129.033,11.522c-.206-.235-.412-.441-.588-.647a3.464,3.464,0,0,0-.647-.5,2.224,2.224,0,0,0-.764-.323,3.129,3.129,0,0,0-.97-.118,3.326,3.326,0,0,0-1.441.294,3.052,3.052,0,0,0-1.088.853,3.518,3.518,0,0,0-.676,1.323,6.073,6.073,0,0,0-.235,1.676,5.861,5.861,0,0,0,.235,1.647,4.036,4.036,0,0,0,.706,1.264,3.027,3.027,0,0,0,1.147.823,3.639,3.639,0,0,0,1.529.294,3.065,3.065,0,0,0,1.617-.382,4.868,4.868,0,0,0,1.264-1.117,1,1,0,0,1,.735-.323.836.836,0,0,1,.676.323,1.1,1.1,0,0,1,.265.676,2.271,2.271,0,0,1-.059.441,1.9,1.9,0,0,1-.265.47,6.683,6.683,0,0,1-.647.647,4.842,4.842,0,0,1-.941.676,5.641,5.641,0,0,1-1.264.529,5.461,5.461,0,0,1-1.588.206,5.946,5.946,0,0,1-2.323-.441,5.219,5.219,0,0,1-1.823-1.264,5.762,5.762,0,0,1-1.176-1.97,8.154,8.154,0,0,1,0-5.116,5.9,5.9,0,0,1,1.176-2,5.415,5.415,0,0,1,1.823-1.294,5.955,5.955,0,0,1,2.323-.47,6.567,6.567,0,0,1,1.764.235,6.892,6.892,0,0,1,1.323.588,4.91,4.91,0,0,1,.911.706,3.538,3.538,0,0,1,.5.588,1.639,1.639,0,0,1,.206.47,1.143,1.143,0,0,1,.059.441,1.219,1.219,0,0,1-.088.47.719.719,0,0,1-.265.323,2.194,2.194,0,0,1-.353.206,1.476,1.476,0,0,1-.353.059,2.307,2.307,0,0,1-.412-.059A.868.868,0,0,1,129.033,11.522Z" transform="translate(-87.781 -7.7)" fill="#203a70"></path>
+                                        <path id="Path_1241" data-name="Path 1241" d="M170.956,18.7a.978.978,0,0,1,.735.265.954.954,0,0,1,.265.706.917.917,0,0,1-1,1h-6.439a1.089,1.089,0,0,1-.823-.294,1.064,1.064,0,0,1-.294-.794v-10a1.064,1.064,0,0,1,.294-.794,1.116,1.116,0,0,1,.853-.294h6.38a1.1,1.1,0,0,1,.764.265.994.994,0,0,1,.294.735.933.933,0,0,1-.294.735,1.051,1.051,0,0,1-.764.265h-5.292v3.028h3.381a1.177,1.177,0,0,1,.794.265.872.872,0,0,1,.294.706,1.044,1.044,0,0,1-.294.735,1.177,1.177,0,0,1-.794.265h-3.381v3.234h5.322Z" transform="translate(-118.209 -8.265)" fill="#203a70"></path>
+                                    </g><text id="TM" transform="translate(55.277 4)" fill="#203a70" font-size="4" font-family="BoosterNextFY-Black, Booster Next FY" font-weight="800">
+                                        <tspan x="0" y="0">TM</tspan>
+                                    </text>
+                                </svg></div>
+                            <div class="download-buttons col-2 order-3 col-sm-1 order-sm-3 col-md-1 order-md-3 col-lg-1 order-lg-3"><button type="button" class="menu-button btn btn-outline-secondary"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 48 48">
+                                        <style type="text/css">
+                                        .st0 {
+                                            fill: #1F3B70;
+                                        }
+                                        </style>
+                                        <g>
+                                            <rect x="0" y="38" class="st0" width="48" height="6"></rect>
+                                            <rect x="0" y="21.3" class="st0" width="36" height="6"></rect>
+                                            <rect x="0" y="4" class="st0" width="48" height="6"></rect>
+                                        </g>
+                                    </svg></button></div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+
+        <script>
+        	// burger menu
+        	document.addEventListener('DOMContentLoaded', () => {
+
+			  // Get all "navbar-burger" elements
+			  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+			  // Check if there are any navbar burgers
+			  if ($navbarBurgers.length > 0) {
+
+			    // Add a click event on each of them
+			    $navbarBurgers.forEach( el => {
+			      el.addEventListener('click', () => {
+
+			        // Get the target from the "data-target" attribute
+			        const target = el.dataset.target;
+			        const $target = document.getElementById(target);
+
+			        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+			        el.classList.toggle('is-active');
+			        $target.classList.toggle('is-active');
+
+			      });
+			    });
+			  }
+
+			  	// Tabs
+			  	const TABS = [...document.querySelectorAll('#tabs li')];
+				const CONTENT = [...document.querySelectorAll('#tab-content p')];
+				const ACTIVE_CLASS = 'is-active';
+				const HIDDEN_CLASS = 'is-hidden';
+
+				function initTabs() {
+				    TABS.forEach((tab) => {
+				      tab.addEventListener('click', (e) => {
+				        let selected = tab.getAttribute('data-tab');
+				        updateActiveTab(tab);
+				        updateActiveContent(selected);
+				      })
+				    })
+				}
+
+				function updateActiveTab(selected) {
+				  TABS.forEach((tab) => {
+				    if (tab && tab.classList.contains(ACTIVE_CLASS)) {
+				      tab.classList.remove(ACTIVE_CLASS);
+				    }
+				  });
+				  selected.classList.add(ACTIVE_CLASS);
+				}
+
+				function updateActiveContent(selected) {
+				  CONTENT.forEach((item) => {
+				    if (item && item.classList.contains(ACTIVE_CLASS)) {
+				      item.classList.remove(ACTIVE_CLASS);
+				      console.log('here');
+				      
+				    }
+				    let data = item.getAttribute('data-content');
+				    if (data === selected) {
+				      item.classList.add(ACTIVE_CLASS);
+				      
+				    }
+				  });
+				}
+
+				initTabs();
+
+			});
+
+
+        </script>
+</body>
