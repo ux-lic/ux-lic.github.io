@@ -14,6 +14,7 @@ $darksky: #007CBE;
 $skyblue: #009CDE;
 $lightsky: #CBDBEF;
 $bluewhite: #EDF3FA;
+$white: #fff;
 
 $grey: #54575A;
 $blue: $darksky;
@@ -64,7 +65,7 @@ $weight-bold: 700;
 
 // Titles
 $title-color: $primary;
-$title-size: $size-6;
+$title-size: $size-3;
 $title-weight: 500;
 
 $subtitle-color: $primary;
@@ -99,6 +100,9 @@ $label-weight: $weight-semibold;
 //Cards
 $card-content-padding: 1rem;
 $card-header-color: $primary;
+
+//Panels
+$panel-heading-color: $text;
 
 // $box-radius: $radius-small;
 $box-padding: 1rem;
