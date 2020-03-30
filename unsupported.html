@@ -12,13 +12,20 @@
     .title-underline {
         border-bottom: 1px solid #009cde;
         margin-bottom: 2rem;
-        padding-bottom: 1.5rem;
-        
     }
     .title-underline-span {
+        position: relative;
+        display: inline-block;
+        padding-bottom: 1.5rem;*/
+    }
+    .title-underline-span:after {
+        content: "";
+        position: absolute;
+        display: block;
+        bottom: -7px;
+        left: 0;
+        width: 100%;
         border-bottom: 6px solid #009cde;
-        vertical-align: top;
-        padding-bottom: 1.5rem;
     }
     .footer-fixed-bottom {
         position: fixed;
