@@ -1,9 +1,10 @@
 @charset "utf-8";
 // @import "../node_modules/bulma/bulma.sass";
 
-@font-face {font-family: 'BoosterNextFY-Regular';src: url('../webfonts/39C314_0_0.eot');src: url('../webfonts/39C314_0_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/39C314_0_0.woff2') format('woff2'),url('../webfonts/39C314_0_0.woff') format('woff'),url('../webfonts/39C314_0_0.ttf') format('truetype');}
-@font-face {font-family: 'BoosterNextFY-Light';src: url('../webfonts/39C314_1_0.eot');src: url('../webfonts/39C314_1_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/39C314_1_0.woff2') format('woff2'),url('../webfonts/39C314_1_0.woff') format('woff'),url('../webfonts/39C314_1_0.ttf') format('truetype');}
-@font-face {font-family: 'BoosterNextFY-Bold';src: url('../webfonts/39C314_2_0.eot');src: url('../webfonts/39C314_2_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/39C314_2_0.woff2') format('woff2'),url('../webfonts/39C314_2_0.woff') format('woff'),url('../webfonts/39C314_2_0.ttf') format('truetype');}
+@font-face {font-family: 'BoosterNextFY-Regular';src: url('../webfonts/3544A2_0_0.eot');src: url('../webfonts/3544A2_0_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/3544A2_0_0.woff2') format('woff2'),url('../webfonts/3544A2_0_0.woff') format('woff'),url('../webfonts/3544A2_0_0.ttf') format('truetype');}
+@font-face {font-family: 'BoosterNextFY-Bold';src: url('../webfonts/3544A2_2_0.eot');src: url('../webfonts/3544A2_2_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/3544A2_2_0.woff2') format('woff2'),url('../webfonts/3544A2_2_0.woff') format('woff'),url('../webfonts/3544A2_2_0.ttf') format('truetype');}
+@font-face {font-family: 'BoosterNextFY-Light';src: url('../webfonts/3546DF_0_0.eot');src: url('../webfonts/3546DF_0_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/3546DF_0_0.woff2') format('woff2'),url('../webfonts/3546DF_0_0.woff') format('woff'),url('../webfonts/3546DF_0_0.ttf') format('truetype');}
+@font-face {font-family: 'BoosterNextFY-SemiBold';src: url('../webfonts/3546DF_1_0.eot');src: url('../webfonts/3546DF_1_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/3546DF_1_0.woff2') format('woff2'),url('../webfonts/3546DF_1_0.woff') format('woff'),url('../webfonts/3546DF_1_0.ttf') format('truetype');}
 
 // back up font
 // @import url('https://fonts.googleapis.com/css?family=Nunito:400,500,700');
@@ -41,6 +42,7 @@ $fullhd-enabled: false;
 // Update some of Bulma's component variables
 $body-background-color: $bluewhite;
 $title: $primary;
+$title-family: "BoosterNextFY-Light", Nunito, sans-serif;;
 
 // Grid
 $column-gap: 1rem;
@@ -66,13 +68,14 @@ $weight-bold: 700;
 // Titles
 $title-color: $primary;
 $title-size: $size-3;
-$title-weight: 500;
+$title-weight: $weight-light;
 
 $subtitle-color: $primary;
 $subtitle-size: $size-3;
 
 // Content
 $content-heading-color: $text;
+$content-heading-weight: $weight-light;
 
 // Link
 $link-hover: darken($link,10%);
@@ -81,7 +84,7 @@ $link-hover: darken($link,10%);
 $tag-radius: 2px;
 
 // Navbar
-// $navbar-height: 6rem;
+$navbar-height: 6rem;
 
 $navbar-item-color: $primary;
 $navbar-item-hover-color: $info;
@@ -103,8 +106,6 @@ $card-header-color: $primary;
 
 //Panels
 $panel-heading-color: $text;
-
-$box-radius: 2px;
 $box-padding: 1rem;
 
 // Breadcrumb
