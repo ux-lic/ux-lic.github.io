@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:300,400,500,700");
 @font-face {
   font-family: 'BoosterNextFY-Regular';
   src: url("../webfonts/3544A2_0_0.eot");
@@ -3655,6 +3656,7 @@ a.tag:hover {
 
 .subtitle {
   color: #001e62;
+  font-family: "BoosterNextFY-Regular", Nunito, sans-serif;
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.25; }
@@ -6693,8 +6695,9 @@ label.panel-block {
       padding: 18rem 1.5rem; } }
 
 .footer {
-  background-color: #fafafa;
-  padding: 3rem 1.5rem 6rem; }
+  background-color: #001e62;
+  padding: 3rem 1.5rem 6rem;
+  color: #CBDBEF; }
 
 .timeline {
   display: flex;

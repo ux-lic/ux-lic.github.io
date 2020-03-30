@@ -7,7 +7,7 @@
 @font-face {font-family: 'BoosterNextFY-SemiBold';src: url('../webfonts/3546DF_1_0.eot');src: url('../webfonts/3546DF_1_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/3546DF_1_0.woff2') format('woff2'),url('../webfonts/3546DF_1_0.woff') format('woff'),url('../webfonts/3546DF_1_0.ttf') format('truetype');}
 
 // back up font
-// @import url('https://fonts.googleapis.com/css?family=Nunito:400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,500,700');
 
 // Set your brand colors
 $darkblue: #001e62;
@@ -41,8 +41,6 @@ $fullhd-enabled: false;
 
 // Update some of Bulma's component variables
 $body-background-color: $bluewhite;
-$title: $primary;
-$title-family: "BoosterNextFY-Light", Nunito, sans-serif;;
 
 // Grid
 $column-gap: 1rem;
@@ -69,6 +67,11 @@ $weight-bold: 700;
 $title-color: $primary;
 $title-size: $size-3;
 $title-weight: $weight-light;
+$title: $primary;
+$title-family: "BoosterNextFY-Light", Nunito, sans-serif;
+
+$subtitle-weight: $weight-normal;
+$subtitle-family: "BoosterNextFY-Regular", Nunito, sans-serif;
 
 $subtitle-color: $primary;
 $subtitle-size: $size-3;
@@ -110,6 +113,10 @@ $box-padding: 1rem;
 
 // Breadcrumb
 $breadcrumb-item-separator-color: $primary;
+
+//Footer
+$footer-background-color: $primary;
+$footer-color: $grey-lighter;
 
 // Import only what you need from Bulma
 @import "../node_modules/bulma/sass/utilities/_all.sass";
