@@ -81,6 +81,7 @@ $content-heading-color: $text;
 $content-heading-weight: $weight-light;
 
 // Link
+
 $link-hover: darken($link,10%);
 
 // Tag
@@ -114,9 +115,18 @@ $box-padding: 1rem;
 // Breadcrumb
 $breadcrumb-item-separator-color: $primary;
 
+
 //Footer
 $footer-background-color: $primary;
 $footer-color: $grey-lighter;
+
+// Switches
+$switch-background: $white-ter;
+$switch-border: .1rem solid $lightsky;
+
+// Import product specific modifers
+@import "../scss/lic/base/generic.scss";
+
 
 // Import only what you need from Bulma
 @import "../node_modules/bulma/sass/utilities/_all.sass";
@@ -129,3 +139,5 @@ $footer-color: $grey-lighter;
 
 // Extensions
 @import "../node_modules/bulma-timeline/dist/css/bulma-timeline.sass";
+@import "../node_modules/bulma-switch/dist/css/bulma-switch.sass";
+
