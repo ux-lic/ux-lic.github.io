@@ -15,6 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "bulma": "^0.8.0",
+    "bulma-slider": "^2.0.0",
     "bulma-switch": "^2.0.0",
     "bulma-timeline": "^3.0.4",
     "mapbox-gl": "^1.8.0",

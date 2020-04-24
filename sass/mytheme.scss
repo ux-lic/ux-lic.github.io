@@ -17,12 +17,11 @@ $lightsky: #CBDBEF;
 $bluewhite: #EDF3FA;
 $white: #fff;
 
-$grey: #54575A;
-$blue: $darksky;
-
-
 $success: #1FC3B0;
 $danger: #CB3A3A;
+
+$grey: #54575A;
+$blue: $darksky;
 
 // Update Bulma's global variables
 $family-sans-serif: "BoosterNextFY-Regular", Nunito, sans-serif;
@@ -140,4 +139,5 @@ $switch-border: .1rem solid $lightsky;
 // Extensions
 @import "../node_modules/bulma-timeline/dist/css/bulma-timeline.sass";
 @import "../node_modules/bulma-switch/dist/css/bulma-switch.sass";
+@import "../node_modules/bulma-slider/dist/css/bulma-slider.sass";
 
