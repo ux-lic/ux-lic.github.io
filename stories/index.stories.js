@@ -13,6 +13,11 @@ storiesOf('Helpers', module)
   .add('General', () => (
     <div></div>
   ))
+  .add('Luiza', () => (
+    <div className="box">
+      <p>Hello Luiza</p>
+    </div>
+  ))
   .add('Color', () => (
     <div className="columns">
       <div className="column is-one-quarter">
