@@ -33,7 +33,6 @@
       <color>#90D18A</color>
       <color>#7EDCE2</color>
       <color>#986BCF</color>
-      <color>#986BCF</color>
     </color-palette>
   </preferences>
 </workbook>
