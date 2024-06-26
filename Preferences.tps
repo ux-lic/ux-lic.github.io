@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <workbook>
   <preferences>
-    <color-palette name="LIC Standard" type="regular">
+    <color-palette name="#LIC Palette" type="regular">
       <color>#007CBE</color>
       <color>#001e62</color>
       <color>#D6F5FF</color>
@@ -13,26 +13,137 @@
       <color>#48A23F</color>
       <color>#5B2F91</color>
     </color-palette>
-    <color-palette name="LIC Sequential Blue" type="ordered-sequential">
-      <color>#EBFAFF</color>
-      <color>#D6F5FF</color>
+    <color-palette name="#LIC Palette" type="categorical">
       <color>#007CBE</color>
       <color>#001e62</color>
-    </color-palette>
-    <color-palette name="LIC Diverging Red-Green" type="ordered-sequential">
+      <color>#D6F5FF</color>
+      <color>#EBFAFF</color>
+      <color>#323849</color>
       <color>#C8102E</color>
+      <color>#FF8200</color>
       <color>#FFAD00</color>
       <color>#48A23F</color>
+      <color>#5B2F91</color>
     </color-palette>
-    <color-palette name="LIC Categorical" type="categorical">
-      <color>#007CBE</color>
-      <color>#85DEFF</color>
-      <color>#929BB5</color>
-      <color>#F58698</color>
-      <color>#FFD47A</color>
-      <color>#90D18A</color>
-      <color>#7EDCE2</color>
-      <color>#986BCF</color>
-    </color-palette>
+    <color-palette name="#LIC Palette - Sequential #001e62" type="ordered-sequential">
+            <color>#c8c8c8</color>
+            <color>#a7a5b5</color>
+            <color>#8784a2</color>
+            <color>#67638d</color>
+            <color>#47457a</color>
+            <color>#262865</color>
+            <color>#000c4c</color>
+        </color-palette>
+        <color-palette name="#LIC Palette - Sequential #007cbe" type="ordered-sequential">
+            <color>#c8c8c8</color>
+            <color>#a6b4c5</color>
+            <color>#859fc0</color>
+            <color>#648cb9</color>
+            <color>#4278ae</color>
+            <color>#1f64a1</color>
+            <color>#00508d</color>
+        </color-palette>
+        <color-palette name="#LIC Palette - Sequential #5145cd" type="ordered-sequential">
+            <color>#c8c8c8</color>
+            <color>#b5acca</color>
+            <color>#a192ca</color>
+            <color>#8a77c9</color>
+            <color>#715ec7</color>
+            <color>#5546c1</color>
+            <color>#3230b4</color>
+        </color-palette>
+        <color-palette name="#LIC Palette - Sequential #48a23f" type="ordered-sequential">
+            <color>#c8c8c8</color>
+            <color>#a5bd9f</color>
+            <color>#84af7a</color>
+            <color>#65a15a</color>
+            <color>#47933e</color>
+            <color>#298325</color>
+            <color>#05720f</color>
+        </color-palette>
+        <color-palette name="#LIC Palette - Diverging #001e62" type="ordered-diverging">
+            <color>#1e0000</color>
+            <color>#2f1814</color>
+            <color>#432a22</color>
+            <color>#583e32</color>
+            <color>#6d5345</color>
+            <color>#81685a</color>
+            <color>#947f72</color>
+            <color>#a7978c</color>
+            <color>#b8afa9</color>
+            <color>#c8c8c8</color>
+            <color>#b1aec0</color>
+            <color>#9996b6</color>
+            <color>#827ea9</color>
+            <color>#6a679b</color>
+            <color>#54518a</color>
+            <color>#3d3d77</color>
+            <color>#272a63</color>
+            <color>#10184e</color>
+            <color>#000038</color>
+        </color-palette>
+        <color-palette name="#LIC Palette - Diverging #007cbe" type="ordered-diverging">
+            <color>#931a00</color>
+            <color>#a93813</color>
+            <color>#bd5127</color>
+            <color>#cc673b</color>
+            <color>#d87c51</color>
+            <color>#df8e67</color>
+            <color>#e29f7e</color>
+            <color>#dfaf96</color>
+            <color>#d7bcaf</color>
+            <color>#c8c8c8</color>
+            <color>#bac5d2</color>
+            <color>#a9c0d8</color>
+            <color>#97b7da</color>
+            <color>#84acd7</color>
+            <color>#6f9ed0</color>
+            <color>#598ec5</color>
+            <color>#417bb6</color>
+            <color>#2767a3</color>
+            <color>#00508d</color>
+        </color-palette>
+        <color-palette name="#LIC Palette - Diverging #5145cd" type="ordered-diverging">
+            <color>#273800</color>
+            <color>#3d4e12</color>
+            <color>#536324</color>
+            <color>#687737</color>
+            <color>#7d894c</color>
+            <color>#909962</color>
+            <color>#a1a87a</color>
+            <color>#b0b593</color>
+            <color>#bebfad</color>
+            <color>#c8c8c8</color>
+            <color>#c1b9d3</color>
+            <color>#b7a9d9</color>
+            <color>#aa98dc</color>
+            <color>#9a85db</color>
+            <color>#8772d5</color>
+            <color>#715dcc</color>
+            <color>#5848bf</color>
+            <color>#3932af</color>
+            <color>#001c9b</color>
+        </color-palette>
+        <color-palette name="#LIC Palette - Diverging #48a23f" type="ordered-diverging">
+            <color>#963c9f</color>
+            <color>#ab56b2</color>
+            <color>#bd6ec2</color>
+            <color>#cb82ce</color>
+            <color>#d495d6</color>
+            <color>#daa4db</color>
+            <color>#dcb1dc</color>
+            <color>#dabcd9</color>
+            <color>#d3c3d2</color>
+            <color>#c8c8c8</color>
+            <color>#becfb9</color>
+            <color>#b1d1a9</color>
+            <color>#a1d097</color>
+            <color>#8fca83</color>
+            <color>#7bc06f</color>
+            <color>#65b159</color>
+            <color>#4ca042</color>
+            <color>#308a2b</color>
+            <color>#05720f</color>
+        </color-palette>
   </preferences>
 </workbook>
