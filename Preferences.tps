@@ -26,10 +26,14 @@
     </color-palette>
     <color-palette name="LIC Categorical" type="categorical">
       <color>#007CBE</color>
-      <color>#FF8200</color>
-      <color>#48A23F</color>
-      <color>#C8102E</color>
-      <color>#5B2F91</color>
+      <color>#85DEFF</color>
+      <color>#929BB5</color>
+      <color>#F58698</color>
+      <color>#FFD47A</color>
+      <color>#90D18A</color>
+      <color>#7EDCE2</color>
+      <color>#986BCF</color>
+      <color>#986BCF</color>
     </color-palette>
   </preferences>
 </workbook>
