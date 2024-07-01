@@ -9,6 +9,14 @@
       <color>#834CC5</color>
       <color>#48A23F</color>
     </color-palette>
+    <color-palette name="LIC GEv Table" type="categorical">
+      <color>#001E62</color>
+      <color>#007CBE</color>
+      <color>#647092</color>
+      <color>#D1E5FF</color>
+      <color>#C8102E</color>
+      <color>#48A23F</color>
+    </color-palette>
     <color-palette name="LIC Sequential Blue" type="ordered-sequential">
         <color>#001E62</color>
         <color>#093999</color>
