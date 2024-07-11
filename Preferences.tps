@@ -45,5 +45,11 @@
             <color>#834CC5</color>           
             <color>#48A23F</color>
         </color-palette>
+        <color-palette name="LIC Quartiles" type="ordered-quartiles">
+            <color>#001E62</color>           
+            <color>#007CBE</color>
+             <color>#D1E5FF</color>           
+            <color>#647092</color>
+        </color-palette>
   </preferences>
 </workbook>
