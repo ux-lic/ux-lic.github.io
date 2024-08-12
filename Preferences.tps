@@ -57,5 +57,10 @@
             <color>#001E62</color>           
             <color>#FFFFFF</color>        
         </color-palette>
+          <color-palette name="LIC rag" type="ordered-rag">
+            <color>#EC1539</color>    
+            <color>#001E62</color>    
+            <color>#48A23F</color>                 
+        </color-palette>
   </preferences>
 </workbook>
